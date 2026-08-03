@@ -3,10 +3,10 @@
 /* Nocturne Light tokens — tuned for clearer contrast and richer accent */
 
 :root {
-  --color-bg: #f3f4fb;
+  --color-bg: #f5f4fc;
   --color-text: #16182a;
-  --color-accent: #6b5cdb;
-  --color-accent-2: #7a72b8;
+  --color-accent: #6b4de6;
+  --color-accent-2: #7a6cf0;
   --color-divider: color-mix(in srgb, #16182a 10%, transparent);
 
   --color-neutral-100: #ffffff;
@@ -19,24 +19,24 @@
   --color-neutral-800: #2e3345;
   --color-neutral-900: #16182a;
 
-  --color-accent-100: #f3f1ff;
-  --color-accent-200: #e4e0fe;
-  --color-accent-300: #c9c1fc;
-  --color-accent-400: #a597f5;
-  --color-accent-500: #8574e6;
-  --color-accent-600: #6b5cdb;
-  --color-accent-700: #5246b0;
-  --color-accent-800: #3b3480;
-  --color-accent-900: #262254;
+  --color-accent-100: #f4f1ff;
+  --color-accent-200: #e8e2fe;
+  --color-accent-300: #cdc0fc;
+  --color-accent-400: #a994f5;
+  --color-accent-500: #8870ec;
+  --color-accent-600: #6b4de6;
+  --color-accent-700: #5538c4;
+  --color-accent-800: #3d2890;
+  --color-accent-900: #281a5c;
 
-  --color-section: #22265c;
-  --color-section-glow: #323880;
-  --color-section-ghost: #4a5198;
+  --color-section: #2a1f6e;
+  --color-section-glow: #3d2f8a;
+  --color-section-ghost: #5446a8;
 
   --band-paper: #ffffff;
   --band-tint: #eeeafc;
-  --band-deep: #1e2250;
-  --band-deep-2: #12153a;
+  --band-deep: #2a1f6e;
+  --band-deep-2: #1a1448;
   --band-deep-text: #f4f6fe;
   --band-deep-muted: rgba(244, 246, 254, 0.72);
 
@@ -51,8 +51,8 @@
   --shadow-sm: 0 0 0 1px #e6e9f5, 0 1px 2px rgba(22, 24, 42, 0.05);
   --shadow-md: 0 0 0 1px #dce0ef, 0 8px 24px rgba(22, 24, 42, 0.1);
   --shadow-lg: 0 0 0 1px #cfd4e8, 0 18px 44px rgba(22, 24, 42, 0.14);
-  --shadow-accent: 0 8px 24px rgba(107, 92, 219, 0.28);
-  --shadow-accent-lg: 0 14px 36px rgba(107, 92, 219, 0.34);
+  --shadow-accent: 0 8px 24px rgba(107, 77, 230, 0.28);
+  --shadow-accent-lg: 0 14px 36px rgba(107, 77, 230, 0.34);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 160ms;

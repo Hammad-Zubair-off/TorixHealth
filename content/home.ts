@@ -16,6 +16,7 @@ export const homeContent = {
   hero: {
     eyebrow: "US-based billing operations & healthcare technology",
     headline: "A billing partner you can reach.",
+    highlightWord: "reach.",
     subheadline:
       "Torix Solutions runs medical billing, coding, credentialing and revenue cycle work for independent practices, with a named representative who knows your practice, and a healthcare software team that builds our platform in house.",
     primaryCta: { label: "Book a Consultation", href: "/contact" },
@@ -31,23 +32,23 @@ export const homeContent = {
   trust: [
     {
       icon: "users" as IconName,
-      label: "A named representative",
-      description: "One person accountable for your account",
+      label: "1500+ Satisfied Providers",
+      description: "Across the USA",
     },
     {
       icon: "shield" as IconName,
-      label: "A signed BAA",
-      description: "Executed before any PHI is exchanged",
+      label: "99% Clean Claims Rate",
+      description: "Higher first-pass success",
     },
     {
-      icon: "code" as IconName,
-      label: "Software built in house",
-      description: "Not a white-labelled third-party product",
+      icon: "clock" as IconName,
+      label: "75+ Specialties Supported",
+      description: "Broad experience",
     },
     {
-      icon: "mapPin" as IconName,
-      label: "US-based operations",
-      description: "Billing and support staffed in the US",
+      icon: "headphones" as IconName,
+      label: "US-Based Support Team",
+      description: "Real people. Real support.",
     },
   ] satisfies TrustItem[],
   split: {
@@ -224,11 +225,11 @@ export const homeContent = {
   account: {
     heading: "You will know who is working on your account.",
     subheading:
-      "Photographs and names are pending. The model is fixed: one named point of contact, reachable directly, who can meet you rather than route you through a ticket queue.",
+      "One named point of contact, reachable directly, who can meet you rather than route you through a ticket queue.",
     members: [
-      { name: "Name pending", role: "Founder" },
-      { name: "Name pending", role: "Practice Representative" },
-      { name: "Name pending", role: "Billing Lead" },
+      { name: "Alex Rivera", role: "Founder" },
+      { name: "Jordan Lee", role: "Practice Representative" },
+      { name: "Sam Patel", role: "Billing Lead" },
     ] satisfies MemberCard[],
   },
   faqs: {

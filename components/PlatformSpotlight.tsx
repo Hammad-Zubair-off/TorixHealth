@@ -5,6 +5,7 @@ import { Icon, type IconName } from "@/components/icons";
 type PlatformSpotlightProps = {
   kicker?: string;
   heading: string;
+  description?: string;
   highlights: Array<{ icon: IconName; label: string }>;
   cta: { label: string; href: string };
 };
@@ -12,6 +13,7 @@ type PlatformSpotlightProps = {
 export function PlatformSpotlight({
   kicker = "Healthcare Platform",
   heading,
+  description,
   highlights,
   cta,
 }: PlatformSpotlightProps) {
@@ -20,9 +22,14 @@ export function PlatformSpotlight({
       <Container className="grid items-center gap-10 py-[clamp(56px,6.5vw,92px)] [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
         <div>
           <Kicker className="mb-3 text-accent-300">{kicker}</Kicker>
-          <h2 className="mb-6 max-w-[18ch] text-[clamp(26px,2.7vw,34px)] text-band-deep-text">
+          <h2 className="mb-4 max-w-[18ch] text-[clamp(26px,2.7vw,34px)] text-band-deep-text">
             {heading}
           </h2>
+          {description ? (
+            <p className="mb-6 max-w-[46ch] text-[15px] leading-[1.6] text-band-deep-muted">
+              {description}
+            </p>
+          ) : null}
           <ul className="m-0 flex list-none flex-col gap-4 p-0">
             {highlights.map((item) => (
               <li key={item.label} className="flex items-start gap-3">
@@ -50,6 +57,10 @@ export function PlatformSpotlight({
             <div className="aspect-square rounded-md border border-white/10 bg-white/5" />
             <div className="aspect-square rounded-md border border-white/10 bg-white/5" />
             <div className="aspect-square rounded-md border border-white/10 bg-white/5" />
+          </div>
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            <div className="h-10 rounded-md border border-white/10 bg-white/5" />
+            <div className="h-10 rounded-md border border-white/10 bg-white/5" />
           </div>
         </div>
       </Container>

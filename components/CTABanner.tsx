@@ -17,7 +17,7 @@ export function CTABanner({ heading, subheading, cta }: CTABannerProps) {
         {subheading ? (
           <p className="max-w-[48ch] text-[15px] text-band-deep-muted">{subheading}</p>
         ) : null}
-        <Button href={cta.href} variant="primary" size="hero" className="w-full sm:w-auto">
+        <Button href={cta.href} variant="primary" size="hero" arrow className="w-full sm:w-auto">
           {cta.label}
         </Button>
       </Container>

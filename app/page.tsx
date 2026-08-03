@@ -3,7 +3,7 @@ import { AccountTeam } from "@/components/AccountTeam";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
+import { Hero, HeroBrandVisual } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
@@ -27,13 +27,15 @@ export default function HomePage() {
         <Hero
           eyebrow={c.hero.eyebrow}
           headline={c.hero.headline}
+          highlightWord={c.hero.highlightWord}
           subheadline={c.hero.subheadline}
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
           consultationNote={c.hero.consultationNote}
-          visualCaption={c.hero.visualCaption}
+          brandLayout
+          visual={<HeroBrandVisual />}
         />
-        <TrustBar items={c.trust} />
+        <TrustBar items={c.trust} variant="brand" />
         <SplitOfferings
           heading={c.split.heading}
           subheading={c.split.subheading}

@@ -10,11 +10,17 @@ export type BenefitItem = {
 type BenefitCardsProps = {
   heading: string;
   subheading?: string;
+  footerNote?: string;
   items: BenefitItem[];
 };
 
 /** Open / light card treatment for differentiator blocks */
-export function BenefitCards({ heading, subheading, items }: BenefitCardsProps) {
+export function BenefitCards({
+  heading,
+  subheading,
+  footerNote,
+  items,
+}: BenefitCardsProps) {
   return (
     <Section band="paper">
       <Container className="py-[clamp(56px,6.5vw,92px)]">
@@ -39,6 +45,11 @@ export function BenefitCards({ heading, subheading, items }: BenefitCardsProps) 
             </li>
           ))}
         </ul>
+        {footerNote ? (
+          <p className="mt-8 max-w-[68ch] text-[14px] leading-[1.55] text-neutral-600">
+            {footerNote}
+          </p>
+        ) : null}
       </Container>
     </Section>
   );

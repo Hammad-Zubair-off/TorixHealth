@@ -1,5 +1,6 @@
 import { Container, Section } from "@/components/Container";
 import { Icon, type IconName } from "@/components/icons";
+import { cn } from "@/lib/utils";
 
 export type TrustItem = {
   icon: IconName;
@@ -9,9 +10,43 @@ export type TrustItem = {
 
 type TrustBarProps = {
   items: TrustItem[];
+  /** Deep-purple rounded bar matching brand mockup (Home). */
+  variant?: "default" | "brand";
 };
 
-export function TrustBar({ items }: TrustBarProps) {
+export function TrustBar({ items, variant = "default" }: TrustBarProps) {
+  if (variant === "brand") {
+    return (
+      <Section band="none" className="relative z-10 -mt-10 pb-6 md:-mt-14 md:pb-8">
+        <Container>
+          <ul
+            className={cn(
+              "m-0 grid list-none grid-cols-2 gap-6 rounded-2xl bg-gradient-to-br from-band-deep to-band-deep-2 px-5 py-7 text-band-deep-text shadow-lg sm:gap-8 sm:px-8 sm:py-8 md:grid-cols-4 md:gap-6 md:px-10 md:py-9",
+            )}
+          >
+            {items.map((item) => (
+              <li key={item.label} className="flex flex-col items-start gap-3 sm:flex-row sm:items-start">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white">
+                  <Icon name={item.icon} size={18} />
+                </span>
+                <div>
+                  <span className="block text-[13px] font-semibold leading-snug text-white sm:text-[14px]">
+                    {item.label}
+                  </span>
+                  {item.description ? (
+                    <span className="mt-1 block text-[12px] leading-snug text-band-deep-muted">
+                      {item.description}
+                    </span>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+    );
+  }
+
   return (
     <Section band="paper" className="border-y border-divider">
       <Container className="py-7">

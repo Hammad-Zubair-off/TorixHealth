@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
@@ -100,9 +102,34 @@ function HamburgerIcon({ open }: { open: boolean }) {
   );
 }
 
+function BrandLogo({ className }: { className?: string }) {
+  return (
+    <Link
+      href="/"
+      className={cn(
+        "mr-auto inline-flex items-center gap-2.5 no-underline",
+        className,
+      )}
+    >
+      <Image
+        src="/brand/logo-mark.png"
+        alt=""
+        width={36}
+        height={30}
+        className="h-[30px] w-auto"
+        priority
+      />
+      <span className="font-[family-name:var(--font-heading)] text-[15px] font-semibold tracking-[0.04em] text-text sm:text-[16px]">
+        TORIX SOLUTIONS
+      </span>
+    </Link>
+  );
+}
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!mobileOpen) setOpenGroup(null);
@@ -112,17 +139,12 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-divider bg-[color-mix(in_srgb,var(--band-paper)_90%,transparent)] backdrop-blur-[12px]">
       <Container
         as="nav"
-        className="flex flex-wrap items-center gap-4 py-4"
+        className="flex flex-wrap items-center gap-4 py-3.5"
         aria-label="Primary"
       >
-        <Link
-          href="/"
-          className="mr-auto font-[family-name:var(--font-heading)] text-[19px] font-semibold tracking-[-0.02em] text-text no-underline"
-        >
-          TORIX
-        </Link>
+        <BrandLogo />
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-0.5 lg:flex">
           {mainNav.map((item) =>
             isGroup(item) ? (
               <DesktopDropdown key={item.label} item={item} />
@@ -130,7 +152,12 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-md px-2 py-1.5 text-[14px] font-medium text-text no-underline transition-colors duration-150 hover:bg-accent-100 hover:text-accent-700"
+                className={cn(
+                  "relative rounded-md px-2.5 py-1.5 text-[14px] font-medium no-underline transition-colors duration-150",
+                  pathname === item.href
+                    ? "text-accent-700 after:absolute after:inset-x-2.5 after:bottom-0 after:h-[2px] after:rounded-full after:bg-accent"
+                    : "text-text hover:bg-accent-100 hover:text-accent-700",
+                )}
               >
                 {item.label}
               </Link>
@@ -139,7 +166,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Button href="/contact" variant="primary">
+          <Button href="/contact" variant="primary" arrow>
             Book a Consultation
           </Button>
         </div>
@@ -225,7 +252,10 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="border-b border-divider py-3 text-[15px] font-medium text-text no-underline transition-colors duration-150 hover:text-accent-700"
+                  className={cn(
+                    "border-b border-divider py-3 text-[15px] font-medium no-underline transition-colors duration-150 hover:text-accent-700",
+                    pathname === item.href ? "text-accent-700" : "text-text",
+                  )}
                   tabIndex={mobileOpen ? 0 : -1}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -234,7 +264,7 @@ export function Navbar() {
               ),
             )}
             <div className="pt-3">
-              <Button href="/contact" variant="primary" className="w-full">
+              <Button href="/contact" variant="primary" arrow className="w-full">
                 Book a Consultation
               </Button>
             </div>

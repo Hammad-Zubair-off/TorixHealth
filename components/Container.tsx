@@ -38,7 +38,7 @@ const bands: Record<NonNullable<SectionProps["band"]>, string> = {
   paper: "bg-band-paper",
   tint: "bg-band-tint",
   deep: "bg-gradient-to-br from-band-deep to-band-deep-2 text-band-deep-text",
-  wash: "bg-[linear-gradient(170deg,var(--color-accent-200)_0%,var(--color-bg)_62%)]",
+  wash: "bg-[radial-gradient(ellipse_80%_60%_at_85%_35%,rgba(107,77,230,0.14),transparent_55%),radial-gradient(ellipse_50%_45%_at_12%_80%,rgba(107,77,230,0.08),transparent_50%),linear-gradient(170deg,#ebe6ff_0%,var(--color-bg)_58%,#f8f7ff_100%)]",
 };
 
 export function Section({

@@ -36,7 +36,7 @@ export function SplitOfferings({
             <p className="mb-6 flex-1 text-[14px] leading-[1.55] text-neutral-600">
               {servicesCard.description}
             </p>
-            <Button href={servicesCard.cta.href} variant="outline" className="self-start">
+            <Button href={servicesCard.cta.href} variant="primary" arrow className="self-start">
               {servicesCard.cta.label}
             </Button>
           </article>

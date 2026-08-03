@@ -20,62 +20,213 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 ## Shared chrome & primitives
 
-| Component | Path |
-|-----------|------|
-| Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) | Animated hamburger → X; smooth mobile panel / submenu expand |
+| Component | Path | Notes |
+|-----------|------|-------|
+| Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) | Brand logo mark + TORIX SOLUTIONS wordmark; active Home underline; solid CTA with arrow; animated hamburger → X |
 | Footer | [`components/Footer.tsx`](../components/Footer.tsx) |
-| Button | [`components/Button.tsx`](../components/Button.tsx) | primary filled accent; secondary / outline / ghost + lift hover |
-| Container / Section / Kicker | [`components/Container.tsx`](../components/Container.tsx) |
-| Icons | [`components/icons.tsx`](../components/icons.tsx) |
+| Button | [`components/Button.tsx`](../components/Button.tsx) | primary filled accent (~`#6B4DE6`); optional `arrow`; secondary / outline / ghost + lift hover |
+| Container / Section / Kicker | [`components/Container.tsx`](../components/Container.tsx) | `wash` band uses lavender radial wash |
+| Icons | [`components/icons.tsx`](../components/icons.tsx) | includes `headphones` for brand trust bar |
 | Nav config | [`lib/nav.ts`](../lib/nav.ts) |
 | `cn` util | [`lib/utils.ts`](../lib/utils.ts) |
 | Card motion | `.card-lift` / `.card-lift-light` / `.card-lift-deep` in globals |
+| Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png` cropped from `referenceUI/brand images.png` |
 
 ## Section components
 
 | Component | Path | Notes |
 |-----------|------|-------|
-| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash band; filled primary CTA; bordered CTA group |
-| TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | Quiet strip with hover chips; no stats |
-| IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | Feature / denial grids; light/deep/open |
-| SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing |
+| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout` (no bordered CTA group; primary + outline); `HeroBrandVisual` (doctor + floating placeholder cards) |
+| TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-purple rounded stats bar (Home uses sample metrics pending final review) |
+| IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote` |
+| SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
 | ServicesOverview | [`components/ServicesOverview.tsx`](../components/ServicesOverview.tsx) | Services (light) + Solutions (deep) |
 | AccountTeam | [`components/AccountTeam.tsx`](../components/AccountTeam.tsx) | Named-contact / pending photos |
-| BenefitCards | [`components/BenefitCards.tsx`](../components/BenefitCards.tsx) | Reusable differentiator blocks |
-| PlatformSpotlight | [`components/PlatformSpotlight.tsx`](../components/PlatformSpotlight.tsx) | Available; not on current Home |
+| BenefitCards | [`components/BenefitCards.tsx`](../components/BenefitCards.tsx) | Differentiator blocks; optional `footerNote` |
+| PlatformSpotlight | [`components/PlatformSpotlight.tsx`](../components/PlatformSpotlight.tsx) | Deep split overview; optional `description`; abstract module visual |
 | ProcessTimeline | [`components/ProcessTimeline.tsx`](../components/ProcessTimeline.tsx) | Numbered steps; stacks on mobile |
 | FAQAccordion | [`components/FAQAccordion.tsx`](../components/FAQAccordion.tsx) | Native details/summary |
-| CTABanner | [`components/CTABanner.tsx`](../components/CTABanner.tsx) | Closing deep band |
+| CTABanner | [`components/CTABanner.tsx`](../components/CTABanner.tsx) | Closing deep band; primary CTA with arrow |
+| ComingSoon | [`components/ComingSoon.tsx`](../components/ComingSoon.tsx) | Full-page stub for unfinished routes; swap for real content when ready |
+| NotFoundView | [`components/NotFoundView.tsx`](../components/NotFoundView.tsx) | Branded 404 body used by `app/not-found.tsx` |
 | TeamMemberCard | [`components/TeamMemberCard.tsx`](../components/TeamMemberCard.tsx) | About Us / AccountTeam |
+
+## Status & error routes
+
+| File | Path | Notes |
+|------|------|-------|
+| Not found | [`app/not-found.tsx`](../app/not-found.tsx) | Unknown URLs |
+| Error boundary | [`app/error.tsx`](../app/error.tsx) | Runtime exceptions; Try again + home |
+| Coming-soon metadata | [`lib/coming-soon.ts`](../lib/coming-soon.ts) | Shared title/description for stubs |
 
 ## Content modules
 
 | Module | Path |
 |--------|------|
 | Homepage copy | [`content/home.ts`](../content/home.ts) |
+| Medical Billing copy | [`content/medical-billing.ts`](../content/medical-billing.ts) |
+| Revenue Cycle Management copy | [`content/revenue-cycle-management.ts`](../content/revenue-cycle-management.ts) |
+| Medical Coding copy | [`content/medical-coding.ts`](../content/medical-coding.ts) |
+| Credentialing copy | [`content/credentialing.ts`](../content/credentialing.ts) |
+| Medical Audit copy | [`content/medical-audit.ts`](../content/medical-audit.ts) |
+| Clearinghouse copy | [`content/clearinghouse.ts`](../content/clearinghouse.ts) |
+| Medical Billing Software copy | [`content/medical-billing-software.ts`](../content/medical-billing-software.ts) |
+| Healthcare Platform copy | [`content/healthcare-platform.ts`](../content/healthcare-platform.ts) |
+| HIPAA-Compliant Software copy | [`content/hipaa-compliant-software.ts`](../content/hipaa-compliant-software.ts) |
 
 ## Homepage section order
 
 1. Navbar  
 2. Hero  
-3. TrustBar (named rep / BAA / in-house software / US-based)  
-4. SplitOfferings (“Two things we do…”)  
-5. ServicesOverview (Healthcare services + Software we wrote…)  
+3. TrustBar  
+4. SplitOfferings  
+5. ServicesOverview  
 6. IconFeatureGrid (denials)  
-7. ProcessTimeline (How onboarding runs)  
+7. ProcessTimeline  
 8. AccountTeam  
 9. FAQAccordion  
 10. CTABanner  
 11. Footer  
 
-**Copy source:** [`content/home.ts`](../content/home.ts) from Nocturne Light reference (em-dash phrasing cleaned).
+## Medical Billing section order (`/services/medical-billing`)
 
-**Intentionally omitted:** Testimonials; Healthcare SEO in nav/footer; invented stats.
+1. Navbar  
+2. Hero (breadcrumb + Healthcare Service kicker)  
+3. IconFeatureGrid — What's included (paper + footerNote)  
+4. IconFeatureGrid — Problems we solve (deep)  
+5. ProcessTimeline — How it works  
+6. BenefitCards — Why choose us (+ footerNote)  
+7. FAQAccordion  
+8. CTABanner  
+9. Footer  
+
+## Revenue Cycle Management section order (`/services/revenue-cycle-management`)
+
+1. Navbar  
+2. Hero (breadcrumb + distinction note vs Medical Billing)  
+3. IconFeatureGrid — What's included / stages (paper + footerNote → Medical Billing)  
+4. IconFeatureGrid — Problems we solve (deep)  
+5. ProcessTimeline — How it works  
+6. BenefitCards — Benefits  
+7. IconFeatureGrid — Why choose us (tint trust grid)  
+8. FAQAccordion  
+9. CTABanner  
+10. Footer  
+
+## Medical Coding section order (`/services/medical-coding`)
+
+1. Navbar  
+2. Hero (breadcrumb + standalone/bundled note)  
+3. IconFeatureGrid — What's included (paper)  
+4. IconFeatureGrid — Problems we solve (deep)  
+5. ProcessTimeline — How accuracy is maintained  
+6. BenefitCards — Benefits  
+7. IconFeatureGrid — Why choose us (tint trust grid)  
+8. FAQAccordion  
+9. CTABanner  
+10. Footer  
+
+## Credentialing section order (`/services/credentialing`)
+
+1. Navbar  
+2. Hero (breadcrumb + enrollment / recredentialing note)  
+3. IconFeatureGrid — What's included (paper)  
+4. IconFeatureGrid — Problems we solve (deep)  
+5. ProcessTimeline — How it works  
+6. BenefitCards — Benefits  
+7. IconFeatureGrid — Why choose us (tint trust grid)  
+8. FAQAccordion  
+9. CTABanner  
+10. Footer  
+
+## Medical Audit section order (`/services/medical-audit`)
+
+1. Navbar  
+2. Hero (breadcrumb + independent-review note; CTA “Request an Audit”)  
+3. IconFeatureGrid — What's included (paper)  
+4. IconFeatureGrid — Why get an audit (deep)  
+5. ProcessTimeline — How the audit works  
+6. BenefitCards — What you receive (deliverables)  
+7. IconFeatureGrid — Why choose us (tint trust grid)  
+8. FAQAccordion  
+9. CTABanner (“Request an Audit”)  
+10. Footer  
+
+## Clearinghouse section order (`/services/clearinghouse`)
+
+1. Navbar  
+2. Hero (breadcrumb + validation-before-submission note)  
+3. IconFeatureGrid — What's included (paper + footerNote)  
+4. IconFeatureGrid — Problems we solve (deep)  
+5. ProcessTimeline — How it works  
+6. BenefitCards — Benefits  
+7. IconFeatureGrid — Why choose us (tint trust grid)  
+8. FAQAccordion  
+9. CTABanner  
+10. Footer  
+
+## Medical Billing Software section order (`/solutions/medical-billing-software`)
+
+1. Navbar  
+2. Hero (Solutions breadcrumb; Healthcare Technology; Request a Demo)  
+3. IconFeatureGrid — What the software does (paper)  
+4. IconFeatureGrid — Problems it solves (deep)  
+5. ProcessTimeline — How it works  
+6. BenefitCards — Benefits  
+7. IconFeatureGrid — Why choose our software (tint)  
+8. FAQAccordion  
+9. CTABanner (Request a Demo)  
+10. Footer  
+
+## Healthcare Platform section order (`/solutions/healthcare-platform`)
+
+1. Navbar  
+2. Hero (Solutions breadcrumb; Request a Platform Demo)  
+3. PlatformSpotlight — Platform overview (deep split)  
+4. IconFeatureGrid — Core capabilities (paper, 7 cards)  
+5. IconFeatureGrid — Why choose a unified platform (deep)  
+6. ProcessTimeline — How onboarding works  
+7. IconFeatureGrid — Why choose our platform (tint)  
+8. FAQAccordion  
+9. CTABanner (Request a Platform Demo)  
+10. Footer  
+
+## HIPAA-Compliant Software section order (`/solutions/hipaa-compliant-software`)
+
+1. Navbar  
+2. Hero (Solutions breadcrumb; Learn About Our Compliance Practices)  
+3. IconFeatureGrid — What HIPAA compliance means (paper)  
+4. IconFeatureGrid — Why HIPAA compliance matters (deep)  
+5. ProcessTimeline — How we maintain compliance  
+6. IconFeatureGrid — Why choose our HIPAA-compliant platform (tint)  
+7. FAQAccordion  
+8. CTABanner  
+9. Footer  
+
+**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution pages from design briefs.
+
+**Intentionally omitted:** Testimonials; Healthcare SEO in nav/footer. Sample stats/names on Home are dummy data for layout — revise before launch.
+
+## Brand mockup notes (Home)
+
+- Accent token ~`#6B4DE6`; deep bands use brand purple (`--band-deep`).
+- Nav + Hero + TrustBar `brand` aim for pixel-close fidelity to the approved mockup; lower sections keep structure with aligned buttons/surfaces.
+- Floating hero cards and trust metrics use sample numbers from the mockup until final figures are confirmed.
 
 ## Routes (live)
 
 | Route | Status |
 |-------|--------|
 | `/` | Homepage built |
-| Other service/solution/supporting pages | Not built yet |
-| `/services/healthcare-seo` | Stub only when added — not in nav |
+| `/services/medical-billing` | Live |
+| `/services/revenue-cycle-management` | Live |
+| `/services/medical-coding` | Live |
+| `/services/credentialing` | Live |
+| `/services/medical-audit` | Live |
+| `/services/clearinghouse` | Live |
+| `/solutions/medical-billing-software` | Live |
+| `/solutions/healthcare-platform` | Live |
+| `/solutions/hipaa-compliant-software` | Live |
+| Other nav-linked service/solution/company pages | Coming-soon stubs via [`ComingSoon`](../components/ComingSoon.tsx) |
+| `/services/healthcare-seo` | Stub (“Under review”); not in nav; `noindex` |
+| Unknown paths | [`app/not-found.tsx`](../app/not-found.tsx) |

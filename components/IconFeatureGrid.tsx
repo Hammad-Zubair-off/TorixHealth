@@ -8,12 +8,15 @@ export type FeatureItem = {
   title: string;
   description?: string;
   href?: string;
+  /** Link label when `href` is set. Defaults to “Explore →”. */
+  ctaLabel?: string;
 };
 
 type IconFeatureGridProps = {
   kicker?: string;
   heading: string;
   subheading?: string;
+  footerNote?: string;
   items: FeatureItem[];
   variant?: "light" | "deep" | "open";
   band?: "bg" | "paper" | "tint" | "deep" | "none";
@@ -25,6 +28,7 @@ export function IconFeatureGrid({
   kicker,
   heading,
   subheading,
+  footerNote,
   items,
   variant = "light",
   band = "bg",
@@ -104,7 +108,7 @@ export function IconFeatureGrid({
                       deep ? "text-accent-300" : "text-accent-700",
                     )}
                   >
-                    Explore →
+                    {item.ctaLabel ?? "Explore →"}
                   </span>
                 ) : null}
               </>
@@ -132,6 +136,17 @@ export function IconFeatureGrid({
             );
           })}
         </ul>
+
+        {footerNote ? (
+          <p
+            className={cn(
+              "mt-8 max-w-[68ch] text-[14px] leading-[1.55]",
+              deep ? "text-band-deep-muted" : "text-neutral-600",
+            )}
+          >
+            {footerNote}
+          </p>
+        ) : null}
       </Container>
     </Section>
   );

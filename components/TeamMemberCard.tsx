@@ -4,10 +4,18 @@ import { cn } from "@/lib/utils";
 export type MemberCard = {
   name: string;
   role: string;
-  /** TODO: real photo pending */
   photoSrc?: string;
   href?: string;
 };
+
+function initials(name: string) {
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
+}
 
 export function TeamMemberCard({ name, role, photoSrc, href }: MemberCard) {
   const inner = (
@@ -21,8 +29,10 @@ export function TeamMemberCard({ name, role, photoSrc, href }: MemberCard) {
             className="h-full w-full object-cover transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
           />
         ) : (
-          <div className="flex h-full items-center justify-center bg-[repeating-linear-gradient(45deg,rgba(107,92,219,0.07)_0_8px,transparent_8px_16px)] text-[12px] text-neutral-500">
-            [PLACEHOLDER: Photo]
+          <div className="flex h-full items-center justify-center bg-[linear-gradient(150deg,var(--color-accent-100),var(--band-paper)_70%)]">
+            <span className="font-[family-name:var(--font-heading)] text-[28px] font-semibold tracking-wide text-accent-700">
+              {initials(name)}
+            </span>
           </div>
         )}
       </div>
