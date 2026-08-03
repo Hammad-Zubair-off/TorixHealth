@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 export type MemberCard = {
   name: string;
   role: string;
+  bio?: string;
   photoSrc?: string;
   href?: string;
 };
@@ -17,7 +18,7 @@ function initials(name: string) {
     .join("");
 }
 
-export function TeamMemberCard({ name, role, photoSrc, href }: MemberCard) {
+export function TeamMemberCard({ name, role, bio, photoSrc, href }: MemberCard) {
   const inner = (
     <>
       <div className="mb-4 aspect-[4/5] w-full overflow-hidden rounded-md border border-divider bg-neutral-200 transition-[border-color,box-shadow] duration-200 group-hover:border-accent-300 group-hover:shadow-md">
@@ -40,6 +41,9 @@ export function TeamMemberCard({ name, role, photoSrc, href }: MemberCard) {
         {name}
       </h3>
       <p className="text-[13px] text-neutral-600">{role}</p>
+      {bio ? (
+        <p className="mt-2 text-[13px] leading-snug text-neutral-600">{bio}</p>
+      ) : null}
     </>
   );
 

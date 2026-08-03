@@ -49,7 +49,11 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | CTABanner | [`components/CTABanner.tsx`](../components/CTABanner.tsx) | Closing deep band; primary CTA with arrow |
 | ComingSoon | [`components/ComingSoon.tsx`](../components/ComingSoon.tsx) | Full-page stub for unfinished routes; swap for real content when ready |
 | NotFoundView | [`components/NotFoundView.tsx`](../components/NotFoundView.tsx) | Branded 404 body used by `app/not-found.tsx` |
-| TeamMemberCard | [`components/TeamMemberCard.tsx`](../components/TeamMemberCard.tsx) | About Us / AccountTeam |
+| ProseSection | [`components/ProseSection.tsx`](../components/ProseSection.tsx) | Multi-paragraph story / about copy; mobile-first |
+| JobOpenings | [`components/JobOpenings.tsx`](../components/JobOpenings.tsx) | Careers openings grid; location + employment type; Apply links |
+| ContactPanel | [`components/ContactPanel.tsx`](../components/ContactPanel.tsx) | Contact info + hours + form layout; stacks on mobile |
+| ContactForm | [`components/ContactForm.tsx`](../components/ContactForm.tsx) | Client form; front-end submit until API/email wired |
+| TeamMemberCard | [`components/TeamMemberCard.tsx`](../components/TeamMemberCard.tsx) | About Us / AccountTeam; optional `bio` |
 
 ## Status & error routes
 
@@ -73,6 +77,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Medical Billing Software copy | [`content/medical-billing-software.ts`](../content/medical-billing-software.ts) |
 | Healthcare Platform copy | [`content/healthcare-platform.ts`](../content/healthcare-platform.ts) |
 | HIPAA-Compliant Software copy | [`content/hipaa-compliant-software.ts`](../content/hipaa-compliant-software.ts) |
+| About Us copy | [`content/about.ts`](../content/about.ts) |
+| Careers copy | [`content/careers.ts`](../content/careers.ts) |
+| Contact copy | [`content/contact.ts`](../content/contact.ts) |
 
 ## Homepage section order
 
@@ -203,7 +210,47 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 8. CTABanner  
 9. Footer  
 
-**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution pages from design briefs.
+## About Us section order (`/about`)
+
+1. Navbar  
+2. Hero — Who we are  
+3. ProseSection — Our story  
+4. BenefitCards — Mission & vision  
+5. IconFeatureGrid — Why healthcare & technology (deep; links to live services/solutions)  
+6. BenefitCards — Our values  
+7. AccountTeam — Meet our team  
+8. IconFeatureGrid — Why choose Torix Solutions (tint)  
+9. CTABanner  
+10. Footer  
+
+## Careers section order (`/careers`)
+
+1. Navbar  
+2. Hero — Build the future… (CTA jumps to `#openings`)  
+3. IconFeatureGrid — Why join (paper)  
+4. IconFeatureGrid — What we do (deep)  
+5. ProseSection — Life at Torix  
+6. IconFeatureGrid — Culture pillars (tint)  
+7. BenefitCards — Benefits  
+8. JobOpenings — Current openings (`#openings`)  
+9. ProcessTimeline — Hiring process  
+10. IconFeatureGrid — Values (tint)  
+11. CTABanner — Apply Now  
+12. Footer  
+
+## Contact Us section order (`/contact`)
+
+1. Navbar  
+2. Hero — Let's start the conversation  
+3. IconFeatureGrid — How can we help  
+4. ContactPanel — Info, hours & message form (`#get-in-touch`)  
+5. CTABanner — Request a consultation (`#consultation`)  
+6. IconFeatureGrid — Why contact Torix (tint)  
+7. FAQAccordion  
+8. CTABanner — Ready to connect  
+9. Footer  
+
+**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution/about/careers/contact pages from design briefs. Sample office phone/email/address on Contact — revise before launch.
 
 **Intentionally omitted:** Testimonials; Healthcare SEO in nav/footer. Sample stats/names on Home are dummy data for layout — revise before launch.
 
@@ -227,6 +274,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | `/solutions/medical-billing-software` | Live |
 | `/solutions/healthcare-platform` | Live |
 | `/solutions/hipaa-compliant-software` | Live |
-| Other nav-linked service/solution/company pages | Coming-soon stubs via [`ComingSoon`](../components/ComingSoon.tsx) |
+| `/about` | Live |
+| `/careers` | Live |
+| `/contact` | Live |
+| `/resources/blog` | Coming-soon stub |
 | `/services/healthcare-seo` | Stub (“Under review”); not in nav; `noindex` |
 | Unknown paths | [`app/not-found.tsx`](../app/not-found.tsx) |
