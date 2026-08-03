@@ -9,7 +9,7 @@ export type NavGroup = {
   children: NavLink[];
 };
 
-/** Exact nav structure — Healthcare SEO intentionally excluded */
+/** Exact nav structure — Healthcare SEO and Resources/Blog intentionally excluded for now */
 export const mainNav: Array<NavLink | NavGroup> = [
   { label: "Home", href: "/" },
   {
@@ -34,10 +34,6 @@ export const mainNav: Array<NavLink | NavGroup> = [
       { label: "HIPAA Compliance", href: "/solutions/hipaa-compliant-software" },
     ],
   },
-  {
-    label: "Resources",
-    children: [{ label: "Blog", href: "/resources/blog" }],
-  },
   { label: "About Us", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
@@ -60,7 +56,6 @@ export const footerNav = {
   company: [
     { label: "About Us", href: "/about" },
     { label: "Careers", href: "/careers" },
-    { label: "Blog", href: "/resources/blog" },
   ],
   contact: [{ label: "Contact Us", href: "/contact" }],
 };

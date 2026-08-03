@@ -3,6 +3,7 @@ import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { ContactDetail } from "@/components/ContactPanel";
 import type { ContactServiceOption } from "@/components/ContactForm";
 import type { IconName } from "@/components/icons";
+import { siteContact } from "@/lib/site-contact";
 
 /** Contact Us page — form is front-end only until email/API is wired. */
 export const contactContent = {
@@ -95,7 +96,7 @@ export const contactContent = {
   panel: {
     heading: "Contact information",
     subheading: "Reach us directly, or send a message with the form.",
-    // Sample details — replace with final office info before launch.
+    // Office address is still sample — replace with final address before launch.
     details: [
       {
         icon: "mapPin" as IconName,
@@ -105,14 +106,14 @@ export const contactContent = {
       {
         icon: "headphones" as IconName,
         label: "Phone",
-        value: "(512) 555-0198",
-        href: "tel:+15125550198",
+        value: siteContact.phone.label,
+        href: siteContact.phone.href,
       },
       {
         icon: "fileText" as IconName,
         label: "Email",
-        value: "hello@torixsolutions.com",
-        href: "mailto:hello@torixsolutions.com",
+        value: siteContact.email.label,
+        href: siteContact.email.href,
       },
     ] satisfies ContactDetail[],
     hours: [

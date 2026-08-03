@@ -8,6 +8,7 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Icon } from "@/components/icons";
 import { mainNav, type NavGroup, type NavLink } from "@/lib/nav";
+import { siteContact } from "@/lib/site-contact";
 import { cn } from "@/lib/utils";
 
 function isGroup(item: NavLink | NavGroup): item is NavGroup {
@@ -137,6 +138,24 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-divider bg-[color-mix(in_srgb,var(--band-paper)_90%,transparent)] backdrop-blur-[12px]">
+      <div className="border-b border-divider bg-band-paper/80">
+        <Container className="flex flex-wrap items-center justify-end gap-x-5 gap-y-1 py-2 text-[12px] text-neutral-600">
+          <a
+            href={siteContact.phone.href}
+            className="inline-flex items-center gap-1.5 no-underline transition-colors hover:text-accent-700"
+          >
+            <Icon name="headphones" size={14} className="text-accent" />
+            <span>{siteContact.phone.label}</span>
+          </a>
+          <a
+            href={siteContact.email.href}
+            className="inline-flex items-center gap-1.5 no-underline transition-colors hover:text-accent-700"
+          >
+            <Icon name="fileText" size={14} className="text-accent" />
+            <span className="break-all">{siteContact.email.label}</span>
+          </a>
+        </Container>
+      </div>
       <Container
         as="nav"
         className="flex flex-wrap items-center gap-4 py-3.5"

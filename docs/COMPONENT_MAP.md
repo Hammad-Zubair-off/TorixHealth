@@ -22,12 +22,13 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 | Component | Path | Notes |
 |-----------|------|-------|
-| Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) | Brand logo mark + TORIX SOLUTIONS wordmark; active Home underline; solid CTA with arrow; animated hamburger → X |
-| Footer | [`components/Footer.tsx`](../components/Footer.tsx) |
+| Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) | Top contact strip (phone/email); brand logo + TORIX SOLUTIONS; active Home underline; solid CTA with arrow; animated hamburger → X |
+| Footer | [`components/Footer.tsx`](../components/Footer.tsx) | Brand column + Contact column include phone/email |
 | Button | [`components/Button.tsx`](../components/Button.tsx) | primary filled accent (~`#6B4DE6`); optional `arrow`; secondary / outline / ghost + lift hover |
 | Container / Section / Kicker | [`components/Container.tsx`](../components/Container.tsx) | `wash` band uses lavender radial wash |
 | Icons | [`components/icons.tsx`](../components/icons.tsx) | includes `headphones` for brand trust bar |
 | Nav config | [`lib/nav.ts`](../lib/nav.ts) |
+| Site phone / email | [`lib/site-contact.ts`](../lib/site-contact.ts) |
 | `cn` util | [`lib/utils.ts`](../lib/utils.ts) |
 | Card motion | `.card-lift` / `.card-lift-light` / `.card-lift-deep` in globals |
 | Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png`; favicons from logo → [`app/favicon.ico`](../app/favicon.ico), [`app/icon.png`](../app/icon.png), [`app/apple-icon.png`](../app/apple-icon.png) |
@@ -36,7 +37,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 | Component | Path | Notes |
 |-----------|------|-------|
-| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout` (no bordered CTA group; primary + outline); `HeroBrandVisual` (doctor + floating placeholder cards) |
+| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout` (no bordered CTA group; primary + outline); `HeroBrandVisual` (doctor + Claims/A/R floating cards; Billing Overview removed) |
 | TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-purple rounded stats bar (Home uses sample metrics pending final review) |
 | IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote`; grid `1→2→3` cols |
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
@@ -248,9 +249,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 8. CTABanner — Ready to connect  
 9. Footer  
 
-**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution/about/careers/contact pages from design briefs. Sample office phone/email/address on Contact — revise before launch.
+**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution/about/careers/contact pages from design briefs. Contact phone/email are live (`lib/site-contact.ts`); office address on Contact is still sample — revise before launch.
 
-**Intentionally omitted:** Testimonials; Healthcare SEO in nav/footer. Sample stats/names on Home are dummy data for layout — revise before launch.
+**Intentionally omitted:** Testimonials; Healthcare SEO in nav/footer; Resources/Blog in nav/footer for now (route stub remains). Sample stats/names on Home are dummy data for layout — revise before launch.
 
 ## Brand mockup notes (Home)
 
@@ -275,6 +276,6 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | `/about` | Live |
 | `/careers` | Live |
 | `/contact` | Live |
-| `/resources/blog` | Coming-soon stub |
+| `/resources/blog` | Coming-soon stub; not in nav/footer |
 | `/services/healthcare-seo` | Stub (“Under review”); not in nav; `noindex` |
 | Unknown paths | [`app/not-found.tsx`](../app/not-found.tsx) |

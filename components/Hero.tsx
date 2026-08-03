@@ -187,29 +187,6 @@ export function HeroBrandVisual() {
 
       {/* Floating UI cards — sample demo metrics (revise later) */}
       <div className="pointer-events-none absolute inset-0 z-[2]">
-        {/* Billing Overview — top left */}
-        <div className="absolute left-0 top-[6%] w-[min(196px,46%)] animate-[faqIn_500ms_ease-out] rounded-xl border border-white/80 bg-band-paper/95 p-3 shadow-lg backdrop-blur-sm sm:left-[-6%] sm:top-[10%] sm:w-[200px] sm:p-3.5">
-          <div className="mb-2 flex items-center gap-1.5 text-[11px] font-semibold text-neutral-700">
-            <Icon name="activity" size={14} className="text-accent" />
-            Billing Overview
-          </div>
-          <p className="font-[family-name:var(--font-heading)] text-[15px] font-semibold leading-tight text-accent sm:text-[17px]">
-            $387,430.00
-          </p>
-          <div className="mt-2 flex h-8 items-end gap-0.5" aria-hidden="true">
-            {[40, 55, 35, 70, 50, 85, 60, 90].map((h, i) => (
-              <span
-                key={i}
-                className="flex-1 rounded-sm bg-accent-200"
-                style={{ height: `${h}%` }}
-              />
-            ))}
-          </div>
-          <p className="mt-1.5 text-[10px] font-medium text-emerald-600">
-            ↑ 18.6%
-          </p>
-        </div>
-
         {/* Claims — bottom left */}
         <div className="absolute bottom-[20%] left-0 hidden w-[148px] rounded-xl bg-accent px-3.5 py-3 text-white shadow-lg sm:block sm:bottom-[24%] sm:left-[-4%]">
           <div className="mb-1 flex items-center justify-between text-[11px] font-medium text-white/85">
