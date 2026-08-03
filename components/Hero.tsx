@@ -39,7 +39,7 @@ export function Hero({
           <p className="mb-8 max-w-[46ch] text-[18px] leading-[1.6] text-neutral-800">
             {subheadline}
           </p>
-          <div className="flex flex-wrap items-center gap-[18px]">
+          <div className="inline-flex flex-wrap items-center gap-[18px] rounded-lg border border-accent-300 bg-band-paper/80 p-3 shadow-sm">
             <Button href={primaryCta.href} variant="primary" size="hero">
               {primaryCta.label}
             </Button>

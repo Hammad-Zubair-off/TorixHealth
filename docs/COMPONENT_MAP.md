@@ -22,7 +22,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 | Component | Path |
 |-----------|------|
-| Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) |
+| Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) | Animated hamburger → X; smooth mobile panel / submenu expand |
 | Footer | [`components/Footer.tsx`](../components/Footer.tsx) |
 | Button | [`components/Button.tsx`](../components/Button.tsx) | primary filled accent; secondary / outline / ghost + lift hover |
 | Container / Section / Kicker | [`components/Container.tsx`](../components/Container.tsx) |
@@ -35,7 +35,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 | Component | Path | Notes |
 |-----------|------|-------|
-| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash band; filled primary CTA |
+| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash band; filled primary CTA; bordered CTA group |
 | TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | Quiet strip with hover chips; no stats |
 | IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | Feature / denial grids; light/deep/open |
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing |

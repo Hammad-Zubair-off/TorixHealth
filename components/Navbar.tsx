@@ -40,13 +40,20 @@ function DesktopDropdown({ item }: { item: NavGroup }) {
         onClick={() => setOpen((v) => !v)}
       >
         {item.label}
-        <Icon name="chevronDown" size={14} className={cn(open && "rotate-180")} />
+        <Icon
+          name="chevronDown"
+          size={14}
+          className={cn(
+            "transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
+            open && "rotate-180",
+          )}
+        />
       </button>
       {open ? (
         <div
           id={id}
           role="menu"
-          className="absolute left-0 top-full z-50 min-w-[240px] rounded-md border border-accent-300 bg-band-paper py-2 shadow-md"
+          className="absolute left-0 top-full z-50 min-w-[240px] origin-top animate-[faqIn_180ms_ease-out] rounded-md border border-accent-300 bg-band-paper py-2 shadow-md"
         >
           {item.children.map((child) => (
             <Link
@@ -65,9 +72,41 @@ function DesktopDropdown({ item }: { item: NavGroup }) {
   );
 }
 
+function HamburgerIcon({ open }: { open: boolean }) {
+  const line =
+    "absolute left-1/2 top-1/2 block h-[2px] w-[18px] -translate-x-1/2 rounded-full bg-current transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]";
+
+  return (
+    <span className="relative block h-5 w-5" aria-hidden="true">
+      <span
+        className={cn(
+          line,
+          open ? "translate-y-0 rotate-45" : "-translate-y-[6px] rotate-0",
+        )}
+      />
+      <span
+        className={cn(
+          line,
+          open ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100",
+        )}
+      />
+      <span
+        className={cn(
+          line,
+          open ? "translate-y-0 -rotate-45" : "translate-y-[6px] rotate-0",
+        )}
+      />
+    </span>
+  );
+}
+
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!mobileOpen) setOpenGroup(null);
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-divider bg-[color-mix(in_srgb,var(--band-paper)_90%,transparent)] backdrop-blur-[12px]">
@@ -107,28 +146,41 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md border border-divider bg-band-paper p-2 text-text lg:hidden"
+          className={cn(
+            "inline-flex h-10 w-10 items-center justify-center rounded-md border bg-band-paper text-text lg:hidden",
+            "transition-[border-color,background-color,color,transform,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+            "hover:border-accent-300 hover:bg-accent-100 hover:text-accent-700 active:scale-95",
+            mobileOpen
+              ? "border-accent bg-accent-100 text-accent-700 shadow-sm"
+              : "border-divider",
+          )}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           onClick={() => setMobileOpen((v) => !v)}
         >
-          <Icon name={mobileOpen ? "close" : "menu"} size={20} />
+          <HamburgerIcon open={mobileOpen} />
         </button>
       </Container>
 
-      {mobileOpen ? (
-        <div
-          id="mobile-nav"
-          className="border-t border-divider bg-band-paper lg:hidden"
-        >
+      <div
+        id="mobile-nav"
+        className={cn(
+          "grid overflow-hidden border-divider bg-band-paper transition-[grid-template-rows,border-color,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
+          mobileOpen
+            ? "grid-rows-[1fr] border-t opacity-100"
+            : "grid-rows-[0fr] border-t border-transparent opacity-0",
+        )}
+        aria-hidden={!mobileOpen}
+      >
+        <div className="min-h-0 overflow-hidden">
           <Container className="flex flex-col gap-1 py-4">
             {mainNav.map((item) =>
               isGroup(item) ? (
                 <div key={item.label} className="border-b border-divider py-1">
                   <button
                     type="button"
-                    className="flex w-full items-center justify-between bg-transparent py-3 text-left text-[15px] font-medium text-text"
+                    className="flex w-full items-center justify-between bg-transparent py-3 text-left text-[15px] font-medium text-text transition-colors duration-150 hover:text-accent-700"
                     aria-expanded={openGroup === item.label}
                     onClick={() =>
                       setOpenGroup((g) => (g === item.label ? null : item.label))
@@ -138,29 +190,43 @@ export function Navbar() {
                     <Icon
                       name="chevronDown"
                       size={16}
-                      className={cn(openGroup === item.label && "rotate-180")}
+                      className={cn(
+                        "transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+                        openGroup === item.label && "rotate-180",
+                      )}
                     />
                   </button>
-                  {openGroup === item.label ? (
-                    <div className="flex flex-col gap-1 pb-3 pl-3">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="py-2 text-[14px] text-neutral-700 no-underline"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
+                  <div
+                    className={cn(
+                      "grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+                      openGroup === item.label
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0",
+                    )}
+                  >
+                    <div className="min-h-0 overflow-hidden">
+                      <div className="flex flex-col gap-1 pb-3 pl-3">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            className="rounded-md py-2 pl-1 text-[14px] text-neutral-700 no-underline transition-colors duration-150 hover:bg-accent-100 hover:text-accent-700"
+                            tabIndex={openGroup === item.label ? 0 : -1}
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  ) : null}
+                  </div>
                 </div>
               ) : (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="border-b border-divider py-3 text-[15px] font-medium text-text no-underline"
+                  className="border-b border-divider py-3 text-[15px] font-medium text-text no-underline transition-colors duration-150 hover:text-accent-700"
+                  tabIndex={mobileOpen ? 0 : -1}
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -174,7 +240,7 @@ export function Navbar() {
             </div>
           </Container>
         </div>
-      ) : null}
+      </div>
     </header>
   );
 }
