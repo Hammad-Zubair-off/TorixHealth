@@ -225,16 +225,12 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 ## Contact Us section order (`/contact`)
 
 1. Navbar  
-2. Hero — Let's start the conversation  
-3. IconFeatureGrid — How can we help  
-4. ContactPanel — Info, hours & message form (`#get-in-touch`)  
-5. CTABanner — Request a consultation (`#consultation`)  
-6. IconFeatureGrid — Why contact Torix (tint)  
-7. FAQAccordion  
-8. CTABanner — Ready to connect  
-9. Footer  
+2. ContactPanel — Info, hours & message form (`#get-in-touch`)  
+3. IconFeatureGrid — Why contact Torix (tint)  
+4. FAQAccordion  
+5. Footer  
 
-**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution/about/careers/contact pages from design briefs. Contact phone/email are live (`lib/site-contact.ts`); office address on Contact is still sample — revise before launch.
+**Copy source:** Nocturne Light reference (em-dash phrasing cleaned); service/solution/about/careers/contact pages from design briefs. Contact phone, email, and office address are live (`lib/site-contact.ts` + Contact panel).
 
 **Intentionally omitted:** Testimonials; Healthcare SEO in nav/footer; Resources/Blog in nav/footer for now (route stub remains). Sample stats/names on Home are dummy data for layout — revise before launch.
 

@@ -12,96 +12,15 @@ export const contactContent = {
     description:
       "Contact Torix Solutions for medical billing, healthcare software, revenue cycle management, and compliance questions. Book a consultation or send a message.",
   },
-  hero: {
-    breadcrumb: [
-      { label: "Home", href: "/" },
-      { label: "Contact Us" },
-    ],
-    eyebrow: "Contact",
-    headline: "Let's start the conversation.",
-    subheadline:
-      "Whether you're looking for professional medical billing services, healthcare software, revenue cycle management, or simply have a question about our solutions, our team is here to help.",
-    distinction:
-      "We're committed to providing clear guidance, responsive support, and practical solutions tailored to your healthcare organization.",
-    primaryCta: { label: "Get in Touch Today", href: "#get-in-touch" },
-    secondaryCta: { label: "Book a Consultation", href: "#consultation" },
-  },
-  help: {
-    heading: "How can we help?",
-    subheading:
-      "No matter where you are in your healthcare journey, we're happy to discuss your goals and recommend the right solution.",
-    items: [
-      {
-        icon: "fileText" as IconName,
-        title: "Medical Billing Services",
-        href: "/services/medical-billing",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "clipboard" as IconName,
-        title: "Medical Coding",
-        href: "/services/medical-coding",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "Revenue Cycle Management",
-        href: "/services/revenue-cycle-management",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "building" as IconName,
-        title: "Credentialing",
-        href: "/services/credentialing",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "check" as IconName,
-        title: "Medical Audits",
-        href: "/services/medical-audit",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "A/R Follow-Up",
-        href: "/services/ar-follow-up",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "monitor" as IconName,
-        title: "Medical Billing Software",
-        href: "/solutions/medical-billing-software",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "code" as IconName,
-        title: "Healthcare Platform Solutions",
-        href: "/solutions/healthcare-platform",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "shield" as IconName,
-        title: "HIPAA-Focused Software & Compliance",
-        href: "/solutions/hipaa-compliant-software",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "handshake" as IconName,
-        title: "General Questions & Support",
-        href: "#get-in-touch",
-        ctaLabel: "Contact us →",
-      },
-    ] satisfies FeatureItem[],
-  },
   panel: {
     heading: "Contact information",
     subheading: "Reach us directly, or send a message with the form.",
-    // Office address is still sample — replace with final address before launch.
+    // Office address — West Jordan, UT
     details: [
       {
         icon: "mapPin" as IconName,
         label: "Office Address",
-        value: "100 Healthcare Plaza, Suite 400, Austin, TX 78701",
+        value: "7533 S Center View Ct Ste N, West Jordan, UT 84084",
       },
       {
         icon: "headphones" as IconName,
@@ -136,12 +55,6 @@ export const contactContent = {
     { value: "hipaa", label: "HIPAA-Focused Software & Compliance" },
     { value: "general", label: "General Questions & Support" },
   ] satisfies ContactServiceOption[],
-  consultation: {
-    heading: "Request a consultation",
-    subheading:
-      "Looking for a more in-depth discussion? Schedule a consultation with our team to explore how Torix Solutions can help improve your healthcare operations, billing performance, or technology infrastructure.",
-    cta: { label: "Book a Consultation", href: "#get-in-touch" },
-  },
   whyContact: {
     heading: "Why contact Torix Solutions?",
     subheading:
@@ -203,11 +116,5 @@ export const contactContent = {
           "Yes. We treat all inquiries with professionalism and follow secure practices when handling information shared with us.",
       },
     ] satisfies FAQItem[],
-  },
-  finalCta: {
-    heading: "Ready to connect?",
-    subheading:
-      "Let's discuss how Torix Solutions can support your healthcare organization with trusted services and innovative technology solutions.",
-    cta: { label: "Book a Consultation", href: "#get-in-touch" },
   },
 };
