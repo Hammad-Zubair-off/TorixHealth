@@ -43,7 +43,7 @@ export function ServicesOverview({
           ) : (
             <div className="mb-8" />
           )}
-          <ul className="m-0 grid list-none gap-4 p-0 [grid-template-columns:repeat(auto-fit,minmax(240px,1fr))]">
+          <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((item) => (
               <li key={item.href}>
                 <Link
@@ -78,7 +78,7 @@ export function ServicesOverview({
           <h2 className="mb-8 max-w-[20ch] text-[clamp(26px,2.7vw,34px)] text-band-deep-text">
             {solutionsHeading}
           </h2>
-          <ul className="m-0 grid list-none gap-4 p-0 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]">
+          <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
             {solutions.map((item) => (
               <li key={item.href}>
                 <div className="card-lift card-lift-deep flex h-full flex-col rounded-md border border-white/10 bg-white/5 p-7">

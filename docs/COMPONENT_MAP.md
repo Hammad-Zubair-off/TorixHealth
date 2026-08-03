@@ -6,7 +6,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 - **Modular:** Pages compose prop-driven section components; copy lives in `content/*`; nav in `lib/nav.ts`; tokens in `app/globals.css`.
 - **Maintainable:** Shared primitives (`Button`, `Container`/`Section`/`Kicker`, `Icon`, `card-lift` utilities) — change once, reuse everywhere.
-- **Responsive (mobile-first):** `auto-fit` / `minmax` grids stack on small screens; Navbar collapses to menu; ProcessTimeline goes number-left / content-right on mobile; side padding `clamp(24px, 4vw, 44px)`; container max `1280px`.
+- **Responsive (mobile-first):** Card grids use `1 / 2 / 3` cols (`sm` / `lg`); Navbar collapses to menu; ProcessTimeline stacks on mobile, connected icon row on `lg+`; side padding `clamp(24px, 4vw, 44px)`; container max `1280px`.
 - **Scalable:** New pages reuse the same sections + content modules; do not fork page-specific markup for shared patterns.
 
 ## Design tokens
@@ -30,7 +30,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Nav config | [`lib/nav.ts`](../lib/nav.ts) |
 | `cn` util | [`lib/utils.ts`](../lib/utils.ts) |
 | Card motion | `.card-lift` / `.card-lift-light` / `.card-lift-deep` in globals |
-| Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png` cropped from `referenceUI/brand images.png` |
+| Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png`; favicons from logo → [`app/favicon.ico`](../app/favicon.ico), [`app/icon.png`](../app/icon.png), [`app/apple-icon.png`](../app/apple-icon.png) |
 
 ## Section components
 
@@ -38,14 +38,14 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 |-----------|------|-------|
 | Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout` (no bordered CTA group; primary + outline); `HeroBrandVisual` (doctor + floating placeholder cards) |
 | TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-purple rounded stats bar (Home uses sample metrics pending final review) |
-| IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote` |
+| IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote`; grid `1→2→3` cols |
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
-| ServicesOverview | [`components/ServicesOverview.tsx`](../components/ServicesOverview.tsx) | Services (light) + Solutions (deep) |
+| ServicesOverview | [`components/ServicesOverview.tsx`](../components/ServicesOverview.tsx) | Services (light) + Solutions (deep); grid `1→2→3` cols |
 | AccountTeam | [`components/AccountTeam.tsx`](../components/AccountTeam.tsx) | Named-contact / pending photos |
 | BenefitCards | [`components/BenefitCards.tsx`](../components/BenefitCards.tsx) | Differentiator blocks; optional `footerNote` |
 | PlatformSpotlight | [`components/PlatformSpotlight.tsx`](../components/PlatformSpotlight.tsx) | Deep split overview; optional `description`; abstract module visual |
-| ProcessTimeline | [`components/ProcessTimeline.tsx`](../components/ProcessTimeline.tsx) | Numbered steps; stacks on mobile |
-| FAQAccordion | [`components/FAQAccordion.tsx`](../components/FAQAccordion.tsx) | Native details/summary |
+| ProcessTimeline | [`components/ProcessTimeline.tsx`](../components/ProcessTimeline.tsx) | Centered kicker heading; purple icon nodes + connector line/dots; stacks on mobile |
+| FAQAccordion | [`components/FAQAccordion.tsx`](../components/FAQAccordion.tsx) | Two-col FAQ + accordion cards; native details/summary |
 | CTABanner | [`components/CTABanner.tsx`](../components/CTABanner.tsx) | Closing deep band; primary CTA with arrow |
 | ComingSoon | [`components/ComingSoon.tsx`](../components/ComingSoon.tsx) | Full-page stub for unfinished routes; swap for real content when ready |
 | NotFoundView | [`components/NotFoundView.tsx`](../components/NotFoundView.tsx) | Branded 404 body used by `app/not-found.tsx` |

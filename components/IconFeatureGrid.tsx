@@ -20,6 +20,7 @@ type IconFeatureGridProps = {
   items: FeatureItem[];
   variant?: "light" | "deep" | "open";
   band?: "bg" | "paper" | "tint" | "deep" | "none";
+  /** @deprecated Prefer fixed responsive cols (1 / 2 / 3). Kept for call-site compat. */
   minCardWidth?: number;
   className?: string;
 };
@@ -32,7 +33,6 @@ export function IconFeatureGrid({
   items,
   variant = "light",
   band = "bg",
-  minCardWidth = 260,
   className,
 }: IconFeatureGridProps) {
   const deep = variant === "deep";
@@ -65,12 +65,7 @@ export function IconFeatureGrid({
           <div className="mb-8" />
         )}
 
-        <ul
-          className="m-0 grid list-none gap-4 p-0"
-          style={{
-            gridTemplateColumns: `repeat(auto-fit, minmax(${minCardWidth}px, 1fr))`,
-          }}
-        >
+        <ul className="m-0 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => {
             const body = (
               <>

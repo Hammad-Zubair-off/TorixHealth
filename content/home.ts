@@ -196,26 +196,31 @@ export const homeContent = {
     heading: "How onboarding runs",
     steps: [
       {
+        icon: "headphones",
         title: "Discovery call",
         description:
           "We look at your denial mix and A/R ageing with you, on a shared screen.",
       },
       {
+        icon: "shield",
         title: "Scope and BAA",
         description:
           "A written scope, then a signed Business Associate Agreement before any PHI moves.",
       },
       {
+        icon: "monitor",
         title: "Access and setup",
         description:
           "Clearinghouse, payer portals and system access, configured alongside your staff.",
       },
       {
+        icon: "clipboard",
         title: "Parallel run",
         description:
           "We run beside your current process so the switch doesn't interrupt cash flow.",
       },
       {
+        icon: "handshake",
         title: "Ongoing operations",
         description:
           "Weekly reporting and a standing check-in with your named representative.",
