@@ -1,6 +1,5 @@
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { OverviewCard } from "@/components/ServicesOverview";
 import type { TrustItem } from "@/components/TrustBar";
 import type { IconName } from "@/components/icons";
@@ -191,41 +190,6 @@ export const homeContent = {
       },
     ] satisfies FeatureItem[],
   },
-  process: {
-    heading: "How onboarding runs",
-    steps: [
-      {
-        icon: "headphones",
-        title: "Discovery call",
-        description:
-          "We look at your denial mix and A/R ageing with you, on a shared screen.",
-      },
-      {
-        icon: "shield",
-        title: "Scope and BAA",
-        description:
-          "A written scope, then a signed Business Associate Agreement before any PHI moves.",
-      },
-      {
-        icon: "monitor",
-        title: "Access and setup",
-        description:
-          "Clearinghouse, payer portals and system access, configured alongside your staff.",
-      },
-      {
-        icon: "clipboard",
-        title: "Parallel run",
-        description:
-          "We run beside your current process so the switch doesn't interrupt cash flow.",
-      },
-      {
-        icon: "handshake",
-        title: "Ongoing operations",
-        description:
-          "Weekly reporting and a standing check-in with your named representative.",
-      },
-    ] satisfies ProcessStep[],
-  },
   faqs: {
     heading: "Questions we get asked first",
     items: [
@@ -238,7 +202,7 @@ export const homeContent = {
       {
         question: "Will switching billing partners interrupt our cash flow?",
         answer:
-          "That's what the parallel run in step four is for. Your existing process keeps submitting while we take over queue by queue, and legacy A/R is worked rather than abandoned.",
+          "We run a parallel period with your current process. Your existing submissions keep going while we take over queue by queue, and legacy A/R is worked rather than abandoned.",
       },
       {
         question: "Do you sign a Business Associate Agreement?",

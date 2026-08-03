@@ -89,10 +89,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 4. SplitOfferings  
 5. ServicesOverview  
 6. IconFeatureGrid (denials)  
-7. ProcessTimeline  
-8. FAQAccordion  
-9. CTABanner  
-10. Footer  
+7. FAQAccordion  
+8. CTABanner  
+9. Footer  
 
 ## Medical Billing section order (`/services/medical-billing`)
 

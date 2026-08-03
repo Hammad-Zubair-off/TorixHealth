@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { Hero, HeroBrandVisual } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { SplitOfferings } from "@/components/SplitOfferings";
 import { TrustBar } from "@/components/TrustBar";
@@ -55,7 +54,6 @@ export default function HomePage() {
           band="bg"
           minCardWidth={190}
         />
-        <ProcessTimeline heading={c.process.heading} steps={c.process.steps} />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
           heading={c.finalCta.heading}
