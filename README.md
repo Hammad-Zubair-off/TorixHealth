@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+**Visual source of truth:** [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) (Nocturne Light — colors, type, spacing, components). Homepage section treatment: [docs/HOMEPAGE_DESIGN_PLAN.md](docs/HOMEPAGE_DESIGN_PLAN.md). Component inventory: [docs/COMPONENT_MAP.md](docs/COMPONENT_MAP.md).
+
 ## Getting Started
 
 First, run the development server:
