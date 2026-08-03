@@ -43,7 +43,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
 | ServicesOverview | [`components/ServicesOverview.tsx`](../components/ServicesOverview.tsx) | Services (light) + Solutions (deep); grid `1→2→3` cols |
 | AccountTeam | [`components/AccountTeam.tsx`](../components/AccountTeam.tsx) | Named-contact / pending photos |
-| BenefitCards | [`components/BenefitCards.tsx`](../components/BenefitCards.tsx) | Differentiator blocks; optional `footerNote` |
+| BenefitCards | [`components/BenefitCards.tsx`](../components/BenefitCards.tsx) | Differentiator / mission blocks as bordered cards; stacks on mobile |
 | PlatformSpotlight | [`components/PlatformSpotlight.tsx`](../components/PlatformSpotlight.tsx) | Deep split overview; optional `description`; abstract module visual |
 | ProcessTimeline | [`components/ProcessTimeline.tsx`](../components/ProcessTimeline.tsx) | Centered kicker heading; purple icon nodes + connector line/dots; stacks on mobile |
 | FAQAccordion | [`components/FAQAccordion.tsx`](../components/FAQAccordion.tsx) | Two-col FAQ + accordion cards; native details/summary |
@@ -202,10 +202,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 4. BenefitCards — Mission & vision  
 5. IconFeatureGrid — Why healthcare & technology (deep; links to live services/solutions)  
 6. BenefitCards — Our values  
-7. AccountTeam — Meet our team  
-8. IconFeatureGrid — Why choose Torix Solutions (tint)  
-9. CTABanner  
-10. Footer  
+7. IconFeatureGrid — Why choose Torix Solutions (tint)  
+8. CTABanner  
+9. Footer  
 
 ## Careers section order (`/careers`)
 

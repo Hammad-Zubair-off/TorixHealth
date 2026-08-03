@@ -14,7 +14,7 @@ type BenefitCardsProps = {
   items: BenefitItem[];
 };
 
-/** Open / light card treatment for differentiator blocks */
+/** Card treatment for differentiator / mission blocks */
 export function BenefitCards({
   heading,
   subheading,
@@ -32,11 +32,15 @@ export function BenefitCards({
         ) : (
           <div className="mb-8" />
         )}
-        <ul className="m-0 grid list-none gap-8 p-0 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
+        <ul className="m-0 grid list-none gap-4 p-0 [grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))]">
           {items.map((item) => (
-            <li key={item.title} className="flex gap-3.5">
-              <Icon name={item.icon} size={24} className="mt-0.5 shrink-0 text-accent-700" />
-              <div>
+            <li key={item.title}>
+              <div className="card-lift card-lift-light flex h-full flex-col rounded-md border border-divider bg-band-paper p-6">
+                <Icon
+                  name={item.icon}
+                  size={24}
+                  className="mb-3 shrink-0 text-accent-700"
+                />
                 <h3 className="mb-2 text-[18px] text-text">{item.title}</h3>
                 <p className="text-[14px] leading-[1.55] text-neutral-600">
                   {item.description}

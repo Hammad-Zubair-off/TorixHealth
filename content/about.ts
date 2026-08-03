@@ -1,6 +1,5 @@
 import type { BenefitItem } from "@/components/BenefitCards";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { MemberCard } from "@/components/TeamMemberCard";
 import type { IconName } from "@/components/icons";
 
 /** About Us page copy from provided company brief. */
@@ -140,33 +139,6 @@ export const aboutContent = {
           "We work as an extension of our clients' teams, building long-term relationships focused on shared success rather than short-term transactions.",
       },
     ] satisfies BenefitItem[],
-  },
-  team: {
-    heading: "Meet our team",
-    subheading:
-      "Our team brings together professionals with expertise in healthcare operations, revenue cycle management, compliance, and software development.",
-    members: [
-      {
-        name: "Alex Rivera",
-        role: "Founder",
-        bio: "Leads Torix Solutions with a focus on connecting healthcare operations and in-house technology.",
-      },
-      {
-        name: "Jordan Lee",
-        role: "Practice Representative",
-        bio: "Named point of contact for practice relationships, onboarding and day-to-day account support.",
-      },
-      {
-        name: "Sam Patel",
-        role: "Billing Lead",
-        bio: "Owns revenue cycle operations across claims, denials and reporting for client practices.",
-      },
-      {
-        name: "Casey Morgan",
-        role: "Software Lead",
-        bio: "Guides in-house healthcare software development for billing automation and the platform.",
-      },
-    ] satisfies MemberCard[],
   },
   whyUs: {
     heading: "Why choose Torix Solutions",

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AccountTeam } from "@/components/AccountTeam";
 import { BenefitCards } from "@/components/BenefitCards";
 import { CTABanner } from "@/components/CTABanner";
 import { Footer } from "@/components/Footer";
@@ -49,11 +48,6 @@ export default function AboutPage() {
           heading={c.values.heading}
           subheading={c.values.subheading}
           items={c.values.items}
-        />
-        <AccountTeam
-          heading={c.team.heading}
-          subheading={c.team.subheading}
-          members={c.team.members}
         />
         <IconFeatureGrid
           heading={c.whyUs.heading}
