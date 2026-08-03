@@ -73,7 +73,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Medical Coding copy | [`content/medical-coding.ts`](../content/medical-coding.ts) |
 | Credentialing copy | [`content/credentialing.ts`](../content/credentialing.ts) |
 | Medical Audit copy | [`content/medical-audit.ts`](../content/medical-audit.ts) |
-| Clearinghouse copy | [`content/clearinghouse.ts`](../content/clearinghouse.ts) |
+| A/R Follow-Up copy | [`content/ar-follow-up.ts`](../content/ar-follow-up.ts) |
 | Medical Billing Software copy | [`content/medical-billing-software.ts`](../content/medical-billing-software.ts) |
 | Healthcare Platform copy | [`content/healthcare-platform.ts`](../content/healthcare-platform.ts) |
 | HIPAA-Compliant Software copy | [`content/hipaa-compliant-software.ts`](../content/hipaa-compliant-software.ts) |
@@ -90,10 +90,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 5. ServicesOverview  
 6. IconFeatureGrid (denials)  
 7. ProcessTimeline  
-8. AccountTeam  
-9. FAQAccordion  
-10. CTABanner  
-11. Footer  
+8. FAQAccordion  
+9. CTABanner  
+10. Footer  
 
 ## Medical Billing section order (`/services/medical-billing`)
 
@@ -159,17 +158,17 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 9. CTABanner (“Request an Audit”)  
 10. Footer  
 
-## Clearinghouse section order (`/services/clearinghouse`)
+## A/R Follow-Up section order (`/services/ar-follow-up`)
 
 1. Navbar  
-2. Hero (breadcrumb + validation-before-submission note)  
-3. IconFeatureGrid — What's included (paper + footerNote)  
+2. Hero (breadcrumb + backlog note; CTA “Request an A/R Assessment”)  
+3. IconFeatureGrid — What's included (paper + footerNote → Medical Billing / RCM)  
 4. IconFeatureGrid — Problems we solve (deep)  
-5. ProcessTimeline — How it works  
-6. BenefitCards — Benefits  
-7. IconFeatureGrid — Why choose us (tint trust grid)  
+5. ProcessTimeline — How A/R recovery works  
+6. BenefitCards — Benefits of A/R management  
+7. IconFeatureGrid — Why choose Torix (tint)  
 8. FAQAccordion  
-9. CTABanner  
+9. CTABanner (“Request an A/R Assessment”)  
 10. Footer  
 
 ## Medical Billing Software section order (`/solutions/medical-billing-software`)
@@ -270,7 +269,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | `/services/medical-coding` | Live |
 | `/services/credentialing` | Live |
 | `/services/medical-audit` | Live |
-| `/services/clearinghouse` | Live |
+| `/services/ar-follow-up` | Live |
 | `/solutions/medical-billing-software` | Live |
 | `/solutions/healthcare-platform` | Live |
 | `/solutions/hipaa-compliant-software` | Live |

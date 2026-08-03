@@ -2,7 +2,6 @@ import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { OverviewCard } from "@/components/ServicesOverview";
-import type { MemberCard } from "@/components/TeamMemberCard";
 import type { TrustItem } from "@/components/TrustBar";
 import type { IconName } from "@/components/icons";
 
@@ -11,14 +10,14 @@ export const homeContent = {
   meta: {
     title: "Torix Solutions | Medical Billing & Healthcare Technology",
     description:
-      "Torix Solutions runs medical billing, coding, credentialing and revenue cycle work for independent practices, with a named representative who knows your practice, and a healthcare software team that builds our platform in house.",
+      "Underpayments and slow follow-up are quietly draining your collections. Torix Solutions fixes that. Our team of billing experts handles your entire revenue cycle — accurate medical coding, credentialing with the insurances you actually bill, timely claims submission, and relentless follow-up on every unpaid claim. The result: faster reimbursements, fewer denials, and more of what you've earned actually landing in your account.",
   },
   hero: {
     eyebrow: "US-based billing operations & healthcare technology",
-    headline: "A billing partner you can reach.",
-    highlightWord: "reach.",
+    headline: "A billing partner you can count on.",
+    highlightWord: "count on.",
     subheadline:
-      "Torix Solutions runs medical billing, coding, credentialing and revenue cycle work for independent practices, with a named representative who knows your practice, and a healthcare software team that builds our platform in house.",
+      "Underpayments and slow follow-up are quietly draining your collections. Torix Solutions fixes that. Our team of billing experts handles your entire revenue cycle — accurate medical coding, credentialing with the insurances you actually bill, timely claims submission, and relentless follow-up on every unpaid claim. The result: faster reimbursements, fewer denials, and more of what you've earned actually landing in your account.",
     primaryCta: { label: "Book a Consultation", href: "/contact" },
     secondaryCta: {
       label: "See how billing works",
@@ -32,7 +31,7 @@ export const homeContent = {
   trust: [
     {
       icon: "users" as IconName,
-      label: "1500+ Satisfied Providers",
+      label: "100+ Satisfied Providers",
       description: "Across the USA",
     },
     {
@@ -42,7 +41,7 @@ export const homeContent = {
     },
     {
       icon: "clock" as IconName,
-      label: "75+ Specialties Supported",
+      label: "25+ Specialties Supported",
       description: "Broad experience",
     },
     {
@@ -66,7 +65,7 @@ export const homeContent = {
       kicker: "Healthcare Technology",
       title: "We build the software",
       description:
-        "Billing automation, EHR and EMR, practice management, patient portal and telehealth: one connected system rather than five vendors.",
+        "Telehealth, patient portal, EHR and EMR, practice management, and billing automation: one connected system rather than five vendors.",
       cta: { label: "Explore Solutions", href: "/solutions/healthcare-platform" },
     },
   },
@@ -109,12 +108,12 @@ export const homeContent = {
         ctaLabel: "Medical Audit",
       },
       {
-        icon: "layers",
-        title: "Clearinghouse",
+        icon: "activity",
+        title: "A/R Follow-Up",
         description:
-          "Claim routing, front-end rejection triage and payer connectivity, so a rejection is caught before it becomes a denial.",
-        href: "/services/clearinghouse",
-        ctaLabel: "Clearinghouse",
+          "Recover aging insurance and patient balances with structured follow-up, claim resolution, and aging reports — so outstanding A/R doesn't become a write-off.",
+        href: "/services/ar-follow-up",
+        ctaLabel: "A/R Follow-Up",
       },
       {
         icon: "building",
@@ -226,16 +225,6 @@ export const homeContent = {
           "Weekly reporting and a standing check-in with your named representative.",
       },
     ] satisfies ProcessStep[],
-  },
-  account: {
-    heading: "You will know who is working on your account.",
-    subheading:
-      "One named point of contact, reachable directly, who can meet you rather than route you through a ticket queue.",
-    members: [
-      { name: "Alex Rivera", role: "Founder" },
-      { name: "Jordan Lee", role: "Practice Representative" },
-      { name: "Sam Patel", role: "Billing Lead" },
-    ] satisfies MemberCard[],
   },
   faqs: {
     heading: "Questions we get asked first",

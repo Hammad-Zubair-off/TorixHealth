@@ -7,15 +7,15 @@ import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
-import { clearinghouseContent } from "@/content/clearinghouse";
+import { arFollowUpContent } from "@/content/ar-follow-up";
 
 export const metadata: Metadata = {
-  title: clearinghouseContent.meta.title,
-  description: clearinghouseContent.meta.description,
+  title: arFollowUpContent.meta.title,
+  description: arFollowUpContent.meta.description,
 };
 
-export default function ClearinghousePage() {
-  const c = clearinghouseContent;
+export default function ArFollowUpPage() {
+  const c = arFollowUpContent;
 
   return (
     <>
@@ -37,7 +37,6 @@ export default function ClearinghousePage() {
           footerNote={c.included.footerNote}
           items={c.included.items}
           band="paper"
-          minCardWidth={240}
         />
         <IconFeatureGrid
           heading={c.problems.heading}
@@ -45,7 +44,6 @@ export default function ClearinghousePage() {
           items={c.problems.items}
           variant="deep"
           band="deep"
-          minCardWidth={240}
         />
         <ProcessTimeline
           heading={c.process.heading}
@@ -62,7 +60,6 @@ export default function ClearinghousePage() {
           subheading={c.whyUs.subheading}
           items={c.whyUs.items}
           band="tint"
-          minCardWidth={240}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner

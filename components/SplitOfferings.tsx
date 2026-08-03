@@ -42,7 +42,7 @@ export function SplitOfferings({
           </article>
 
           <article className="card-lift card-lift-deep flex flex-col rounded-lg border border-white/10 bg-gradient-to-br from-band-deep to-band-deep-2 p-[30px] shadow-md">
-            <Kicker className="mb-2 text-accent-300">{solutionsCard.kicker}</Kicker>
+            <Kicker className="mb-2 text-white">{solutionsCard.kicker}</Kicker>
             <h3 className="mb-3 mt-2 text-[26px] text-band-deep-text">
               {solutionsCard.title}
             </h3>

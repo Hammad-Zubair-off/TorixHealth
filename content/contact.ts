@@ -61,9 +61,9 @@ export const contactContent = {
         ctaLabel: "Learn more →",
       },
       {
-        icon: "layers" as IconName,
-        title: "Clearinghouse Services",
-        href: "/services/clearinghouse",
+        icon: "activity" as IconName,
+        title: "A/R Follow-Up",
+        href: "/services/ar-follow-up",
         ctaLabel: "Learn more →",
       },
       {
@@ -129,7 +129,7 @@ export const contactContent = {
     { value: "rcm", label: "Revenue Cycle Management (RCM)" },
     { value: "credentialing", label: "Credentialing" },
     { value: "medical-audit", label: "Medical Audits" },
-    { value: "clearinghouse", label: "Clearinghouse Services" },
+    { value: "ar-follow-up", label: "A/R Follow-Up" },
     { value: "billing-software", label: "Medical Billing Software" },
     { value: "healthcare-platform", label: "Healthcare Platform Solutions" },
     { value: "hipaa", label: "HIPAA-Focused Software & Compliance" },
@@ -154,7 +154,7 @@ export const contactContent = {
       {
         icon: "fileText" as IconName,
         title: "Reducing billing inefficiencies",
-        description: "Clarify scope between billing, coding, clearinghouse and RCM.",
+        description: "Clarify scope between billing, coding, A/R and RCM.",
       },
       {
         icon: "monitor" as IconName,

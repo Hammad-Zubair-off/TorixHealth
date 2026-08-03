@@ -19,7 +19,7 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: "Torix Solutions | Medical Billing & Healthcare Technology",
   description:
-    "Torix Solutions runs medical billing, coding, credentialing and revenue cycle work for independent practices, with a named representative who knows your practice, and a healthcare software team that builds our platform in house.",
+    "Underpayments and slow follow-up are quietly draining your collections. Torix Solutions fixes that. Our team of billing experts handles your entire revenue cycle — accurate medical coding, credentialing with the insurances you actually bill, timely claims submission, and relentless follow-up on every unpaid claim. The result: faster reimbursements, fewer denials, and more of what you've earned actually landing in your account.",
 };
 
 export default function RootLayout({

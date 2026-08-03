@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AccountTeam } from "@/components/AccountTeam";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
@@ -57,11 +56,6 @@ export default function HomePage() {
           minCardWidth={190}
         />
         <ProcessTimeline heading={c.process.heading} steps={c.process.steps} />
-        <AccountTeam
-          heading={c.account.heading}
-          subheading={c.account.subheading}
-          members={c.account.members}
-        />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
           heading={c.finalCta.heading}
