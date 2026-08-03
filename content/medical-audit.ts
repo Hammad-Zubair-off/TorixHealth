@@ -4,12 +4,12 @@ import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { IconName } from "@/components/icons";
 
-/** Medical Audit service page — independent review; same section stack as other services. */
+/** Medical Audit — KPI, denial, and productivity analysis with corrective actions. */
 export const medicalAuditContent = {
   meta: {
     title: "Medical Audit | Torix Solutions",
     description:
-      "An independent Torix Solutions review of documentation, coding, compliance and revenue leakage. Written findings and a walkthrough, useful whether or not you hire us afterwards.",
+      "Torix Solutions analyzes your practice's revenue cycle KPIs, denial patterns, and provider productivity — turning billing data into decisions you can act on.",
   },
   hero: {
     breadcrumb: [
@@ -18,172 +18,213 @@ export const medicalAuditContent = {
       { label: "Medical Audit" },
     ],
     eyebrow: "Healthcare Service",
-    headline: "An independent look at your billing and documentation.",
+    headline: "Know which numbers are moving, and why.",
     subheadline:
-      "Torix Solutions reviews documentation, coding accuracy, compliance and revenue cycle performance, then delivers written findings you can act on. The audit is built to be useful on its own, not a sales pitch for another service.",
+      "Most practices have data. Very few have answers. A monthly collections figure tells you what happened; it doesn't tell you whether your clean claims ratio slipped, which payer is underpaying, or which provider's E/M distribution is quietly costing you revenue.",
     distinction:
-      "Objective findings first. No pressure to become a billing client to receive the report.",
+      "Torix Solutions analyzes your practice's operational and financial data against defined benchmarks, identifies where performance is deviating, and returns specific corrective actions — not a dashboard you'll stop opening after two weeks.",
     primaryCta: { label: "Request an Audit", href: "/contact" },
     secondaryCta: {
-      label: "See Medical Coding",
-      href: "/services/medical-coding",
+      label: "See Medical Billing",
+      href: "/services/medical-billing",
     },
     visualCaption:
-      "Illustration: documentation, coding and compliance reviewed into a written findings report.",
+      "Illustration: practice KPIs, denial patterns and productivity reviewed into actionable recommendations.",
   },
-  overview: {
-    heading: "What's included",
+  analyze: {
+    heading: "What we analyze",
     subheading:
-      "Four review areas that make up a complete Medical Audit engagement.",
+      "Operational and financial performance against defined benchmarks — so you get answers, not another unused dashboard.",
     items: [
       {
-        icon: "clipboard" as IconName,
-        title: "Documentation Review",
+        icon: "activity" as IconName,
+        title: "Revenue Cycle KPIs",
         description:
-          "Clinical notes assessed for whether they support the codes and services billed, and where gaps would fail a payer or auditor ask.",
+          "Clean claims ratio, days in AR (tracked against a 30–35 day claim payment target), net collection rate, denial rate by payer and root cause, AR aging distribution, and cost to collect — the metrics that actually predict financial health.",
+      },
+      {
+        icon: "clipboard" as IconName,
+        title: "Coding & Documentation Patterns",
+        description:
+          "ICD-10 and CPT assignment reviewed for accuracy and distribution. We flag E/M level patterns that fall outside specialty norms — misused evaluation and management codes are among the most common and expensive coding failures.",
       },
       {
         icon: "fileText" as IconName,
-        title: "Coding Accuracy Review",
+        title: "Payer Performance & Contract Compliance",
         description:
-          "ICD-10 and CPT assignment checked against the documentation for mismatch, unsupported codes and recurring error patterns.",
+          "Reimbursement rates compared across payers and against your contracted fee schedules. We surface which payers are underpaying, which contracts are due for renewal, and where your payer mix is working against you.",
       },
       {
-        icon: "shield" as IconName,
-        title: "Compliance Review",
+        icon: "layers" as IconName,
+        title: "Accounts Receivable Analysis",
         description:
-          "Processes and claim patterns reviewed for compliance risk, not just whether a single claim paid.",
+          "Where cash flow is obstructed, quantified by cause: unworked denials, stalled follow-up, unbilled secondaries, uncollected patient balances, and claims approaching timely filing limits.",
       },
       {
-        icon: "alert" as IconName,
-        title: "Revenue Leakage Identification",
+        icon: "users" as IconName,
+        title: "Provider Productivity",
         description:
-          "Where money is lost across documentation, coding, denials or unworked balances, named specifically so you can fix the cause.",
+          "Individual provider performance on volume, coding accuracy, documentation completeness, and revenue contribution — compared against benchmarks from comparable practices. The point isn't ranking providers; it's identifying behaviors that affect practice-level results.",
+      },
+      {
+        icon: "building" as IconName,
+        title: "Front-Office & Workflow Efficiency",
+        description:
+          "Registration accuracy, eligibility verification completion, and authorization capture — the front-end steps that determine whether a claim was ever going to be paid.",
       },
     ] satisfies FeatureItem[],
-  },
-  whyAudit: {
-    heading: "Why get an audit",
-    subheading:
-      "Reasons practices ask for an independent review before problems get expensive.",
-    items: [
-      {
-        icon: "alert" as IconName,
-        title: "Hidden Revenue Leakage",
-        description:
-          "Leakage spread across coding, denials and A/R that never shows up as one obvious failure in the monthly numbers.",
-      },
-      {
-        icon: "shield" as IconName,
-        title: "Compliance & Audit Risk",
-        description:
-          "Unsupported documentation or coding patterns that become costly when a payer or external auditor asks for proof.",
-      },
-      {
-        icon: "eyeOff" as IconName,
-        title: "No Independent Performance Verification",
-        description:
-          "Nobody outside the current billing path has validated whether documentation, coding and cash performance actually hold up.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  process: {
-    heading: "How the audit works",
-    subheading:
-      "Five steps from request through a findings walkthrough and recommendations.",
-    steps: [
-      {
-        title: "Request & Scope",
-        description:
-          "We agree what will be reviewed: specialty, sample size, payers and whether the focus is documentation, coding, compliance or the full set.",
-      },
-      {
-        title: "Document & Data Collection",
-        description:
-          "After the BAA, we collect the notes, claims and reports needed for the scoped review, with clear access limits.",
-      },
-      {
-        title: "Documentation, Coding & Compliance Review",
-        description:
-          "Independent review of the sample against documentation support, code accuracy, compliance risk and leakage patterns.",
-      },
-      {
-        title: "Findings Report",
-        description:
-          "A written report covering documentation, coding, compliance and revenue leakage findings, without requiring you to buy ongoing services.",
-      },
-      {
-        title: "Results Walkthrough & Recommendations",
-        description:
-          "A walkthrough of the findings and practical recommendations. You decide what to do next, including whether to engage Torix further.",
-      },
-    ] satisfies ProcessStep[],
   },
   deliverables: {
     heading: "What you receive",
     subheading:
-      "Every audit ends with the same deliverable set, whether or not you become a client afterwards.",
+      "Findings and next steps you can use to plan, budget, and verify improvement.",
     items: [
       {
-        icon: "fileText" as IconName,
-        title: "Findings Report",
+        icon: "monitor" as IconName,
+        title: "Performance Report",
         description:
-          "A written report you keep, summarizing what was reviewed and what we found.",
+          "Current-state metrics with benchmark comparison and variance flagged.",
       },
       {
-        icon: "clipboard" as IconName,
-        title: "Documentation Review Summary",
+        icon: "alert" as IconName,
+        title: "Gap Analysis",
         description:
-          "Where notes support the billed services and where gaps would fail scrutiny.",
+          "Where performance is deviating and what's causing it.",
       },
       {
         icon: "check" as IconName,
-        title: "Coding Accuracy Findings",
+        title: "Prioritized Recommendations",
         description:
-          "ICD-10 and CPT issues by pattern, not just a list of individual claim errors.",
+          "Ranked by revenue impact and implementation effort.",
+      },
+      {
+        icon: "activity" as IconName,
+        title: "Financial Forecast Inputs",
+        description:
+          "Data you can actually plan and budget against.",
       },
       {
         icon: "shield" as IconName,
         title: "Compliance Findings",
         description:
-          "Compliance risks tied to documentation and coding practices in the sample.",
+          "Coding, documentation, and payer requirement gaps.",
       },
       {
-        icon: "alert" as IconName,
-        title: "Revenue Leakage Findings",
+        icon: "clock" as IconName,
+        title: "Follow-Up Reporting",
         description:
-          "Specific places cash is being lost and what would need to change to stop it.",
-      },
-      {
-        icon: "handshake" as IconName,
-        title: "Results Walkthrough",
-        description:
-          "A live review of the report and recommendations so the findings aren't left unread in an inbox.",
+          "Verification that implemented changes moved the metric.",
       },
     ] satisfies BenefitItem[],
   },
-  whyUs: {
-    heading: "Why choose us",
+  process: {
+    heading: "Our process",
     subheading:
-      "Independence and handling standards that make the audit worth requesting.",
-    items: [
+      "From data collection through ongoing tracking — so performance is monitored, not sampled once.",
+    steps: [
+      {
+        icon: "clipboard" as IconName,
+        title: "Data Collection",
+        description:
+          "Front-office records, billing and coding data, remittance data, payer contracts, and fee schedules.",
+      },
+      {
+        icon: "layers" as IconName,
+        title: "Benchmark Selection",
+        description:
+          "Targets set against your specialty, practice size, and payer mix — not generic industry averages.",
+      },
+      {
+        icon: "activity" as IconName,
+        title: "Analysis",
+        description:
+          "Statistical review of KPIs, denial patterns, coding distribution, and AR composition.",
+      },
       {
         icon: "eyeOff" as IconName,
-        title: "Independent & Objective Review",
+        title: "Root Cause Identification",
         description:
-          "Findings written to be useful on their own. The audit is not conditioned on hiring Torix for billing afterwards.",
+          "Distinguishing symptoms from causes; a rising denial rate is a symptom.",
+      },
+      {
+        icon: "check" as IconName,
+        title: "Recommendations",
+        description:
+          "Specific, sequenced, and assigned — tied to estimated revenue impact where possible.",
+      },
+      {
+        icon: "clock" as IconName,
+        title: "Ongoing Tracking",
+        description:
+          "Recurring reporting so performance is monitored, not sampled.",
+      },
+    ] satisfies ProcessStep[],
+  },
+  specialties: {
+    heading: "Specialties we support",
+    subheading:
+      "Analysis scoped to how your specialty actually bills and collects.",
+    items: [
+      {
+        icon: "users" as IconName,
+        title: "Internal Medicine",
+        description:
+          "Performance review tailored to outpatient volume, E/M distribution, and multi-payer primary care cycles.",
+      },
+      {
+        icon: "activity" as IconName,
+        title: "Urgent Care",
+        description:
+          "High-throughput claim patterns, same-day documentation, and AR targets that fit urgent care workflows.",
+      },
+      {
+        icon: "clipboard" as IconName,
+        title: "Pain Management",
+        description:
+          "Procedure-heavy coding, authorization-sensitive services, and specialty-specific denial and productivity patterns.",
+      },
+    ] satisfies FeatureItem[],
+  },
+  whyUs: {
+    heading: "Why Torix Solutions",
+    subheading:
+      "Benchmarks, root cause, and recommendations tied to dollars — with a path to implement findings.",
+    items: [
+      {
+        icon: "handshake" as IconName,
+        title: "Operating Experience",
+        description:
+          "Analysts and consultants with direct revenue cycle operating experience, not general-purpose data staff.",
+      },
+      {
+        icon: "layers" as IconName,
+        title: "Benchmarks, Not Just Numbers",
+        description:
+          "A metric without a comparison point isn't information. Every KPI is reported against a defined target.",
+      },
+      {
+        icon: "eyeOff" as IconName,
+        title: "Root Cause Over Reporting",
+        description:
+          "Identifying that denials rose is the easy part. We identify which payer, which code family, and which upstream step.",
+      },
+      {
+        icon: "activity" as IconName,
+        title: "Recommendations Tied to Dollars",
+        description:
+          "Each finding carries an estimated revenue impact so you can sequence by return.",
       },
       {
         icon: "shield" as IconName,
-        title: "HIPAA-Compliant Documentation Handling",
+        title: "HIPAA Compliant Throughout",
         description:
-          "A signed BAA before any PHI moves, with access limited to what the scoped review requires.",
+          "All PHI and financial data handled under documented safeguards.",
       },
       {
-        icon: "mapPin" as IconName,
-        title: "US-Based & In-Person Support",
+        icon: "check" as IconName,
+        title: "Connected to Execution",
         description:
-          "Staffed in the United States, with a walkthrough you can take with a real person, not only a PDF.",
+          "Because Torix also runs revenue cycle management, billing audits, and credentialing, findings can be implemented rather than just delivered.",
       },
     ] satisfies FeatureItem[],
   },
@@ -191,43 +232,49 @@ export const medicalAuditContent = {
     heading: "Frequently asked questions",
     items: [
       {
-        question: "Is the audit free or paid?",
+        question:
+          "How is performance analysis different from a billing audit?",
         answer:
-          "Pricing depends on scope, specialty and sample size. We confirm whether the engagement is complimentary or paid in writing before any PHI is exchanged, so there is no surprise after the request.",
+          "An audit tests a sample of claims for accuracy and compliance — it answers \"were these coded and billed correctly?\" Performance analysis is broader and forward-looking: it measures the whole revenue cycle against benchmarks to answer \"where is this practice losing money, and what should change?\" Audits often feed into it.",
+      },
+      {
+        question: "What data do you need from us?",
+        answer:
+          "Front-office and registration records, billing and coding data, remittance and payment data, payer contracts, and fee schedules. We'll provide a specific list scoped to your systems.",
+      },
+      {
+        question: "How often should performance be reviewed?",
+        answer:
+          "Monthly for core KPIs, quarterly for deeper analysis. Annual review is too infrequent to catch a trend while it's still cheap to correct.",
+      },
+      {
+        question: "What benchmarks do you compare against?",
+        answer:
+          "Specialty-specific and practice-size-adjusted benchmarks rather than blanket industry averages. A 40-day AR figure means something different in a surgical practice than in urgent care.",
       },
       {
         question:
-          "Will I receive a report even if I don't become a client?",
+          "Can you analyze performance if our billing is handled in-house or by another vendor?",
         answer:
-          "Yes. The findings report and walkthrough are deliverables of the audit itself. You do not need to hire Torix for billing, coding or RCM to receive them.",
-      },
-      {
-        question: "How long does the audit process take?",
-        answer:
-          "Timelines depend on scope and how quickly documents are available after the BAA. During scoping we set a target for review completion and the walkthrough date.",
-      },
-      {
-        question: "What exactly gets reviewed?",
-        answer:
-          "Within the agreed scope: documentation support for billed services, coding accuracy, compliance risk and revenue leakage patterns. Exact sample size and payers are confirmed before work starts.",
-      },
-      {
-        question: "Is my data secure during the audit?",
-        answer:
-          "Yes. A signed Business Associate Agreement is executed before any PHI moves. Access is limited to the audit team and the documents required for the scoped review.",
+          "Yes. Analysis is independent of who runs the billing. The findings are yours regardless.",
       },
       {
         question:
-          "Do I need to switch billing providers to request an audit?",
+          "Do you provide reporting on an ongoing basis or as a one-time engagement?",
         answer:
-          "No. The audit is independent of who currently does your billing. Many practices use it to verify performance while keeping their existing team or vendor.",
+          "Both. Some practices need a one-time assessment; others prefer recurring KPI and follow-up reporting. We'll confirm scope and cadence during the assessment conversation.",
+      },
+      {
+        question: "How quickly do we see results?",
+        answer:
+          "Front-end fixes — eligibility verification, registration accuracy, authorization capture — typically show up within a billing cycle. Coding and contract changes take longer to flow through.",
       },
     ] satisfies FAQItem[],
   },
   finalCta: {
-    heading: "Request an audit without the sales pitch.",
+    heading: "Get started with a performance assessment.",
     subheading:
-      "Tell us your specialty and what you want reviewed. We'll scope the work, sign the BAA when ready, and deliver findings you can use either way.",
+      "If you can't currently state your clean claims ratio, your denial rate by root cause, and your days in AR, you're managing the practice's finances on a lagging indicator. Send us your specialty, practice size, and payer mix and we'll scope an analysis.",
     cta: { label: "Request an Audit", href: "/contact" },
   },
 };

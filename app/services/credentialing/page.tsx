@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { BenefitCards } from "@/components/BenefitCards";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
-import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { credentialingContent } from "@/content/credentialing";
 
 export const metadata: Metadata = {
@@ -28,40 +26,13 @@ export default function CredentialingPage() {
           subheadline={c.hero.subheadline}
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
-          consultationNote={c.hero.distinction}
           visualCaption={c.hero.visualCaption}
         />
         <IconFeatureGrid
-          heading={c.overview.heading}
-          subheading={c.overview.subheading}
-          items={c.overview.items}
+          heading={c.howItWorks.heading}
+          subheading={c.howItWorks.subheading}
+          items={c.howItWorks.items}
           band="paper"
-          minCardWidth={240}
-        />
-        <IconFeatureGrid
-          heading={c.problems.heading}
-          subheading={c.problems.subheading}
-          items={c.problems.items}
-          variant="deep"
-          band="deep"
-          minCardWidth={240}
-        />
-        <ProcessTimeline
-          heading={c.process.heading}
-          subheading={c.process.subheading}
-          steps={c.process.steps}
-        />
-        <BenefitCards
-          heading={c.benefits.heading}
-          subheading={c.benefits.subheading}
-          items={c.benefits.items}
-        />
-        <IconFeatureGrid
-          heading={c.whyUs.heading}
-          subheading={c.whyUs.subheading}
-          items={c.whyUs.items}
-          band="tint"
-          minCardWidth={240}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner

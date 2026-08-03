@@ -1,15 +1,13 @@
-import type { BenefitItem } from "@/components/BenefitCards";
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { IconName } from "@/components/icons";
 
-/** Credentialing service page — same component pattern as Medical Billing / RCM / Coding. */
+/** Credentialing — payer enrollment, CAQH, recredentialing, and related support. */
 export const credentialingContent = {
   meta: {
     title: "Credentialing | Torix Solutions",
     description:
-      "Torix Solutions handles provider enrollment, insurance network applications, CAQH setup and maintenance, and ongoing recredentialing so practices can bill without enrollment lag sitting on top of revenue.",
+      "Torix Solutions credentialing gets you enrolled with the insurances that matter and keeps you compliant — so enrollment lag and expired credentials don't quietly cut off your ability to bill.",
   },
   hero: {
     breadcrumb: [
@@ -18,160 +16,63 @@ export const credentialingContent = {
       { label: "Credentialing" },
     ],
     eyebrow: "Healthcare Service",
-    headline: "Get enrolled. Stay enrolled. Start billing.",
+    headline: "Enrolled with the payers that matter — and kept that way.",
     subheadline:
-      "Torix Solutions manages provider enrollment and ongoing recredentialing for independent practices: insurance network applications, CAQH setup and maintenance, status tracking and a recredentialing calendar, so enrollment lag stops sitting on top of your revenue.",
-    distinction:
-      "Provider enrollment to get you in-network, and proactive recredentialing so you stay there.",
+      "Credentialing delays cost you real money — every day you're not enrolled with a payer is a day you can't bill them. Our credentialing service gets you set up and approved with the insurances that matter, and keeps you compliant so you don't lose network status without knowing it.",
     primaryCta: { label: "Book a Consultation", href: "/contact" },
     secondaryCta: {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
     visualCaption:
-      "Illustration: enrollment applications, CAQH maintenance and a recredentialing calendar.",
+      "Illustration: provider enrollment, CAQH maintenance and recredentialing on a tracked calendar.",
   },
-  overview: {
-    heading: "What's included",
+  howItWorks: {
+    heading: "How it works",
     subheading:
-      "Four functions that cover getting providers enrolled and keeping credentialing current.",
+      "Enrollment, CAQH, follow-up, contracts, recredentialing, NPI/PECOS, and privileging support — managed so nothing sits in limbo.",
     items: [
       {
-        icon: "users" as IconName,
+        icon: "fileText" as IconName,
         title: "Provider Enrollment",
         description:
-          "New and existing providers enrolled with the payers your practice bills, with documentation gathered once and reused across applications where allowed.",
-      },
-      {
-        icon: "building" as IconName,
-        title: "Insurance Network Applications",
-        description:
-          "Payer and network applications prepared and submitted to the panels that matter for your specialty and geography.",
+          "We prepare and submit applications to get you enrolled with commercial payers, Medicare, and Medicaid, so you can start billing as soon as possible.",
       },
       {
         icon: "clipboard" as IconName,
         title: "CAQH Profile Setup & Maintenance",
         description:
-          "CAQH profiles created or updated, attested on schedule, and kept consistent with the information payers actually request.",
+          "Your CAQH profile is created, kept current, and re-attested on schedule, since an outdated profile is one of the most common causes of enrollment delays.",
       },
       {
         icon: "clock" as IconName,
-        title: "Ongoing Recredentialing Management",
+        title: "Application Tracking & Follow-Up",
         description:
-          "A recredentialing calendar with follow-up before deadlines, so renewals don't lapse and silently block claims.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  problems: {
-    heading: "Problems we solve",
-    subheading:
-      "The enrollment and recredentialing gaps that delay or interrupt your ability to bill.",
-    items: [
-      {
-        icon: "alert" as IconName,
-        title: "Delayed Revenue from Pending Enrollment",
-        description:
-          "Providers seeing patients while applications sit unanswered, so charges can't be billed to the network yet.",
-      },
-      {
-        icon: "clipboard" as IconName,
-        title: "CAQH Profile Complexity",
-        description:
-          "Incomplete, outdated or unattested CAQH profiles that stall every payer application that depends on them.",
-      },
-      {
-        icon: "clock" as IconName,
-        title: "Missed Recredentialing Deadlines",
-        description:
-          "Renewals that lapse because nobody owned the calendar, putting active enrollments and claim payment at risk.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  process: {
-    heading: "How it works",
-    subheading:
-      "Five steps from document collection through confirmed enrollment and ongoing recredentialing.",
-    steps: [
-      {
-        title: "Document Collection & CAQH Setup",
-        description:
-          "We gather provider documents, set up or update CAQH, and confirm the profile is ready for payer use.",
-      },
-      {
-        title: "Payer / Network Application Submission",
-        description:
-          "Applications prepared and submitted to the insurance networks in your scope, with a clear list of what was filed where.",
-      },
-      {
-        title: "Active Follow-Up & Status Tracking",
-        description:
-          "We chase status with payers instead of waiting passively, and keep you informed when something is stuck.",
-      },
-      {
-        title: "Enrollment Confirmation",
-        description:
-          "Effective dates and panel status confirmed so your billing team knows when claims can go out for that provider and payer.",
-      },
-      {
-        title: "Ongoing Recredentialing Management",
-        description:
-          "Recredentialing deadlines tracked and worked before they lapse, so enrollment doesn't quietly expire.",
-      },
-    ] satisfies ProcessStep[],
-  },
-  benefits: {
-    heading: "Benefits",
-    subheading:
-      "What proactive credentialing management changes for cash flow and staff time.",
-    items: [
-      {
-        icon: "activity" as IconName,
-        title: "Faster Time Until Providers Can Bill",
-        description:
-          "Applications filed completely and followed up so providers reach billable, in-network status without avoidable stall.",
-      },
-      {
-        icon: "check" as IconName,
-        title: "No Missed Recredentialing Deadlines",
-        description:
-          "A managed calendar and follow-up so renewals are handled before they put claims and enrollment at risk.",
+          "We don't just submit and wait — applications are actively followed up on with payers until approval, so nothing sits in limbo.",
       },
       {
         icon: "handshake" as IconName,
-        title: "Reduced Administrative Burden",
+        title: "Contract Negotiation Support",
         description:
-          "Document chase, CAQH upkeep and payer follow-up handled by Torix instead of your front desk between patients.",
+          "We review payer contract terms and reimbursement rates so you're not signing into unfavorable agreements without knowing it.",
       },
-    ] satisfies BenefitItem[],
-  },
-  whyUs: {
-    heading: "Why choose us",
-    subheading:
-      "Credentialing expertise and handling standards that keep enrollment moving.",
-    items: [
+      {
+        icon: "check" as IconName,
+        title: "Re-credentialing & Revalidation",
+        description:
+          "Credentials are tracked and renewed before expiration, so you never lose network status or get quietly dropped from a payer panel.",
+      },
       {
         icon: "building" as IconName,
-        title: "Payer-Specific Enrollment Expertise",
+        title: "NPI & PECOS Management",
         description:
-          "Applications shaped for how individual payers and networks actually process enrollment, not a generic packet sent everywhere the same way.",
+          "Individual and group NPI records and PECOS enrollments are kept accurate and up to date.",
       },
       {
-        icon: "clock" as IconName,
-        title: "Proactive Recredentialing Tracking",
+        icon: "users" as IconName,
+        title: "Privileging Support",
         description:
-          "Deadlines owned on a calendar with outreach before they hit, not discovered after claims start bouncing.",
-      },
-      {
-        icon: "shield" as IconName,
-        title: "HIPAA-Compliant Provider Data Handling",
-        description:
-          "A signed BAA before provider data moves, with access control for the documents and profiles we maintain.",
-      },
-      {
-        icon: "mapPin" as IconName,
-        title: "US-Based & In-Person Support",
-        description:
-          "Staffed in the United States, with a representative who can work through enrollment issues with your practice in person when needed.",
+          "Where applicable, we assist with hospital or facility privileging alongside payer credentialing.",
       },
     ] satisfies FeatureItem[],
   },

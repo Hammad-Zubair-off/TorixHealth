@@ -37,7 +37,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 | Component | Path | Notes |
 |-----------|------|-------|
-| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout` (no bordered CTA group; primary + outline); `HeroBrandVisual` (doctor + Claims/A/R floating cards; Billing Overview removed) |
+| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout`; CTA group unboxed (primary + outline secondary); `HeroBrandVisual` (doctor + Claims/A/R floating cards; Billing Overview removed) |
 | TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-purple rounded stats bar (Home uses sample metrics pending final review) |
 | IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote`; grid `1→2→3` cols |
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
@@ -97,27 +97,20 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 ## Medical Billing section order (`/services/medical-billing`)
 
 1. Navbar  
-2. Hero (breadcrumb + Healthcare Service kicker)  
-3. IconFeatureGrid — What's included (paper + footerNote)  
-4. IconFeatureGrid — Problems we solve (deep)  
-5. ProcessTimeline — How it works  
-6. BenefitCards — Why choose us (+ footerNote)  
-7. FAQAccordion  
-8. CTABanner  
-9. Footer  
+2. Hero (breadcrumb + full-cycle billing paragraph)  
+3. IconFeatureGrid — How it works (paper + footerNote → RCM / Medical Audit)  
+4. FAQAccordion  
+5. CTABanner  
+6. Footer  
 
 ## Revenue Cycle Management section order (`/services/revenue-cycle-management`)
 
 1. Navbar  
-2. Hero (breadcrumb + distinction note vs Medical Billing)  
-3. IconFeatureGrid — What's included / stages (paper + footerNote → Medical Billing)  
-4. IconFeatureGrid — Problems we solve (deep)  
-5. ProcessTimeline — How it works  
-6. BenefitCards — Benefits  
-7. IconFeatureGrid — Why choose us (tint trust grid)  
-8. FAQAccordion  
-9. CTABanner  
-10. Footer  
+2. Hero (breadcrumb + full-cycle paragraph)  
+3. IconFeatureGrid — How it works (paper + footerNote → Medical Billing)  
+4. FAQAccordion  
+5. CTABanner  
+6. Footer  
 
 ## Medical Coding section order (`/services/medical-coding`)
 
@@ -135,25 +128,21 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 ## Credentialing section order (`/services/credentialing`)
 
 1. Navbar  
-2. Hero (breadcrumb + enrollment / recredentialing note)  
-3. IconFeatureGrid — What's included (paper)  
-4. IconFeatureGrid — Problems we solve (deep)  
-5. ProcessTimeline — How it works  
-6. BenefitCards — Benefits  
-7. IconFeatureGrid — Why choose us (tint trust grid)  
-8. FAQAccordion  
-9. CTABanner  
-10. Footer  
+2. Hero (breadcrumb + enrollment lag paragraph)  
+3. IconFeatureGrid — How it works (paper)  
+4. FAQAccordion  
+5. CTABanner  
+6. Footer  
 
 ## Medical Audit section order (`/services/medical-audit`)
 
 1. Navbar  
-2. Hero (breadcrumb + independent-review note; CTA “Request an Audit”)  
-3. IconFeatureGrid — What's included (paper)  
-4. IconFeatureGrid — Why get an audit (deep)  
-5. ProcessTimeline — How the audit works  
-6. BenefitCards — What you receive (deliverables)  
-7. IconFeatureGrid — Why choose us (tint trust grid)  
+2. Hero (breadcrumb; CTA “Request an Audit”)  
+3. IconFeatureGrid — What we analyze (paper)  
+4. BenefitCards — What you receive  
+5. ProcessTimeline — Our process (6 steps)  
+6. IconFeatureGrid — Specialties we support (deep)  
+7. IconFeatureGrid — Why Torix (tint)  
 8. FAQAccordion  
 9. CTABanner (“Request an Audit”)  
 10. Footer  
@@ -161,15 +150,11 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 ## A/R Follow-Up section order (`/services/ar-follow-up`)
 
 1. Navbar  
-2. Hero (breadcrumb + backlog note; CTA “Request an A/R Assessment”)  
-3. IconFeatureGrid — What's included (paper + footerNote → Medical Billing / RCM)  
-4. IconFeatureGrid — Problems we solve (deep)  
-5. ProcessTimeline — How A/R recovery works  
-6. BenefitCards — Benefits of A/R management  
-7. IconFeatureGrid — Why choose Torix (tint)  
-8. FAQAccordion  
-9. CTABanner (“Request an A/R Assessment”)  
-10. Footer  
+2. Hero (breadcrumb + AR / denials / appeals paragraph)  
+3. IconFeatureGrid — How it works (paper + footerNote → Medical Billing / RCM)  
+4. FAQAccordion  
+5. CTABanner (“Request an A/R Assessment”)  
+6. Footer  
 
 ## Medical Billing Software section order (`/solutions/medical-billing-software`)
 

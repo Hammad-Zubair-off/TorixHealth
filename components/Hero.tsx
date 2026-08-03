@@ -121,20 +121,14 @@ export function Hero({
           <p className="mb-8 max-w-[46ch] text-[18px] leading-[1.6] text-neutral-800">
             {subheadline}
           </p>
-          <div
-            className={cn(
-              "flex flex-wrap items-center gap-3.5",
-              !brandLayout &&
-                "inline-flex gap-[18px] rounded-lg border border-accent-300 bg-band-paper/80 p-3 shadow-sm",
-            )}
-          >
+          <div className="flex flex-wrap items-center gap-3.5">
             <Button href={primaryCta.href} variant="primary" size="hero" arrow={brandLayout}>
               {primaryCta.label}
             </Button>
             {secondaryCta ? (
               <Button
                 href={secondaryCta.href}
-                variant={brandLayout ? "outline" : "ghost"}
+                variant="outline"
                 size={brandLayout ? "hero" : "default"}
               >
                 {secondaryCta.label}

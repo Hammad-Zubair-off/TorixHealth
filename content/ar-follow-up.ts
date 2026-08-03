@@ -1,15 +1,13 @@
-import type { BenefitItem } from "@/components/BenefitCards";
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { IconName } from "@/components/icons";
 
-/** Accounts Receivable (A/R) Management — recover aging insurance and patient balances. */
+/** A/R Follow-Up — aging AR, denials, appeals, and payment recovery. */
 export const arFollowUpContent = {
   meta: {
     title: "A/R Follow-Up | Torix Solutions",
     description:
-      "Torix Solutions Accounts Receivable Management recovers aging insurance and patient balances through structured follow-up, claim resolution and detailed reporting.",
+      "Torix Solutions handles AR follow-up, denial resolution, appeals and payment recovery — working inside the system you already use, with a named representative you can call.",
   },
   hero: {
     breadcrumb: [
@@ -18,219 +16,71 @@ export const arFollowUpContent = {
       { label: "A/R Follow-Up" },
     ],
     eyebrow: "Healthcare Service",
-    headline: "Recover revenue that's already yours.",
+    headline: "Aging balances worked — denials fixed, payments recovered.",
     subheadline:
-      "Aging claims and unpaid balances shouldn't become write-offs simply because they're no longer the newest priority. Our dedicated Accounts Receivable (A/R) Management service focuses on recovering outstanding insurance and patient balances through structured follow-up, claim resolution, and detailed reporting.",
-    distinction:
-      "Whether your backlog comes from staffing shortages, a previous billing vendor, or years of accumulated unpaid claims, we help turn neglected receivables back into collected revenue.",
+      "We handle AR follow-up, denial resolution, appeals and payment recovery for your practice, working inside the system you already use, with a named representative you can call.",
     primaryCta: { label: "Request an A/R Assessment", href: "/contact" },
     secondaryCta: {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
     visualCaption:
-      "Illustration: aging balances organized into recovery work and collected revenue.",
+      "Illustration: aging AR buckets, denial root causes and recovery reporting.",
   },
-  included: {
-    heading: "What's included",
+  howItWorks: {
+    heading: "How it works",
     subheading:
-      "Everything needed to recover aging accounts receivable. Designed for practices with outstanding claims and unpaid balances that require dedicated attention.",
+      "Aging review through appeals, underpayments, patient balances, and reporting — so outstanding revenue doesn't become a write-off.",
     footerNote:
-      "This service focuses on recovering existing outstanding balances. For ongoing claim submission and daily billing operations, explore Medical Billing. For complete revenue cycle management from patient registration to final payment, see Revenue Cycle Management.",
-    items: [
-      {
-        icon: "clipboard" as IconName,
-        title: "Aging A/R Analysis",
-        description:
-          "Review and organize outstanding accounts into 30, 60, 90, 120+ day aging categories to identify recovery opportunities.",
-      },
-      {
-        icon: "fileText" as IconName,
-        title: "Insurance Claim Follow-Up",
-        description:
-          "Communicate directly with insurance payers to determine claim status, resolve delays, and pursue outstanding reimbursements.",
-      },
-      {
-        icon: "headphones" as IconName,
-        title: "Patient Balance Follow-Up",
-        description:
-          "Professionally manage patient balances through compliant communication while maintaining a positive patient experience.",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "Denial Resolution & Resubmission",
-        description:
-          "Investigate denied claims, correct issues where appropriate, and resubmit eligible claims for reimbursement.",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "Aging Reports & Performance Tracking",
-        description:
-          "Receive organized reports showing outstanding balances, recovery progress, payer trends, and aging distribution.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  problems: {
-    heading: "Problems we solve",
-    subheading:
-      "Don't let aging claims become permanent losses. Many practices focus on today's claims while yesterday's revenue quietly slips away.",
+      "This service focuses on recovering outstanding balances and resolving denials. For day-to-day claim submission, see Medical Billing. For the full cash path across registration through collections, see Revenue Cycle Management.",
     items: [
       {
         icon: "clock" as IconName,
-        title: "Claims Aging Without Follow-Up",
+        title: "Aging AR Review",
         description:
-          "Claims aging beyond 60, 90, or 120 days without active follow-up.",
-      },
-      {
-        icon: "eyeOff" as IconName,
-        title: "Unclear Insurance Status",
-        description:
-          "Outstanding insurance claims with unclear payment status.",
-      },
-      {
-        icon: "layers" as IconName,
-        title: "Growing A/R Backlogs",
-        description:
-          "Growing accounts receivable backlogs after staffing shortages or vendor transitions.",
+          "Claims are worked by aging bucket (0-30, 31-60, 61-90, 90+ days), with the oldest and highest-dollar claims prioritized first so nothing crosses the timely-filing deadline.",
       },
       {
         icon: "alert" as IconName,
-        title: "Unnecessary Write-Offs",
+        title: "Root-Cause Denial Analysis",
         description:
-          "Revenue being written off simply because no one is actively working older claims.",
-      },
-      {
-        icon: "monitor" as IconName,
-        title: "Limited Visibility",
-        description:
-          "Limited visibility into why outstanding balances remain unpaid.",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "Delayed Collections",
-        description:
-          "Delayed collections reducing overall cash flow.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  process: {
-    heading: "How A/R recovery works",
-    subheading: "A structured recovery process from assessment through reporting.",
-    steps: [
-      {
-        icon: "clipboard" as IconName,
-        title: "A/R Assessment",
-        description:
-          "We review your current accounts receivable to understand the size, age, and complexity of your outstanding balances.",
-      },
-      {
-        icon: "layers" as IconName,
-        title: "Aging Analysis",
-        description:
-          "Claims are categorized by aging period, payer, and patient responsibility to prioritize recovery efforts effectively.",
+          "Every denial is categorized (eligibility, authorization, coding, medical necessity, duplicate, timely filing, etc.) so we fix the actual problem instead of just resubmitting and getting denied again.",
       },
       {
         icon: "headphones" as IconName,
-        title: "Insurance & Patient Follow-Up",
+        title: "Payer Follow-Up Calls",
         description:
-          "Our team actively communicates with insurance carriers and patients to resolve outstanding balances while maintaining professionalism and compliance.",
+          "Outbound calls and portal checks directly with insurance carriers to get real claim status, not just automated EOB codes.",
       },
       {
         icon: "fileText" as IconName,
-        title: "Resolution & Resubmission",
+        title: "Appeals and Reconsiderations",
         description:
-          "When recoverable issues are identified, we correct claim errors, submit appeals when appropriate, and resubmit eligible claims for payment.",
+          "For wrongful or underpaid denials, we draft and submit appeal letters with supporting documentation (medical records, notes, payer policy citations) to overturn the decision.",
       },
       {
         icon: "activity" as IconName,
-        title: "Reporting & Ongoing Visibility",
+        title: "Underpayment Identification",
         description:
-          "Receive clear reporting showing recovery progress, aging trends, outstanding balances, and actionable insights.",
-      },
-    ] satisfies ProcessStep[],
-  },
-  benefits: {
-    heading: "Benefits of our A/R management",
-    subheading: "Recover more than revenue.",
-    items: [
-      {
-        icon: "check" as IconName,
-        title: "Recover Outstanding Payments",
-        description:
-          "Maximize collections from aging claims that may otherwise be written off.",
-      },
-      {
-        icon: "layers" as IconName,
-        title: "Reduce Aging Backlogs",
-        description:
-          "Keep outstanding accounts under control with consistent follow-up and structured recovery efforts.",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "Improve Cash Flow",
-        description:
-          "Recovered receivables contribute directly to healthier practice revenue.",
-      },
-      {
-        icon: "monitor" as IconName,
-        title: "Better Financial Visibility",
-        description:
-          "Understand where outstanding balances exist and why they remain unpaid.",
-      },
-      {
-        icon: "users" as IconName,
-        title: "Dedicated Recovery Focus",
-        description:
-          "Older claims receive specialized attention instead of competing with daily billing priorities.",
-      },
-      {
-        icon: "shield" as IconName,
-        title: "HIPAA-Compliant Communication",
-        description:
-          "Patient financial information is handled securely throughout the recovery process.",
-      },
-    ] satisfies BenefitItem[],
-  },
-  whyUs: {
-    heading: "Why choose Torix Solutions",
-    subheading:
-      "Unlike routine billing services, our Accounts Receivable Management focuses exclusively on recovering aging balances with a structured and transparent process.",
-    items: [
-      {
-        icon: "users" as IconName,
-        title: "Dedicated A/R Specialists",
-        description:
-          "Older claims receive focused attention instead of becoming secondary to daily claim submissions.",
-      },
-      {
-        icon: "shield" as IconName,
-        title: "HIPAA-Compliant Processes",
-        description:
-          "Every interaction follows secure healthcare data handling practices.",
-      },
-      {
-        icon: "handshake" as IconName,
-        title: "Insurance & Patient Recovery",
-        description:
-          "We pursue both insurance reimbursements and patient balances where appropriate.",
+          "Claims paid below the contracted rate are flagged and pursued for the difference, not written off.",
       },
       {
         icon: "clipboard" as IconName,
-        title: "Detailed Aging Reports",
+        title: "Resubmission of Corrected Claims",
         description:
-          "Stay informed with organized reporting and complete visibility into recovery progress.",
+          "Coding or data errors get fixed and refiled fast, before the timely-filing window closes.",
       },
       {
-        icon: "building" as IconName,
-        title: "Experienced Healthcare Billing Team",
+        icon: "users" as IconName,
+        title: "Patient Responsibility Follow-Up",
         description:
-          "We understand payer workflows, claim lifecycles, and the challenges practices face with aging receivables.",
+          "Where balances shift to the patient, we handle statements and follow-up communication so that revenue doesn't get lost either.",
       },
       {
-        icon: "headphones" as IconName,
-        title: "Transparent Communication",
+        icon: "monitor" as IconName,
+        title: "Reporting",
         description:
-          "You'll always know what actions are being taken and where your outstanding claims stand.",
+          "You get visibility into AR aging trends, denial rates by payer, and recovery totals, so you know exactly what's being collected and why claims were denied in the first place.",
       },
     ] satisfies FeatureItem[],
   },
@@ -239,7 +89,7 @@ export const arFollowUpContent = {
     items: [
       {
         question:
-          "Is A/R Management a one-time cleanup or an ongoing service?",
+          "Is A/R Follow-Up a one-time cleanup or an ongoing service?",
         answer:
           "It can be either. Some practices need a one-time recovery project, while others choose ongoing A/R management to keep aging balances under control.",
       },
@@ -253,18 +103,13 @@ export const arFollowUpContent = {
         question:
           "Can I use this service without switching my medical billing provider?",
         answer:
-          "Yes. Accounts Receivable Management can often be provided as a standalone service depending on your practice's needs.",
-      },
-      {
-        question: "How is pricing structured?",
-        answer:
-          "Pricing depends on the size of your backlog, claim complexity, and the scope of work required. We discuss available options during your consultation.",
+          "Yes. A/R Follow-Up can often be provided as a standalone service depending on your practice's needs.",
       },
       {
         question:
-          "What's the difference between A/R Management and Medical Billing?",
+          "What's the difference between A/R Follow-Up and Medical Billing?",
         answer:
-          "Medical Billing focuses on submitting and managing current claims. A/R Management focuses specifically on recovering older unpaid claims and outstanding balances that require dedicated attention.",
+          "Medical Billing runs day-to-day eligibility, claim submission, posting and patient billing. A/R Follow-Up focuses on aging balances, denial resolution, appeals, underpayments and recovery of outstanding claims.",
       },
       {
         question: "How far back can outstanding claims be recovered?",
@@ -276,7 +121,7 @@ export const arFollowUpContent = {
   finalCta: {
     heading: "Stop letting outstanding revenue slip away.",
     subheading:
-      "Every aging claim represents revenue your practice has already earned. Let our A/R specialists help recover outstanding balances, improve visibility, and strengthen your financial performance. Discover how dedicated Accounts Receivable Management can help recover aging claims and reduce outstanding balances.",
+      "Every aging claim represents revenue your practice has already earned. Bring your A/R ageing and a recent month of denials — we'll show you what is still recoverable.",
     cta: { label: "Request an A/R Assessment", href: "/contact" },
   },
 };

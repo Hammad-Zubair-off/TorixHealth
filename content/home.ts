@@ -78,7 +78,7 @@ export const homeContent = {
         icon: "fileText",
         title: "Medical Billing",
         description:
-          "Claim scrubbing, submission, payment posting and denial rework. Scoped to the claim itself, deliberately narrower than RCM.",
+          "Full-cycle billing from scheduling to final insurance and patient payment — eligibility, claims, posting, and patient balances handled end to end.",
         href: "/services/medical-billing",
         ctaLabel: "Medical Billing",
       },
@@ -86,7 +86,7 @@ export const homeContent = {
         icon: "activity",
         title: "Revenue Cycle Management",
         description:
-          "Eligibility at registration through patient collections, managed as one process with a single point of accountability.",
+          "Everything working together from patient scheduling to final payment — so nothing falls through the cracks between coding, claims, credentialing, and collections.",
         href: "/services/revenue-cycle-management",
         ctaLabel: "Revenue Cycle Management",
       },
@@ -102,7 +102,7 @@ export const homeContent = {
         icon: "check",
         title: "Medical Audit",
         description:
-          "An independent review of documentation, coding and compliance. Written to be useful whether or not you hire us afterwards.",
+          "Revenue cycle KPIs, denial patterns, and provider productivity — analyzed against benchmarks with corrective actions you can act on.",
         href: "/services/medical-audit",
         ctaLabel: "Medical Audit",
       },
@@ -110,7 +110,7 @@ export const homeContent = {
         icon: "activity",
         title: "A/R Follow-Up",
         description:
-          "Recover aging insurance and patient balances with structured follow-up, claim resolution, and aging reports — so outstanding A/R doesn't become a write-off.",
+          "AR follow-up, denial resolution, appeals and payment recovery — worked inside your system, with a named representative you can call.",
         href: "/services/ar-follow-up",
         ctaLabel: "A/R Follow-Up",
       },
@@ -118,7 +118,7 @@ export const homeContent = {
         icon: "building",
         title: "Credentialing",
         description:
-          "Payer enrollment, CAQH maintenance and a recredentialing calendar, so enrollment lag stops sitting on top of your revenue.",
+          "Get enrolled with the insurances that matter, keep CAQH current, and renew credentials before you lose network status.",
         href: "/services/credentialing",
         ctaLabel: "Credentialing",
       },

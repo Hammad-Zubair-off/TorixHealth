@@ -32,36 +32,33 @@ export default function MedicalAuditPage() {
           visualCaption={c.hero.visualCaption}
         />
         <IconFeatureGrid
-          heading={c.overview.heading}
-          subheading={c.overview.subheading}
-          items={c.overview.items}
+          heading={c.analyze.heading}
+          subheading={c.analyze.subheading}
+          items={c.analyze.items}
           band="paper"
-          minCardWidth={240}
-        />
-        <IconFeatureGrid
-          heading={c.whyAudit.heading}
-          subheading={c.whyAudit.subheading}
-          items={c.whyAudit.items}
-          variant="deep"
-          band="deep"
-          minCardWidth={240}
-        />
-        <ProcessTimeline
-          heading={c.process.heading}
-          subheading={c.process.subheading}
-          steps={c.process.steps}
         />
         <BenefitCards
           heading={c.deliverables.heading}
           subheading={c.deliverables.subheading}
           items={c.deliverables.items}
         />
+        <ProcessTimeline
+          heading={c.process.heading}
+          subheading={c.process.subheading}
+          steps={c.process.steps}
+        />
+        <IconFeatureGrid
+          heading={c.specialties.heading}
+          subheading={c.specialties.subheading}
+          items={c.specialties.items}
+          variant="deep"
+          band="deep"
+        />
         <IconFeatureGrid
           heading={c.whyUs.heading}
           subheading={c.whyUs.subheading}
           items={c.whyUs.items}
           band="tint"
-          minCardWidth={240}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner

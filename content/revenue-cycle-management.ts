@@ -1,15 +1,13 @@
-import type { BenefitItem } from "@/components/BenefitCards";
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { IconName } from "@/components/icons";
 
-/** Revenue Cycle Management service page — same component pattern as Medical Billing. */
+/** Revenue Cycle Management — full-cycle oversight from intake to final payment. */
 export const rcmContent = {
   meta: {
     title: "Revenue Cycle Management | Torix Solutions",
     description:
-      "Torix Solutions manages the complete revenue cycle for independent practices: eligibility, charge capture, claims, posting, denials, A/R, patient billing and reporting, with one named point of accountability.",
+      "Torix Solutions manages your entire revenue cycle from patient scheduling to final payment — so nothing falls through the cracks between coding, claims, credentialing, and collections.",
   },
   hero: {
     breadcrumb: [
@@ -20,9 +18,7 @@ export const rcmContent = {
     eyebrow: "Healthcare Service",
     headline: "The full revenue cycle, managed as one process.",
     subheadline:
-      "From patient registration through collections and reporting, Torix Solutions runs the complete cash path for independent practices. One accountable partner, one clear scope, and a named representative who knows how your practice actually works.",
-    distinction:
-      "Medical Billing covers the claim. Revenue Cycle Management covers the entire financial lifecycle around it.",
+      "Revenue cycle management is everything working together — not just billing in isolation. We manage your entire cycle from patient scheduling to final payment, so nothing falls through the cracks between coding, claims, credentialing, and collections.",
     primaryCta: { label: "Book a Consultation", href: "/contact" },
     secondaryCta: {
       label: "See Medical Billing",
@@ -31,185 +27,48 @@ export const rcmContent = {
     visualCaption:
       "Illustration: registration through collections on a single managed cash path.",
   },
-  included: {
-    heading: "What's included",
+  howItWorks: {
+    heading: "How it works",
     subheading:
-      "Eight stages, run end to end so registration, billing and collections stay connected.",
+      "End-to-end oversight, continuous monitoring, and coordination across billing, credentialing, and collections.",
     footerNote:
-      "If you only need claims submitted and followed up on, please see our Medical Billing service.",
+      "If you only need claims submitted and followed up on, see our Medical Billing service.",
     items: [
       {
-        icon: "users" as IconName,
-        title: "Patient Registration & Eligibility Verification",
+        icon: "layers" as IconName,
+        title: "End-to-End Cycle Oversight",
         description:
-          "Demographics, coverage and benefits checked at the front desk so claims don't fail for preventable eligibility issues.",
-      },
-      {
-        icon: "clipboard" as IconName,
-        title: "Charge Capture & Coding",
-        description:
-          "Charges captured from documentation and coded to support medical necessity, modifiers and place of service.",
-      },
-      {
-        icon: "fileText" as IconName,
-        title: "Claim Submission",
-        description:
-          "Claims scrubbed against payer edits, submitted electronically, and front-end rejections triaged the same day they return.",
-      },
-      {
-        icon: "check" as IconName,
-        title: "Payment Posting",
-        description:
-          "ERAs and remittances posted line by line, with underpayments flagged rather than written off silently.",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "Denial Management",
-        description:
-          "Denials categorised by reason code and routed to the right fix: appeal, corrected claim, or a process change upstream.",
-      },
-      {
-        icon: "clock" as IconName,
-        title: "Accounts Receivable Follow-Up",
-        description:
-          "Ageing balances worked systematically so open A/R doesn't sit past timely filing or fall through the cracks.",
-      },
-      {
-        icon: "building" as IconName,
-        title: "Patient Billing & Collections",
-        description:
-          "Patient responsibility statements, follow-up and collections handled as part of the same cycle, not a separate vendor.",
+          "Every stage from patient intake to final payment is managed under one system, so nothing gets lost in handoffs between departments.",
       },
       {
         icon: "activity" as IconName,
-        title: "Reporting",
+        title: "Performance Monitoring",
         description:
-          "Clear reporting across submissions, payments, denials, A/R ageing and patient balances so you can see the full cash path.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  problems: {
-    heading: "Problems we solve",
-    subheading:
-      "The gaps that appear when registration, billing and collections aren't owned as one process.",
-    items: [
-      {
-        icon: "layers" as IconName,
-        title: "Fragmented Registration, Billing & Collections",
-        description:
-          "Different people, vendors or tools own each stage, so handoffs fail and nobody sees the full picture.",
-      },
-      {
-        icon: "users" as IconName,
-        title: "No Single Point of Accountability",
-        description:
-          "When revenue drops, responsibility bounces between front desk, billers and collections with no one owning the outcome.",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "Revenue Leakage Across Multiple Processes",
-        description:
-          "Missed eligibility, incomplete charges, unworked denials and stalled patient balances each take a cut of what you earned.",
-      },
-      {
-        icon: "eyeOff" as IconName,
-        title: "Disconnected Financial Workflow",
-        description:
-          "No shared view of where cash is stuck: registration, claim, payer A/R or patient responsibility.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  process: {
-    heading: "How it works",
-    subheading:
-      "A phased transition so full-cycle management starts without interrupting cash flow.",
-    steps: [
-      {
-        title: "Consultation & Scope Assessment",
-        description:
-          "We review your denial mix, A/R ageing, registration process and where staff time is spent today.",
-      },
-      {
-        title: "Current-State Process Review",
-        description:
-          "A written look at how registration, coding, claims, posting and collections connect, including the gaps between them.",
-      },
-      {
-        title: "Phased Onboarding",
-        description:
-          "Access, payer setup and handoffs configured in stages so your current process keeps running while we take ownership.",
-      },
-      {
-        title: "Full-Cycle Management",
-        description:
-          "Eligibility through collections managed as one cycle, with a named representative accountable for the account.",
-      },
-      {
-        title: "Ongoing Reporting & Optimization",
-        description:
-          "Standing reporting plus process fixes where the same denials or leakage patterns keep recurring.",
-      },
-    ] satisfies ProcessStep[],
-  },
-  benefits: {
-    heading: "Benefits",
-    subheading:
-      "What changes when one partner owns the complete revenue cycle.",
-    items: [
-      {
-        icon: "handshake" as IconName,
-        title: "One Accountable Partner",
-        description:
-          "A single team and named contact responsible for outcomes across registration, claims, A/R and patient billing.",
+          "Key metrics like days in AR, denial rate, and net collection rate are tracked continuously, not just reviewed once a year.",
       },
       {
         icon: "check" as IconName,
-        title: "Reduced Revenue Leakage",
+        title: "Process Optimization",
         description:
-          "Fewer dollars lost between stages because eligibility, charge capture, denials and collections are managed together.",
+          "Recurring bottlenecks and inefficiencies in your billing workflow are identified and fixed before they cost you more revenue.",
       },
       {
-        icon: "layers" as IconName,
-        title: "Scalable Revenue Operations",
+        icon: "shield" as IconName,
+        title: "Compliance Oversight",
         description:
-          "Volume and specialty growth without bolting on another vendor for each part of the cash path.",
+          "Coding, billing, and payer requirements are kept current with evolving regulations, reducing audit and compliance risk.",
+      },
+      {
+        icon: "users" as IconName,
+        title: "Cross-Functional Coordination",
+        description:
+          "Billing, credentialing, and AR teams work off the same data, so a change in one area (like a payer contract) doesn't create problems in another.",
       },
       {
         icon: "monitor" as IconName,
-        title: "Full-Cycle Visibility",
+        title: "Ongoing Reporting",
         description:
-          "Reporting that shows where money is in the cycle: submitted, paid, denied, ageing or sitting with the patient.",
-      },
-    ] satisfies BenefitItem[],
-  },
-  whyUs: {
-    heading: "Why choose us",
-    subheading:
-      "Capability and access that matter when the whole revenue cycle is on the line.",
-    items: [
-      {
-        icon: "shield" as IconName,
-        title: "HIPAA-Compliant Processes",
-        description:
-          "A signed BAA before any PHI moves, with access control and audit logging documented for every stage we touch.",
-      },
-      {
-        icon: "mapPin" as IconName,
-        title: "US-Based & In-Person Support",
-        description:
-          "Staffed in the United States, with a representative who can work with your team in person when the process needs it.",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "Stage-by-Stage Process Transparency",
-        description:
-          "You see what happens at registration, claim, A/R and collections, not a black box labelled 'billing'.",
-      },
-      {
-        icon: "code" as IconName,
-        title: "Healthcare Software Experience",
-        description:
-          "We build healthcare software in house, so operational work and the systems it runs on stay aligned when something breaks.",
+          "You get regular visibility into practice financial health — not just numbers, but what's driving them.",
       },
     ] satisfies FeatureItem[],
   },
@@ -220,12 +79,12 @@ export const rcmContent = {
         question:
           "What's the difference between Revenue Cycle Management and Medical Billing?",
         answer:
-          "Medical Billing is the claim: charge entry, submission, payment posting and denial follow-up. Revenue Cycle Management starts earlier and ends later: eligibility at registration, charge capture and coding, the claim, A/R follow-up, patient statements and collections, plus reporting across the full cash path.",
+          "Medical Billing focuses on the claim path and performance insight around billing outcomes. Revenue Cycle Management is everything working together: from patient scheduling to final payment, coordinating coding, claims, credentialing, and collections so nothing falls between stages.",
       },
       {
         question: "What parts of the revenue cycle are included?",
         answer:
-          "Patient registration and eligibility, charge capture and coding, claim submission, payment posting, denial management, accounts receivable follow-up, patient billing and collections, and reporting. Scope is confirmed in writing before onboarding starts.",
+          "Intake through final payment under one system — including coordination across coding, claims, credentialing, AR, and collections. Exact scope is confirmed in writing before onboarding starts.",
       },
       {
         question:

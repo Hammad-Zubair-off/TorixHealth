@@ -1,15 +1,13 @@
-import type { BenefitItem } from "@/components/BenefitCards";
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { IconName } from "@/components/icons";
 
-/** Medical Billing page copy from Nocturne Light reference (em-dashes cleaned). */
+/** Medical Billing — full-cycle billing from scheduling through final payment. */
 export const medicalBillingContent = {
   meta: {
     title: "Medical Billing | Torix Solutions",
     description:
-      "We handle charge entry, claim submission, payment posting and denial follow-up for independent practices, working inside the system you already use, with a named representative you can call.",
+      "From patient scheduling to the last insurance or patient dollar, Torix Solutions medical billing handles the full cycle — accurate claims, faster turnaround, and no missed steps between departments.",
   },
   hero: {
     breadcrumb: [
@@ -18,169 +16,91 @@ export const medicalBillingContent = {
       { label: "Medical Billing" },
     ],
     eyebrow: "Healthcare Service",
-    headline: "Claims submitted right the first time.",
+    headline: "Full-cycle billing, from schedule to final payment.",
     subheadline:
-      "We handle charge entry, claim submission, payment posting and denial follow-up for independent practices, working inside the system you already use, with a named representative you can call.",
+      "From the moment your patient is scheduled to the moment the last dollar — insurance or patient — lands in your account, our medical billing service handles it all. Our international team delivers the same accuracy as US-based billers, at a fraction of the cost, with faster turnaround and no missed steps between departments. It's full-cycle billing, run by people who treat your claims like their own revenue.",
     primaryCta: { label: "Book a Consultation", href: "/contact" },
     secondaryCta: {
       label: "Compare with full RCM",
       href: "/services/revenue-cycle-management",
     },
     visualCaption:
-      "Illustration: a claim moving through scrub, submission and posting.",
+      "Illustration: eligibility through claim submission, posting and patient billing on one cycle.",
   },
-  included: {
-    heading: "What's included",
-    subheading: "Four functions, run end to end on every claim you send us.",
+  howItWorks: {
+    heading: "How it works",
+    subheading:
+      "Eligibility through patient responsibility — handled end to end so revenue isn't left uncollected.",
     footerNote:
-      "This page covers Medical Billing only: the claim itself. Registration, eligibility, patient collections and reporting across the whole cash path belong to Revenue Cycle Management.",
+      "For complete revenue cycle management from registration through collections as one coordinated process, see Revenue Cycle Management. For KPI and performance analysis, see Medical Audit.",
     items: [
       {
-        icon: "clipboard" as IconName,
-        title: "Charge Entry",
+        icon: "check" as IconName,
+        title: "Eligibility & Benefits Verification",
         description:
-          "Charges captured from your documentation and entered against the correct provider, place of service and modifiers.",
+          "Patient coverage, copays, deductibles and authorization requirements are confirmed before the appointment, so claims aren't denied for avoidable reasons.",
+      },
+      {
+        icon: "clipboard" as IconName,
+        title: "Charge Entry & Claim Submission",
+        description:
+          "Visits are coded and submitted to the correct payer within 24-48 hours, minimizing delays in reimbursement.",
       },
       {
         icon: "fileText" as IconName,
-        title: "Claim Submission",
+        title: "Claim Scrubbing",
         description:
-          "Scrubbed against payer edits, then submitted electronically. Front-end rejections are triaged the same day they return.",
+          "Every claim is checked for errors before submission to cut first-pass denials and speed up payment.",
       },
       {
-        icon: "alert" as IconName,
-        title: "Denial Follow-Up",
+        icon: "activity" as IconName,
+        title: "Payment Posting & Reconciliation",
         description:
-          "Every denial is read, categorised by reason code, and routed to the right fix: appeal, corrected claim, or a process change at the front desk.",
+          "Insurance payments and adjustments are posted accurately against each claim, so your books always match what was actually paid.",
       },
       {
-        icon: "check" as IconName,
-        title: "Payment Posting",
+        icon: "headphones" as IconName,
+        title: "Patient Responsibility Billing",
         description:
-          "ERAs and paper remittances posted line by line, with underpayments flagged rather than written off silently.",
+          "After insurance pays, remaining patient balances are billed and followed up on, so revenue isn't left uncollected.",
       },
     ] satisfies FeatureItem[],
-  },
-  problems: {
-    heading: "Problems we solve",
-    subheading: "The four things practices tell us are costing them the most.",
-    items: [
-      {
-        icon: "alert" as IconName,
-        title: "Claim denials",
-        description:
-          "Denials that repeat month after month because nobody traced them back to the cause.",
-      },
-      {
-        icon: "clock" as IconName,
-        title: "Slow payments",
-        description:
-          "Claims sitting in a queue for days before submission, then ageing past the filing limit.",
-      },
-      {
-        icon: "clipboard" as IconName,
-        title: "Administrative burden",
-        description:
-          "Clinical and front-desk staff spending their afternoons on payer phone calls.",
-      },
-      {
-        icon: "eyeOff" as IconName,
-        title: "No billing visibility",
-        description:
-          "No clear view of what was submitted, what was paid, and what is still outstanding.",
-      },
-    ] satisfies FeatureItem[],
-  },
-  process: {
-    heading: "How it works",
-    subheading: "Five steps from first call to steady-state billing.",
-    steps: [
-      {
-        title: "Consultation",
-        description:
-          "A conversation about your current denial mix, A/R ageing and what your staff spends time on.",
-      },
-      {
-        title: "Practice assessment",
-        description:
-          "We review your payer mix, fee schedule and system setup, then write the scope and sign the BAA.",
-      },
-      {
-        title: "Onboarding",
-        description:
-          "Clearinghouse, payer portal and system access configured with your staff, not around them.",
-      },
-      {
-        title: "Ongoing billing",
-        description:
-          "Charges entered, claims scrubbed and submitted, payments posted, denials worked on a daily cycle.",
-      },
-      {
-        title: "Reporting",
-        description:
-          "A weekly summary of submissions, payments, denials by reason and outstanding A/R.",
-      },
-    ] satisfies ProcessStep[],
-  },
-  whyUs: {
-    heading: "Why choose us",
-    items: [
-      {
-        icon: "handshake" as IconName,
-        title: "In-person support",
-        description:
-          "A representative who can sit with your front desk rather than send a ticket reply.",
-      },
-      {
-        icon: "mapPin" as IconName,
-        title: "US-based team",
-        description:
-          "Billing and support staffed in the United States, on your working hours.",
-      },
-      {
-        icon: "shield" as IconName,
-        title: "HIPAA compliant",
-        description:
-          "A signed BAA before any PHI moves, with access control and audit logging documented.",
-      },
-    ] satisfies BenefitItem[],
-    footerNote:
-      "Most billing vendors are remote-only, and most software vendors don't do the billing. We do both: the operational work, and the software the work runs on, which means when something breaks in the workflow, the same company can fix it.",
   },
   faqs: {
     heading: "Frequently asked questions",
     items: [
       {
-        question: "What's the difference between Medical Billing and RCM?",
+        question:
+          "What's the difference between Medical Billing and Revenue Cycle Management?",
         answer:
-          "Medical Billing is the claim: charge entry, submission, posting and denial follow-up. Revenue Cycle Management wraps around it: eligibility at registration, charge capture, patient statements, collections and reporting across the whole cash path.",
+          "Medical Billing runs the full claim cycle from eligibility and submission through posting and patient balances. Revenue Cycle Management coordinates the wider cycle across coding, claims, credentialing, and collections so nothing falls between stages.",
       },
       {
-        question: "How fast are claims submitted?",
+        question: "How is Medical Billing different from Medical Audit?",
         answer:
-          "Clean charges are scrubbed and submitted on a daily cycle. Where documentation is incomplete we raise a query rather than hold the claim silently. You'll see what's waiting and why.",
+          "Medical Billing operates your day-to-day claims. Medical Audit analyzes KPIs, denial patterns, and productivity against benchmarks and returns corrective actions. Many practices use both.",
       },
       {
-        question: "Do you work with my EHR or practice management system?",
+        question: "Do we have to use your software?",
         answer:
-          "Yes. We work inside the system you already run. Our own Medical Billing Software is offered free alongside the service, but adopting it is optional and never a condition of the engagement.",
+          "No. The billing service works with the system you already run. Our software is available where it helps, but adopting it is optional.",
       },
       {
-        question: "How are denials handled?",
+        question: "Will switching billing partners interrupt our cash flow?",
         answer:
-          "Each denial is categorised by its reason code (CO-197 prior authorisation, CO-16 missing information, CO-97 bundling, and so on) and routed to the matching fix. Recurring causes are reported back so the pattern stops.",
+          "We run a parallel period with your current process. Your existing submissions keep going while we take over queue by queue, and legacy A/R is worked rather than abandoned.",
       },
       {
         question: "How is pricing structured?",
         answer:
-          "Pricing is quoted per practice after the assessment, based on volume, payer mix and specialty. We put the number and the scope in writing before anything starts.",
+          "Pricing is quoted per practice after the assessment, based on volume, payer mix and specialty. The number and the scope go in writing before anything starts.",
       },
     ] satisfies FAQItem[],
   },
   finalCta: {
-    heading: "Let's look at your last month of claims.",
+    heading: "Start with a conversation about your current billing.",
     subheading:
-      "Bring a remittance and your A/R ageing. We'll tell you what we'd change, whether or not you engage us.",
+      "Bring a recent remittance and your A/R ageing. We'll tell you what we'd change, whether or not you engage us.",
     cta: { label: "Book a Consultation", href: "/contact" },
   },
 };
