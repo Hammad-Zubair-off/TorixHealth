@@ -26,15 +26,54 @@ export function ContactForm({
   const formId = useId();
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError(null);
     setPending(true);
-    // Front-end only until a backend/email endpoint is wired.
-    window.setTimeout(() => {
-      setPending(false);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      fullName: String(formData.get("fullName") ?? ""),
+      organization: String(formData.get("organization") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      service: String(formData.get("service") ?? ""),
+      message: String(formData.get("message") ?? ""),
+      website: String(formData.get("website") ?? ""),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = (await res.json().catch(() => null)) as {
+        error?: string;
+      } | null;
+
+      if (!res.ok) {
+        setError(
+          data?.error ??
+            "Unable to send your message right now. Please try again or email us directly.",
+        );
+        return;
+      }
+
+      form.reset();
       setSubmitted(true);
-    }, 400);
+    } catch {
+      setError(
+        "Unable to send your message right now. Please check your connection and try again.",
+      );
+    } finally {
+      setPending(false);
+    }
   }
 
   if (submitted) {
@@ -68,6 +107,17 @@ export function ContactForm({
       className="flex flex-col gap-4"
       noValidate
     >
+      {/* Honeypot — hidden from users; bots that fill it are ignored. */}
+      <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden">
+        <label htmlFor={`${formId}-website`}>Website</label>
+        <input
+          id={`${formId}-website`}
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <div>
         <label className={labelClass} htmlFor={`${formId}-name`}>
           Full Name
@@ -158,6 +208,14 @@ export function ContactForm({
           placeholder="Tell us what you need help with"
         />
       </div>
+      {error ? (
+        <p
+          className="rounded-md border border-red-200 bg-red-50 px-3.5 py-2.5 text-[13px] leading-[1.5] text-red-800"
+          role="alert"
+        >
+          {error}
+        </p>
+      ) : null}
       <button
         type="submit"
         disabled={pending}

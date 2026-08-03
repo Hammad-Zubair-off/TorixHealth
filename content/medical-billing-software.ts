@@ -28,8 +28,10 @@ export const medicalBillingSoftwareContent = {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
-    visualCaption:
-      "Illustration: billing dashboard with workflow status and reporting.",
+    image: {
+      src: "/brand/heroes/billing-software.jpg",
+      alt: "Team reviewing healthcare billing software together on a laptop",
+    },
   },
   features: {
     heading: "What the software does",

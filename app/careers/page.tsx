@@ -30,6 +30,7 @@ export default function CareersPage() {
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
           consultationNote={c.hero.distinction}
+          image={c.hero.image}
         />
         <IconFeatureGrid
           heading={c.whyJoin.heading}

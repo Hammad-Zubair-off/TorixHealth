@@ -28,6 +28,7 @@ export default function AboutPage() {
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
           consultationNote={c.hero.distinction}
+          image={c.hero.image}
         />
         <ProseSection heading={c.story.heading} paragraphs={c.story.paragraphs} band="paper" />
         <BenefitCards

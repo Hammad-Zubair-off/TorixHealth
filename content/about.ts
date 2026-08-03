@@ -25,6 +25,10 @@ export const aboutContent = {
       label: "Explore Services",
       href: "/services/medical-billing",
     },
+    image: {
+      src: "/brand/heroes/about.jpg",
+      alt: "Healthcare professional representing the Torix Solutions partnership approach",
+    },
   },
   story: {
     heading: "Our story",

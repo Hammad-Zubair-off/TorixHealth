@@ -29,15 +29,17 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Icons | [`components/icons.tsx`](../components/icons.tsx) | includes `headphones` for brand trust bar |
 | Nav config | [`lib/nav.ts`](../lib/nav.ts) |
 | Site phone / email | [`lib/site-contact.ts`](../lib/site-contact.ts) |
+| Contact form schema | [`lib/contact-schema.ts`](../lib/contact-schema.ts) | Zod payload for `/api/contact` |
+| Contact API | [`app/api/contact/route.ts`](../app/api/contact/route.ts) | Resend email relay; needs `RESEND_API_KEY` |
 | `cn` util | [`lib/utils.ts`](../lib/utils.ts) |
 | Card motion | `.card-lift` / `.card-lift-light` / `.card-lift-deep` in globals |
-| Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png`; favicons from logo → [`app/favicon.ico`](../app/favicon.ico), [`app/icon.png`](../app/icon.png), [`app/apple-icon.png`](../app/apple-icon.png) |
+| Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png`; page heroes in [`public/brand/heroes/`](../public/brand/heroes/); favicons from logo → [`app/favicon.ico`](../app/favicon.ico), [`app/icon.png`](../app/icon.png), [`app/apple-icon.png`](../app/apple-icon.png) |
 
 ## Section components
 
 | Component | Path | Notes |
 |-----------|------|-------|
-| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout`; CTA group unboxed (primary + outline secondary); `HeroBrandVisual` (doctor + Claims/A/R floating cards; Billing Overview removed) |
+| Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout`; CTA group unboxed (primary + outline secondary); `image` → `HeroPhoto` (themed stock under `public/brand/heroes/`); Home uses `HeroBrandVisual` (doctor + Claims/A/R floating cards). Claim workflow placeholder removed. |
 | TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-purple rounded stats bar (Home uses sample metrics pending final review) |
 | IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote`; grid `1→2→3` cols |
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
@@ -53,7 +55,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | ProseSection | [`components/ProseSection.tsx`](../components/ProseSection.tsx) | Multi-paragraph story / about copy; mobile-first |
 | JobOpenings | [`components/JobOpenings.tsx`](../components/JobOpenings.tsx) | Careers openings grid; location + employment type; Apply links |
 | ContactPanel | [`components/ContactPanel.tsx`](../components/ContactPanel.tsx) | Contact info + hours + form layout; stacks on mobile |
-| ContactForm | [`components/ContactForm.tsx`](../components/ContactForm.tsx) | Client form; front-end submit until API/email wired |
+| ContactForm | [`components/ContactForm.tsx`](../components/ContactForm.tsx) | Client form; posts to `/api/contact` (Resend) |
 | TeamMemberCard | [`components/TeamMemberCard.tsx`](../components/TeamMemberCard.tsx) | About Us / AccountTeam; optional `bio` |
 
 ## Status & error routes

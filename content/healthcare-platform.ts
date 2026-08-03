@@ -27,8 +27,10 @@ export const healthcarePlatformContent = {
       label: "See Medical Billing Software",
       href: "/solutions/medical-billing-software",
     },
-    visualCaption:
-      "Illustration: connected EHR, practice management, portal and telehealth modules.",
+    image: {
+      src: "/brand/heroes/healthcare-platform.jpg",
+      alt: "Stethoscope beside a laptop representing connected healthcare technology",
+    },
   },
   overview: {
     kicker: "Platform overview",

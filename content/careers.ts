@@ -24,6 +24,10 @@ export const careersContent = {
       "Whether you're an experienced professional or just starting your career, we believe great people create great solutions.",
     primaryCta: { label: "Explore Open Positions", href: "#openings" },
     secondaryCta: { label: "Send Your Resume", href: "/contact" },
+    image: {
+      src: "/brand/heroes/careers.jpg",
+      alt: "Collaborative team working together in a modern workplace",
+    },
   },
   whyJoin: {
     heading: "Why join Torix Solutions?",

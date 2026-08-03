@@ -28,8 +28,10 @@ export const medicalCodingContent = {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
-    visualCaption:
-      "Illustration: documentation reviewed, ICD-10 and CPT assigned, claim-ready handoff.",
+    image: {
+      src: "/brand/heroes/medical-coding.jpg",
+      alt: "Clinician reviewing documentation with a patient using a digital tablet",
+    },
   },
   overview: {
     heading: "What's included",

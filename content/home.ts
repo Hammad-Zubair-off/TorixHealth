@@ -24,8 +24,6 @@ export const homeContent = {
     },
     consultationNote:
       "A consultation is a conversation about your current denials and A/R. Not a sales call.",
-    visualCaption:
-      "Photo: a Torix representative sitting with a provider at the front desk.",
   },
   trust: [
     {

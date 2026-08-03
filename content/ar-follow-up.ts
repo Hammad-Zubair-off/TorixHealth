@@ -24,8 +24,10 @@ export const arFollowUpContent = {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
-    visualCaption:
-      "Illustration: aging AR buckets, denial root causes and recovery reporting.",
+    image: {
+      src: "/brand/heroes/ar-follow-up.jpg",
+      alt: "Team reviewing insurance and analysis documents around a conference table",
+    },
   },
   howItWorks: {
     heading: "How it works",

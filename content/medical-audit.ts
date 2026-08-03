@@ -28,8 +28,10 @@ export const medicalAuditContent = {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
-    visualCaption:
-      "Illustration: practice KPIs, denial patterns and productivity reviewed into actionable recommendations.",
+    image: {
+      src: "/brand/heroes/medical-audit.jpg",
+      alt: "Laptop showing analytics dashboards used for practice performance review",
+    },
   },
   analyze: {
     heading: "What we analyze",

@@ -5,7 +5,7 @@ import type { ContactServiceOption } from "@/components/ContactForm";
 import type { IconName } from "@/components/icons";
 import { siteContact } from "@/lib/site-contact";
 
-/** Contact Us page — form is front-end only until email/API is wired. */
+/** Contact Us page — form posts to `/api/contact` (Resend). */
 export const contactContent = {
   meta: {
     title: "Contact Us | Torix Solutions",

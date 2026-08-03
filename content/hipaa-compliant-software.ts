@@ -30,8 +30,10 @@ export const hipaaCompliantSoftwareContent = {
       label: "See Healthcare Platform",
       href: "/solutions/healthcare-platform",
     },
-    visualCaption:
-      "Illustration: access control, encryption and audit logging for healthcare data.",
+    image: {
+      src: "/brand/heroes/hipaa.jpg",
+      alt: "Close-up of a security interface representing protected healthcare data",
+    },
   },
   means: {
     heading: "What HIPAA compliance means",

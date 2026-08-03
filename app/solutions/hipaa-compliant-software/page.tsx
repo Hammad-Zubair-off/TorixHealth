@@ -28,7 +28,7 @@ export default function HipaaCompliantSoftwarePage() {
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
           consultationNote={c.hero.distinction}
-          visualCaption={c.hero.visualCaption}
+          image={c.hero.image}
         />
         <IconFeatureGrid
           heading={c.means.heading}

@@ -24,8 +24,10 @@ export const medicalBillingContent = {
       label: "Compare with full RCM",
       href: "/services/revenue-cycle-management",
     },
-    visualCaption:
-      "Illustration: eligibility through claim submission, posting and patient billing on one cycle.",
+    image: {
+      src: "/brand/heroes/medical-billing.jpg",
+      alt: "Healthcare professional reviewing patient information on a tablet during an office visit",
+    },
   },
   howItWorks: {
     heading: "How it works",

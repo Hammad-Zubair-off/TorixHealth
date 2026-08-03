@@ -29,7 +29,7 @@ export default function HealthcarePlatformPage() {
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
           consultationNote={c.hero.distinction}
-          visualCaption={c.hero.visualCaption}
+          image={c.hero.image}
         />
         <PlatformSpotlight
           kicker={c.overview.kicker}

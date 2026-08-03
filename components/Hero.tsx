@@ -1,13 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/Button";
-import { Container, Kicker, Section } from "@/components/Container";
+import { Container, Section } from "@/components/Container";
 import { Icon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 export type BreadcrumbItem = {
   label: string;
   href?: string;
+};
+
+export type HeroImage = {
+  src: string;
+  alt: string;
 };
 
 type HeroProps = {
@@ -20,7 +25,8 @@ type HeroProps = {
   primaryCta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   consultationNote?: string;
-  visualCaption?: string;
+  /** Page hero photo — preferred over the Claim workflow placeholder. */
+  image?: HeroImage;
   visual?: React.ReactNode;
   /** When true, CTAs sit side-by-side without bordered wrapper (brand mockup). */
   brandLayout?: boolean;
@@ -46,6 +52,27 @@ function HeadlineWithHighlight({
   );
 }
 
+export function HeroPhoto({ src, alt }: HeroImage) {
+  return (
+    <div className="relative mx-auto w-full max-w-[520px] overflow-hidden rounded-lg border border-accent-300 bg-band-paper shadow-md">
+      <div className="relative aspect-[5/4] min-h-[280px] w-full sm:aspect-[4/5] sm:min-h-[320px] lg:min-h-[360px]">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 640px) 92vw, (max-width: 1024px) 440px, 520px"
+          priority
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[color-mix(in_srgb,var(--color-accent)_12%,transparent)] via-transparent to-transparent"
+        />
+      </div>
+    </div>
+  );
+}
+
 export function Hero({
   breadcrumb,
   eyebrow,
@@ -55,7 +82,7 @@ export function Hero({
   primaryCta,
   secondaryCta,
   consultationNote,
-  visualCaption,
+  image,
   visual,
   brandLayout = false,
 }: HeroProps) {
@@ -146,7 +173,7 @@ export function Hero({
         </div>
 
         <div className={cn("min-h-[280px]")}>
-          {visual ?? <HeroVisualPlaceholder caption={visualCaption} />}
+          {visual ?? (image ? <HeroPhoto src={image.src} alt={image.alt} /> : null)}
         </div>
       </Container>
     </Section>
@@ -223,48 +250,6 @@ export function HeroBrandVisual() {
           <p className="text-[10px] font-medium text-white/85">Claims</p>
           <p className="text-[13px] font-semibold">1,243</p>
         </div>
-      </div>
-    </div>
-  );
-}
-
-function HeroVisualPlaceholder({ caption }: { caption?: string }) {
-  return (
-    <div
-      className="relative h-full min-h-[280px] overflow-hidden rounded-lg border border-accent-300 bg-band-paper p-6 shadow-md"
-      style={{
-        backgroundImage:
-          "repeating-linear-gradient(45deg, rgba(107,77,230,0.07) 0 8px, transparent 8px 16px)",
-      }}
-    >
-      <div className="relative flex flex-col gap-4">
-        <Kicker>Claim workflow</Kicker>
-        <div className="rounded-md border border-divider bg-bg p-5 shadow-sm">
-          <div className="mb-3 flex items-center gap-2.5 text-accent-700">
-            <Icon name="activity" size={20} />
-            <span className="text-[15px] font-medium text-text">
-              Scrub → Submit → Post
-            </span>
-          </div>
-          <div className="grid gap-2">
-            <div className="h-2.5 w-4/5 rounded-sm bg-accent-200" />
-            <div className="h-2.5 w-3/5 rounded-sm bg-neutral-200" />
-            <div className="h-2.5 w-2/3 rounded-sm bg-neutral-200" />
-          </div>
-        </div>
-        <div className="grid grid-cols-3 gap-3">
-          {["Scrub", "Submit", "Post"].map((label) => (
-            <div
-              key={label}
-              className="rounded-md border border-divider bg-[linear-gradient(150deg,var(--color-accent-100),var(--band-paper)_70%)] p-3 text-center"
-            >
-              <p className="text-[12px] font-medium text-accent-700">{label}</p>
-            </div>
-          ))}
-        </div>
-        {caption ? (
-          <p className="text-[12px] text-neutral-600">{caption}</p>
-        ) : null}
       </div>
     </div>
   );

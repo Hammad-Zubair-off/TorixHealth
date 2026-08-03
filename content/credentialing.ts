@@ -24,8 +24,10 @@ export const credentialingContent = {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
-    visualCaption:
-      "Illustration: provider enrollment, CAQH maintenance and recredentialing on a tracked calendar.",
+    image: {
+      src: "/brand/heroes/credentialing.jpg",
+      alt: "Professional handshake representing provider enrollment and network partnership",
+    },
   },
   howItWorks: {
     heading: "How it works",

@@ -26,7 +26,7 @@ export default function CredentialingPage() {
           subheadline={c.hero.subheadline}
           primaryCta={c.hero.primaryCta}
           secondaryCta={c.hero.secondaryCta}
-          visualCaption={c.hero.visualCaption}
+          image={c.hero.image}
         />
         <IconFeatureGrid
           heading={c.howItWorks.heading}

@@ -24,8 +24,10 @@ export const rcmContent = {
       label: "See Medical Billing",
       href: "/services/medical-billing",
     },
-    visualCaption:
-      "Illustration: registration through collections on a single managed cash path.",
+    image: {
+      src: "/brand/heroes/rcm.jpg",
+      alt: "Operations teammates collaborating on revenue and workflow results in a bright office",
+    },
   },
   howItWorks: {
     heading: "How it works",
