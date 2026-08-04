@@ -3,7 +3,6 @@ import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero, HeroBrandVisual } from "@/components/Hero";
-import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { SplitOfferings } from "@/components/SplitOfferings";
@@ -46,13 +45,6 @@ export default function HomePage() {
           solutionsHeading={c.overview.solutionsHeading}
           services={c.overview.services}
           solutions={c.overview.solutions}
-        />
-        <IconFeatureGrid
-          heading={c.denials.heading}
-          subheading={c.denials.subheading}
-          items={c.denials.items}
-          band="bg"
-          minCardWidth={190}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner

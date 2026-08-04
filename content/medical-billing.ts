@@ -34,7 +34,7 @@ export const medicalBillingContent = {
     subheading:
       "Eligibility through patient responsibility — handled end to end so revenue isn't left uncollected.",
     footerNote:
-      "For complete revenue cycle management from registration through collections as one coordinated process, see Revenue Cycle Management. For KPI and performance analysis, see Medical Audit.",
+      "For complete revenue cycle management from registration through collections as one coordinated process, see Revenue Cycle Management. For KPI and performance analysis, see Medical Billing Audit.",
     items: [
       {
         icon: "check" as IconName,
@@ -78,9 +78,9 @@ export const medicalBillingContent = {
           "Medical Billing runs the full claim cycle from eligibility and submission through posting and patient balances. Revenue Cycle Management coordinates the wider cycle across coding, claims, credentialing, and collections so nothing falls between stages.",
       },
       {
-        question: "How is Medical Billing different from Medical Audit?",
+        question: "How is Medical Billing different from Medical Billing Audit?",
         answer:
-          "Medical Billing operates your day-to-day claims. Medical Audit analyzes KPIs, denial patterns, and productivity against benchmarks and returns corrective actions. Many practices use both.",
+          "Medical Billing operates your day-to-day claims. Medical Billing Audit analyzes KPIs, denial patterns, and productivity against benchmarks and returns corrective actions. Many practices use both.",
       },
       {
         question: "Do we have to use your software?",

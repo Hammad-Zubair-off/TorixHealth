@@ -4,10 +4,10 @@ import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { ProcessStep } from "@/components/ProcessTimeline";
 import type { IconName } from "@/components/icons";
 
-/** Medical Audit — KPI, denial, and productivity analysis with corrective actions. */
+/** Medical Billing Audit — KPI, denial, and productivity analysis with corrective actions. */
 export const medicalAuditContent = {
   meta: {
-    title: "Medical Audit | Torix Solutions",
+    title: "Medical Billing Audit | Torix Solutions",
     description:
       "Torix Solutions analyzes your practice's revenue cycle KPIs, denial patterns, and provider productivity — turning billing data into decisions you can act on.",
   },
@@ -15,7 +15,7 @@ export const medicalAuditContent = {
     breadcrumb: [
       { label: "Home", href: "/" },
       { label: "Services" },
-      { label: "Medical Audit" },
+      { label: "Medical Billing Audit" },
     ],
     eyebrow: "Healthcare Service",
     headline: "Know which numbers are moving, and why.",

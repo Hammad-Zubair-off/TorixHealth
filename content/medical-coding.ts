@@ -186,9 +186,9 @@ export const medicalCodingContent = {
       },
       {
         question:
-          "What's the difference between Medical Coding and Medical Audit?",
+          "What's the difference between Medical Coding and Medical Billing Audit?",
         answer:
-          "Medical Coding assigns ICD-10 and CPT codes for claims, with documentation queries when needed. Medical Audit is an independent review of documentation, coding and compliance, written to be useful whether or not you hire us for ongoing work afterwards.",
+          "Medical Coding assigns ICD-10 and CPT codes for claims, with documentation queries when needed. Medical Billing Audit is an independent review of documentation, coding and compliance, written to be useful whether or not you hire us for ongoing work afterwards.",
       },
       {
         question: "Do you code for all specialties or only specific ones?",

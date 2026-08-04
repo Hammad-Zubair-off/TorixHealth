@@ -2,10 +2,10 @@ import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { IconName } from "@/components/icons";
 
-/** Credentialing — payer enrollment, CAQH, recredentialing, and related support. */
+/** Credentialing and Contract — payer enrollment, CAQH, recredentialing, and related support. */
 export const credentialingContent = {
   meta: {
-    title: "Credentialing | Torix Solutions",
+    title: "Credentialing and Contract | Torix Solutions",
     description:
       "Torix Solutions credentialing gets you enrolled with the insurances that matter and keeps you compliant — so enrollment lag and expired credentials don't quietly cut off your ability to bill.",
   },
@@ -13,7 +13,7 @@ export const credentialingContent = {
     breadcrumb: [
       { label: "Home", href: "/" },
       { label: "Services" },
-      { label: "Credentialing" },
+      { label: "Credentialing and Contract" },
     ],
     eyebrow: "Healthcare Service",
     headline: "Enrolled with the payers that matter — and kept that way.",
@@ -103,9 +103,9 @@ export const credentialingContent = {
           "Yes. Recredentialing is managed on a calendar with proactive follow-up before deadlines, so renewals don't lapse unnoticed.",
       },
       {
-        question: "Is Credentialing available separately from Medical Billing?",
+        question: "Is Credentialing and Contract available separately from Medical Billing?",
         answer:
-          "Yes. Credentialing can stand alone or run alongside Medical Billing or Revenue Cycle Management. Many practices use it when adding providers or cleaning up enrollment lag even if billing stays in house.",
+          "Yes. Credentialing and Contract can stand alone or run alongside Medical Billing or Revenue Cycle Management. Many practices use it when adding providers or cleaning up enrollment lag even if billing stays in house.",
       },
       {
         question: "Which insurance networks do you work with?",

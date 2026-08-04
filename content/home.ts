@@ -1,5 +1,4 @@
 import type { FAQItem } from "@/components/FAQAccordion";
-import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { OverviewCard } from "@/components/ServicesOverview";
 import type { TrustItem } from "@/components/TrustBar";
 import type { IconName } from "@/components/icons";
@@ -98,27 +97,27 @@ export const homeContent = {
       },
       {
         icon: "check",
-        title: "Medical Audit",
+        title: "Medical Billing Audit",
         description:
           "Revenue cycle KPIs, denial patterns, and provider productivity — analyzed against benchmarks with corrective actions you can act on.",
         href: "/services/medical-audit",
-        ctaLabel: "Medical Audit",
+        ctaLabel: "Medical Billing Audit",
       },
       {
         icon: "activity",
-        title: "A/R Follow-Up",
+        title: "Accounts Receivable Operations",
         description:
           "AR follow-up, denial resolution, appeals and payment recovery — worked inside your system, with a named representative you can call.",
         href: "/services/ar-follow-up",
-        ctaLabel: "A/R Follow-Up",
+        ctaLabel: "Accounts Receivable Operations",
       },
       {
         icon: "building",
-        title: "Credentialing",
+        title: "Credentialing and Contract",
         description:
           "Get enrolled with the insurances that matter, keep CAQH current, and renew credentials before you lose network status.",
         href: "/services/credentialing",
-        ctaLabel: "Credentialing",
+        ctaLabel: "Credentialing and Contract",
       },
     ] satisfies OverviewCard[],
     solutions: [
@@ -150,43 +149,6 @@ export const homeContent = {
         ctaLabel: "Read the detail",
       },
     ] satisfies OverviewCard[],
-  },
-  denials: {
-    heading: "The denials we work, by name.",
-    subheading:
-      "Each of these has a different fix. Some are appeals, some are corrected claims, and some are a front-desk process change that stops the denial recurring. We tell you which one it is.",
-    items: [
-      {
-        icon: "alert" as IconName,
-        title: "CO-197",
-        description: "Prior authorization absent",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "CO-29",
-        description: "Timely filing limit expired",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "CO-16",
-        description: "Claim lacks required information",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "PR-204",
-        description: "Not covered under the patient's plan",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "CO-97",
-        description: "Already included in another payment",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "CO-11",
-        description: "Diagnosis inconsistent with procedure",
-      },
-    ] satisfies FeatureItem[],
   },
   faqs: {
     heading: "Questions we get asked first",

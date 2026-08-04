@@ -2,10 +2,10 @@ import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { IconName } from "@/components/icons";
 
-/** A/R Follow-Up — aging AR, denials, appeals, and payment recovery. */
+/** Accounts Receivable Operations — aging AR, denials, appeals, and payment recovery. */
 export const arFollowUpContent = {
   meta: {
-    title: "A/R Follow-Up | Torix Solutions",
+    title: "Accounts Receivable Operations | Torix Solutions",
     description:
       "Torix Solutions handles AR follow-up, denial resolution, appeals and payment recovery — working inside the system you already use, with a named representative you can call.",
   },
@@ -13,7 +13,7 @@ export const arFollowUpContent = {
     breadcrumb: [
       { label: "Home", href: "/" },
       { label: "Services" },
-      { label: "A/R Follow-Up" },
+      { label: "Accounts Receivable Operations" },
     ],
     eyebrow: "Healthcare Service",
     headline: "Aging balances worked — denials fixed, payments recovered.",
@@ -91,7 +91,7 @@ export const arFollowUpContent = {
     items: [
       {
         question:
-          "Is A/R Follow-Up a one-time cleanup or an ongoing service?",
+          "Is Accounts Receivable Operations a one-time cleanup or an ongoing service?",
         answer:
           "It can be either. Some practices need a one-time recovery project, while others choose ongoing A/R management to keep aging balances under control.",
       },
@@ -105,13 +105,13 @@ export const arFollowUpContent = {
         question:
           "Can I use this service without switching my medical billing provider?",
         answer:
-          "Yes. A/R Follow-Up can often be provided as a standalone service depending on your practice's needs.",
+          "Yes. Accounts Receivable Operations can often be provided as a standalone service depending on your practice's needs.",
       },
       {
         question:
-          "What's the difference between A/R Follow-Up and Medical Billing?",
+          "What's the difference between Accounts Receivable Operations and Medical Billing?",
         answer:
-          "Medical Billing runs day-to-day eligibility, claim submission, posting and patient billing. A/R Follow-Up focuses on aging balances, denial resolution, appeals, underpayments and recovery of outstanding claims.",
+          "Medical Billing runs day-to-day eligibility, claim submission, posting and patient billing. Accounts Receivable Operations focuses on aging balances, denial resolution, appeals, underpayments and recovery of outstanding claims.",
       },
       {
         question: "How far back can outstanding claims be recovered?",

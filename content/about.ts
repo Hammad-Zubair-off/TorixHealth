@@ -86,14 +86,14 @@ export const aboutContent = {
       },
       {
         icon: "building" as IconName,
-        title: "Credentialing",
+        title: "Credentialing and Contract",
         description: "Enrollment, CAQH and recredentialing so providers can bill.",
         href: "/services/credentialing",
         ctaLabel: "Learn more →",
       },
       {
         icon: "check" as IconName,
-        title: "Medical Audits",
+        title: "Medical Billing Audit",
         description: "Independent documentation, coding and compliance review.",
         href: "/services/medical-audit",
         ctaLabel: "Learn more →",

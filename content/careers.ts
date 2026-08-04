@@ -85,13 +85,13 @@ export const careersContent = {
       },
       {
         icon: "building" as IconName,
-        title: "Credentialing",
+        title: "Credentialing and Contract",
         href: "/services/credentialing",
         ctaLabel: "Learn more →",
       },
       {
         icon: "check" as IconName,
-        title: "Medical Audits",
+        title: "Medical Billing Audit",
         href: "/services/medical-audit",
         ctaLabel: "Learn more →",
       },

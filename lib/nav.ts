@@ -16,11 +16,11 @@ export const mainNav: Array<NavLink | NavGroup> = [
     label: "Services",
     children: [
       { label: "Medical Billing", href: "/services/medical-billing" },
-      { label: "Medical Audit", href: "/services/medical-audit" },
+      { label: "Medical Billing Audit", href: "/services/medical-audit" },
       { label: "Medical Coding", href: "/services/medical-coding" },
-      { label: "A/R Follow-Up", href: "/services/ar-follow-up" },
+      { label: "Accounts Receivable Operations", href: "/services/ar-follow-up" },
       { label: "Revenue Cycle Management", href: "/services/revenue-cycle-management" },
-      { label: "Credentialing", href: "/services/credentialing" },
+      { label: "Credentialing and Contract", href: "/services/credentialing" },
     ],
   },
   {
@@ -42,11 +42,11 @@ export const mainNav: Array<NavLink | NavGroup> = [
 export const footerNav = {
   services: [
     { label: "Medical Billing", href: "/services/medical-billing" },
-    { label: "Medical Audit", href: "/services/medical-audit" },
+    { label: "Medical Billing Audit", href: "/services/medical-audit" },
     { label: "Medical Coding", href: "/services/medical-coding" },
-    { label: "A/R Follow-Up", href: "/services/ar-follow-up" },
+    { label: "Accounts Receivable Operations", href: "/services/ar-follow-up" },
     { label: "Revenue Cycle Management", href: "/services/revenue-cycle-management" },
-    { label: "Credentialing", href: "/services/credentialing" },
+    { label: "Credentialing and Contract", href: "/services/credentialing" },
   ],
   solutions: [
     { label: "Medical Billing Software", href: "/solutions/medical-billing-software" },

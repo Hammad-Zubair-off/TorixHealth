@@ -74,9 +74,9 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Medical Billing copy | [`content/medical-billing.ts`](../content/medical-billing.ts) |
 | Revenue Cycle Management copy | [`content/revenue-cycle-management.ts`](../content/revenue-cycle-management.ts) |
 | Medical Coding copy | [`content/medical-coding.ts`](../content/medical-coding.ts) |
-| Credentialing copy | [`content/credentialing.ts`](../content/credentialing.ts) |
-| Medical Audit copy | [`content/medical-audit.ts`](../content/medical-audit.ts) |
-| A/R Follow-Up copy | [`content/ar-follow-up.ts`](../content/ar-follow-up.ts) |
+| Credentialing and Contract copy | [`content/credentialing.ts`](../content/credentialing.ts) |
+| Medical Billing Audit copy | [`content/medical-audit.ts`](../content/medical-audit.ts) |
+| Accounts Receivable Operations copy | [`content/ar-follow-up.ts`](../content/ar-follow-up.ts) |
 | Medical Billing Software copy | [`content/medical-billing-software.ts`](../content/medical-billing-software.ts) |
 | Healthcare Platform copy | [`content/healthcare-platform.ts`](../content/healthcare-platform.ts) |
 | HIPAA-Compliant Software copy | [`content/hipaa-compliant-software.ts`](../content/hipaa-compliant-software.ts) |
@@ -91,16 +91,15 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 3. TrustBar  
 4. SplitOfferings  
 5. ServicesOverview  
-6. IconFeatureGrid (denials)  
-7. FAQAccordion  
-8. CTABanner  
-9. Footer  
+6. FAQAccordion  
+7. CTABanner  
+8. Footer  
 
 ## Medical Billing section order (`/services/medical-billing`)
 
 1. Navbar  
 2. Hero (breadcrumb + full-cycle billing paragraph)  
-3. IconFeatureGrid — How it works (paper + footerNote → RCM / Medical Audit)  
+3. IconFeatureGrid — How it works (paper + footerNote → RCM / Medical Billing Audit)  
 4. FAQAccordion  
 5. CTABanner  
 6. Footer  
@@ -127,7 +126,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 9. CTABanner  
 10. Footer  
 
-## Credentialing section order (`/services/credentialing`)
+## Credentialing and Contract section order (`/services/credentialing`)
 
 1. Navbar  
 2. Hero (breadcrumb + enrollment lag paragraph)  
@@ -136,7 +135,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 5. CTABanner  
 6. Footer  
 
-## Medical Audit section order (`/services/medical-audit`)
+## Medical Billing Audit section order (`/services/medical-audit`)
 
 1. Navbar  
 2. Hero (breadcrumb; CTA “Request an Audit”)  
@@ -149,7 +148,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 9. CTABanner (“Request an Audit”)  
 10. Footer  
 
-## A/R Follow-Up section order (`/services/ar-follow-up`)
+## Accounts Receivable Operations section order (`/services/ar-follow-up`)
 
 1. Navbar  
 2. Hero (breadcrumb + AR / denials / appeals paragraph)  
