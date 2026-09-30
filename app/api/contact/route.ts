@@ -74,6 +74,31 @@ async function sendWithGmail(
 }
 
 export async function POST(request: Request) {
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
+  }
+
+  const parsed = contactFormSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      {
+        error: "Please check the form and try again.",
+        issues: parsed.error.flatten().fieldErrors,
+      },
+      { status: 400 },
+    );
+  }
+
+  const data = parsed.data;
+
+  // Honeypot tripped — pretend success so bots don't retry.
+  if (data.website) {
+    return NextResponse.json({ ok: true });
+  }
+
   const resendApiKey = process.env.RESEND_API_KEY?.trim();
   const gmailUser = process.env.GMAIL_USER?.trim();
   const gmailAppPassword = process.env.GMAIL_APP_PASSWORD?.trim();
@@ -103,31 +128,6 @@ export async function POST(request: Request) {
       },
       { status: 503 },
     );
-  }
-
-  let body: unknown;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
-  }
-
-  const parsed = contactFormSchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json(
-      {
-        error: "Please check the form and try again.",
-        issues: parsed.error.flatten().fieldErrors,
-      },
-      { status: 400 },
-    );
-  }
-
-  const data = parsed.data;
-
-  // Honeypot tripped — pretend success so bots don't retry.
-  if (data.website) {
-    return NextResponse.json({ ok: true });
   }
 
   const serviceLabel = formatServiceLabel(data.service);

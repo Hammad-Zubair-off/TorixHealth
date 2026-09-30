@@ -1,7 +1,13 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useRef, useState } from "react";
+import type { ZodError } from "zod";
 import { Icon } from "@/components/icons";
+import {
+  contactFormSchema,
+  type ContactFormPayload,
+} from "@/lib/contact-schema";
+import { siteContact } from "@/lib/site-contact";
 import { cn } from "@/lib/utils";
 
 export type ContactServiceOption = {
@@ -14,23 +20,98 @@ type ContactFormProps = {
   submitLabel?: string;
 };
 
+type FieldName =
+  | "fullName"
+  | "organization"
+  | "email"
+  | "phone"
+  | "service"
+  | "message";
+
+type FieldErrors = Partial<Record<FieldName, string>>;
+
+type ApiErrorBody = {
+  error?: string;
+  issues?: Partial<Record<string, string[] | undefined>>;
+};
+
 const fieldClass =
-  "w-full rounded-md border border-divider bg-band-paper px-3.5 py-2.5 text-[14px] text-text outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-neutral-500 focus:border-accent focus:shadow-[0_0_0_3px_rgba(10,80,208,0.15)]";
+  "w-full rounded-md border bg-band-paper px-3.5 py-2.5 text-[14px] text-text outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-neutral-500 focus:shadow-[0_0_0_3px_rgba(10,80,208,0.15)]";
 
 const labelClass = "mb-1.5 block text-[13px] font-medium text-text";
+
+function firstIssueMessage(
+  issues: ApiErrorBody["issues"],
+): FieldErrors {
+  const out: FieldErrors = {};
+  if (!issues) return out;
+  for (const key of Object.keys(issues) as FieldName[]) {
+    const messages = issues[key];
+    if (messages?.[0]) out[key] = messages[0];
+  }
+  return out;
+}
+
+function zodFieldErrors(error: ZodError<ContactFormPayload>): FieldErrors {
+  const flat = error.flatten().fieldErrors;
+  const out: FieldErrors = {};
+  for (const key of Object.keys(flat) as FieldName[]) {
+    const messages = flat[key];
+    if (messages?.[0]) out[key] = messages[0];
+  }
+  return out;
+}
 
 export function ContactForm({
   serviceOptions,
   submitLabel = "Send Message",
 }: ContactFormProps) {
   const formId = useId();
+  const formRef = useRef<HTMLFormElement>(null);
   const [submitted, setSubmitted] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+
+  function clearFieldError(name: FieldName) {
+    setFieldErrors((prev) => {
+      if (!prev[name]) return prev;
+      const next = { ...prev };
+      delete next[name];
+      return next;
+    });
+  }
+
+  function focusFirstInvalid(errors: FieldErrors) {
+    const order: FieldName[] = [
+      "fullName",
+      "organization",
+      "email",
+      "phone",
+      "service",
+      "message",
+    ];
+    const first = order.find((key) => errors[key]);
+    if (!first || !formRef.current) return;
+    const el = formRef.current.elements.namedItem(first);
+    if (el && "focus" in el && typeof el.focus === "function") {
+      el.focus();
+    }
+  }
+
+  function inputClass(name: FieldName) {
+    return cn(
+      fieldClass,
+      fieldErrors[name]
+        ? "border-red-400 focus:border-red-500"
+        : "border-divider focus:border-accent",
+    );
+  }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
+    setFieldErrors({});
     setPending(true);
 
     const form = e.currentTarget;
@@ -46,21 +127,40 @@ export function ContactForm({
       website: String(formData.get("website") ?? ""),
     };
 
+    const parsed = contactFormSchema.safeParse(payload);
+    if (!parsed.success) {
+      const errors = zodFieldErrors(parsed.error);
+      setFieldErrors(errors);
+      setError("Please check the highlighted fields and try again.");
+      setPending(false);
+      focusFirstInvalid(errors);
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(parsed.data),
       });
 
-      const data = (await res.json().catch(() => null)) as {
-        error?: string;
-      } | null;
+      const data = (await res.json().catch(() => null)) as ApiErrorBody | null;
 
       if (!res.ok) {
+        const apiFieldErrors = firstIssueMessage(data?.issues);
+        if (Object.keys(apiFieldErrors).length > 0) {
+          setFieldErrors(apiFieldErrors);
+          setError(
+            data?.error ??
+              "Please check the highlighted fields and try again.",
+          );
+          focusFirstInvalid(apiFieldErrors);
+          return;
+        }
+
         setError(
           data?.error ??
-            "Unable to send your message right now. Please try again or email us directly.",
+            `Unable to send your message right now. Please try again or email us at ${siteContact.email.label}.`,
         );
         return;
       }
@@ -69,7 +169,7 @@ export function ContactForm({
       setSubmitted(true);
     } catch {
       setError(
-        "Unable to send your message right now. Please check your connection and try again.",
+        `Unable to send your message right now. Please check your connection and try again, or email us at ${siteContact.email.label}.`,
       );
     } finally {
       setPending(false);
@@ -103,6 +203,7 @@ export function ContactForm({
   return (
     <form
       id="contact-form"
+      ref={formRef}
       onSubmit={onSubmit}
       className="relative flex flex-col gap-4"
       noValidate
@@ -132,9 +233,23 @@ export function ContactForm({
           type="text"
           required
           autoComplete="name"
-          className={fieldClass}
+          className={inputClass("fullName")}
           placeholder="Your name"
+          aria-invalid={Boolean(fieldErrors.fullName)}
+          aria-describedby={
+            fieldErrors.fullName ? `${formId}-name-error` : undefined
+          }
+          onChange={() => clearFieldError("fullName")}
         />
+        {fieldErrors.fullName ? (
+          <p
+            id={`${formId}-name-error`}
+            className="mt-1.5 text-[12px] text-red-700"
+            role="alert"
+          >
+            {fieldErrors.fullName}
+          </p>
+        ) : null}
       </div>
       <div>
         <label className={labelClass} htmlFor={`${formId}-org`}>
@@ -145,9 +260,23 @@ export function ContactForm({
           name="organization"
           type="text"
           autoComplete="organization"
-          className={fieldClass}
+          className={inputClass("organization")}
           placeholder="Practice or organization"
+          aria-invalid={Boolean(fieldErrors.organization)}
+          aria-describedby={
+            fieldErrors.organization ? `${formId}-org-error` : undefined
+          }
+          onChange={() => clearFieldError("organization")}
         />
+        {fieldErrors.organization ? (
+          <p
+            id={`${formId}-org-error`}
+            className="mt-1.5 text-[12px] text-red-700"
+            role="alert"
+          >
+            {fieldErrors.organization}
+          </p>
+        ) : null}
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
@@ -160,9 +289,23 @@ export function ContactForm({
             type="email"
             required
             autoComplete="email"
-            className={fieldClass}
+            className={inputClass("email")}
             placeholder="you@practice.com"
+            aria-invalid={Boolean(fieldErrors.email)}
+            aria-describedby={
+              fieldErrors.email ? `${formId}-email-error` : undefined
+            }
+            onChange={() => clearFieldError("email")}
           />
+          {fieldErrors.email ? (
+            <p
+              id={`${formId}-email-error`}
+              className="mt-1.5 text-[12px] text-red-700"
+              role="alert"
+            >
+              {fieldErrors.email}
+            </p>
+          ) : null}
         </div>
         <div>
           <label className={labelClass} htmlFor={`${formId}-phone`}>
@@ -173,9 +316,23 @@ export function ContactForm({
             name="phone"
             type="tel"
             autoComplete="tel"
-            className={fieldClass}
+            className={inputClass("phone")}
             placeholder="(555) 000-0000"
+            aria-invalid={Boolean(fieldErrors.phone)}
+            aria-describedby={
+              fieldErrors.phone ? `${formId}-phone-error` : undefined
+            }
+            onChange={() => clearFieldError("phone")}
           />
+          {fieldErrors.phone ? (
+            <p
+              id={`${formId}-phone-error`}
+              className="mt-1.5 text-[12px] text-red-700"
+              role="alert"
+            >
+              {fieldErrors.phone}
+            </p>
+          ) : null}
         </div>
       </div>
       <div>
@@ -186,8 +343,13 @@ export function ContactForm({
           id={`${formId}-service`}
           name="service"
           required
-          className={cn(fieldClass, "bg-band-paper")}
+          className={cn(inputClass("service"), "bg-band-paper")}
           defaultValue=""
+          aria-invalid={Boolean(fieldErrors.service)}
+          aria-describedby={
+            fieldErrors.service ? `${formId}-service-error` : undefined
+          }
+          onChange={() => clearFieldError("service")}
         >
           <option value="" disabled>
             Select a service
@@ -198,6 +360,15 @@ export function ContactForm({
             </option>
           ))}
         </select>
+        {fieldErrors.service ? (
+          <p
+            id={`${formId}-service-error`}
+            className="mt-1.5 text-[12px] text-red-700"
+            role="alert"
+          >
+            {fieldErrors.service}
+          </p>
+        ) : null}
       </div>
       <div>
         <label className={labelClass} htmlFor={`${formId}-message`}>
@@ -208,17 +379,41 @@ export function ContactForm({
           name="message"
           required
           rows={5}
-          className={cn(fieldClass, "resize-y min-h-[120px]")}
+          className={cn(inputClass("message"), "resize-y min-h-[120px]")}
           placeholder="Tell us what you need help with"
+          aria-invalid={Boolean(fieldErrors.message)}
+          aria-describedby={
+            fieldErrors.message ? `${formId}-message-error` : undefined
+          }
+          onChange={() => clearFieldError("message")}
         />
+        {fieldErrors.message ? (
+          <p
+            id={`${formId}-message-error`}
+            className="mt-1.5 text-[12px] text-red-700"
+            role="alert"
+          >
+            {fieldErrors.message}
+          </p>
+        ) : null}
       </div>
       {error ? (
-        <p
+        <div
           className="rounded-md border border-red-200 bg-red-50 px-3.5 py-2.5 text-[13px] leading-[1.5] text-red-800"
           role="alert"
         >
-          {error}
-        </p>
+          <p>{error}</p>
+          <p className="mt-1.5">
+            Or email us directly at{" "}
+            <a
+              href={siteContact.email.href}
+              className="font-semibold underline underline-offset-2"
+            >
+              {siteContact.email.label}
+            </a>
+            .
+          </p>
+        </div>
       ) : null}
       <button
         type="submit"

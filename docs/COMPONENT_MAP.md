@@ -55,16 +55,19 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | ProseSection | [`components/ProseSection.tsx`](../components/ProseSection.tsx) | Multi-paragraph story / about copy; mobile-first |
 | JobOpenings | [`components/JobOpenings.tsx`](../components/JobOpenings.tsx) | Careers openings grid; location + employment type; Apply links |
 | ContactPanel | [`components/ContactPanel.tsx`](../components/ContactPanel.tsx) | Contact info + hours + form layout; stacks on mobile |
-| ContactForm | [`components/ContactForm.tsx`](../components/ContactForm.tsx) | Client form; posts to `/api/contact` (Resend) |
+| ContactForm | [`components/ContactForm.tsx`](../components/ContactForm.tsx) | Client form; Zod validation + per-field errors; posts to `/api/contact`; mailto fallback on send failures |
 | TeamMemberCard | [`components/TeamMemberCard.tsx`](../components/TeamMemberCard.tsx) | About Us / AccountTeam; optional `bio` |
 
 ## Status & error routes
 
 | File | Path | Notes |
 |------|------|-------|
-| Not found | [`app/not-found.tsx`](../app/not-found.tsx) | Unknown URLs |
-| Error boundary | [`app/error.tsx`](../app/error.tsx) | Runtime exceptions; Try again + home |
+| Not found | [`app/not-found.tsx`](../app/not-found.tsx) | Unknown URLs; branded [`NotFoundView`](../components/NotFoundView.tsx); `noindex, follow` metadata |
+| Error boundary | [`app/error.tsx`](../app/error.tsx) | Runtime exceptions in a route segment; Try again + home |
+| Global error | [`app/global-error.tsx`](../app/global-error.tsx) | Root-layout failures; own `html`/`body`; Try again + home + contact |
 | Coming-soon metadata | [`lib/coming-soon.ts`](../lib/coming-soon.ts) | Shared title/description for stubs |
+
+Contact form ([`ContactForm`](../components/ContactForm.tsx)): client Zod validation, per-field errors, maps API `issues`, banners with mailto fallback for network / 502 / 503.
 
 ## Content modules
 
