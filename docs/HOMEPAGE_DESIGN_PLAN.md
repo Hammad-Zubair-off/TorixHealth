@@ -22,19 +22,20 @@ Premium, modern, clean, trustworthy, **technical healthcare** — confident prod
 
 | Role | Hex | Token |
 |------|-----|-------|
-| Page bg | `#f4f5fc` | `--color-bg` |
-| Text | `#1c1e2b` | `--color-text` |
-| Accent | `#796cbf` | `--color-accent` |
-| Accent text/emphasis | `#5d5294` | `--color-accent-700` |
-| Soft wash | `#f5f4ff` / `#e7e5fe` | `--color-accent-100` / `--color-accent-200` |
+| Page bg | `#f3f6fc` | `--color-bg` |
+| Text | `#16182a` | `--color-text` |
+| Accent (Primary Blue) | `#0a50d0` | `--color-accent` |
+| Accent text/emphasis (Deep Blue) | `#0546c1` | `--color-accent-700` |
+| Soft wash | `#eef4ff` / `#d6e6ff` | `--color-accent-100` / `--color-accent-200` |
+| Bright highlight | `#207dff` | `--color-accent-500` |
 | Paper | `#ffffff` | `--band-paper` |
-| Tint band | `#f0eefc` | `--band-tint` |
-| Deep band | `#23264f` → `#171a3a` | `--band-deep` / `--band-deep-2` |
-| Deep text | `#f3f5fe` / muted `rgba(243,245,254,0.72)` | `--band-deep-text` / `--band-deep-muted` |
-| Muted copy | `#75798c` | `--color-neutral-600` |
-| Divider | text at 12% mix | `--color-divider` |
+| Tint band | `#e8f0fc` | `--band-tint` |
+| Deep band | `#062a6e` → `#041a45` | `--band-deep` / `--band-deep-2` |
+| Deep text | `#f4f6fe` / muted `rgba(244,246,254,0.72)` | `--band-deep-text` / `--band-deep-muted` |
+| Muted copy | `#6a7288` | `--color-neutral-600` |
+| Divider | text at 10% mix | `--color-divider` |
 
-**Accent rule:** Accent is outline, border, icon, and kicker color — not large solid purple fills. Depth comes from navy bands + paper cards, not saturated blocks.
+**Accent rule:** Accent is outline, border, icon, and kicker color — not large solid blue fills except primary CTAs. Depth comes from navy-blue bands + paper cards, not saturated blocks.
 
 ### Typography
 

@@ -186,16 +186,16 @@ export function HeroBrandVisual() {
       {/* Ambient glow behind the transparent subject */}
       <div
         aria-hidden="true"
-        className="absolute left-[8%] top-[4%] h-[70%] w-[84%] rounded-full bg-[radial-gradient(circle_at_50%_45%,rgba(167,148,245,0.4)_0%,rgba(107,77,230,0.12)_48%,transparent_70%)] blur-[2px]"
+        className="absolute left-[8%] top-[4%] h-[70%] w-[84%] rounded-full bg-[radial-gradient(circle_at_50%_45%,rgba(32,125,255,0.35)_0%,rgba(10,80,208,0.12)_48%,transparent_70%)] blur-[2px]"
       />
 
       <div className="relative z-[1] w-full">
         <Image
-          src="/brand/hero-doctor.png"
+          src="/brand/hero-doctor1.png"
           alt="Healthcare professional representing Torix Solutions billing partnership"
-          width={720}
-          height={912}
-          className="relative mx-auto h-auto w-full select-none drop-shadow-[0_20px_40px_rgba(42,31,110,0.16)]"
+          width={1114}
+          height={1412}
+          className="relative mx-auto h-auto w-full select-none drop-shadow-[0_20px_40px_rgba(6,42,110,0.16)]"
           priority
           sizes="(max-width: 640px) 88vw, (max-width: 1024px) 440px, 480px"
         />

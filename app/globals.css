@@ -1,42 +1,42 @@
 @import "tailwindcss";
 
-/* Nocturne Light tokens — tuned for clearer contrast and richer accent */
+/* Torix Blue tokens — Deep #0546C1, Primary #0A50D0, Bright #207DFF */
 
 :root {
-  --color-bg: #f5f4fc;
+  --color-bg: #f3f6fc;
   --color-text: #16182a;
-  --color-accent: #6b4de6;
-  --color-accent-2: #7a6cf0;
+  --color-accent: #0a50d0;
+  --color-accent-2: #207dff;
   --color-divider: color-mix(in srgb, #16182a 10%, transparent);
 
   --color-neutral-100: #ffffff;
-  --color-neutral-200: #eef0f8;
-  --color-neutral-300: #dce0ef;
-  --color-neutral-400: #b8bdd2;
-  --color-neutral-500: #8b91ab;
-  --color-neutral-600: #6a7088;
+  --color-neutral-200: #eef2f8;
+  --color-neutral-300: #dce3ef;
+  --color-neutral-400: #b8c0d2;
+  --color-neutral-500: #8b93ab;
+  --color-neutral-600: #6a7288;
   --color-neutral-700: #4d5368;
   --color-neutral-800: #2e3345;
   --color-neutral-900: #16182a;
 
-  --color-accent-100: #f4f1ff;
-  --color-accent-200: #e8e2fe;
-  --color-accent-300: #cdc0fc;
-  --color-accent-400: #a994f5;
-  --color-accent-500: #8870ec;
-  --color-accent-600: #6b4de6;
-  --color-accent-700: #5538c4;
-  --color-accent-800: #3d2890;
-  --color-accent-900: #281a5c;
+  --color-accent-100: #eef4ff;
+  --color-accent-200: #d6e6ff;
+  --color-accent-300: #a8c8ff;
+  --color-accent-400: #4b93ff;
+  --color-accent-500: #207dff;
+  --color-accent-600: #0a50d0;
+  --color-accent-700: #0546c1;
+  --color-accent-800: #04389a;
+  --color-accent-900: #032a73;
 
-  --color-section: #2a1f6e;
-  --color-section-glow: #3d2f8a;
-  --color-section-ghost: #5446a8;
+  --color-section: #062a6e;
+  --color-section-glow: #0a3d8f;
+  --color-section-ghost: #1a5ab8;
 
   --band-paper: #ffffff;
-  --band-tint: #eeeafc;
-  --band-deep: #2a1f6e;
-  --band-deep-2: #1a1448;
+  --band-tint: #e8f0fc;
+  --band-deep: #062a6e;
+  --band-deep-2: #041a45;
   --band-deep-text: #f4f6fe;
   --band-deep-muted: rgba(244, 246, 254, 0.72);
 
@@ -51,8 +51,8 @@
   --shadow-sm: 0 0 0 1px #e6e9f5, 0 1px 2px rgba(22, 24, 42, 0.05);
   --shadow-md: 0 0 0 1px #dce0ef, 0 8px 24px rgba(22, 24, 42, 0.1);
   --shadow-lg: 0 0 0 1px #cfd4e8, 0 18px 44px rgba(22, 24, 42, 0.14);
-  --shadow-accent: 0 8px 24px rgba(107, 77, 230, 0.28);
-  --shadow-accent-lg: 0 14px 36px rgba(107, 77, 230, 0.34);
+  --shadow-accent: 0 8px 24px rgba(10, 80, 208, 0.28);
+  --shadow-accent-lg: 0 14px 36px rgba(10, 80, 208, 0.34);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 160ms;

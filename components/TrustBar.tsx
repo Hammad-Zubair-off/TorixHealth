@@ -10,7 +10,7 @@ export type TrustItem = {
 
 type TrustBarProps = {
   items: TrustItem[];
-  /** Deep-purple rounded bar matching brand mockup (Home). */
+  /** Deep-blue rounded bar matching brand mockup (Home). */
   variant?: "default" | "brand";
 };
 

@@ -24,8 +24,8 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 |-----------|------|-------|
 | Navbar | [`components/Navbar.tsx`](../components/Navbar.tsx) | Top contact strip (phone/email); brand logo + TORIX SOLUTIONS; active Home underline; solid CTA with arrow; animated hamburger → X |
 | Footer | [`components/Footer.tsx`](../components/Footer.tsx) | Brand column + Contact column include phone/email |
-| Button | [`components/Button.tsx`](../components/Button.tsx) | primary filled accent (~`#6B4DE6`); optional `arrow`; secondary / outline / ghost + lift hover |
-| Container / Section / Kicker | [`components/Container.tsx`](../components/Container.tsx) | `wash` band uses lavender radial wash |
+| Button | [`components/Button.tsx`](../components/Button.tsx) | primary filled accent (~`#0A50D0`); optional `arrow`; secondary / outline / ghost + lift hover |
+| Container / Section / Kicker | [`components/Container.tsx`](../components/Container.tsx) | `wash` band uses cool blue radial wash |
 | Icons | [`components/icons.tsx`](../components/icons.tsx) | includes `headphones` for brand trust bar |
 | Nav config | [`lib/nav.ts`](../lib/nav.ts) |
 | Site phone / email | [`lib/site-contact.ts`](../lib/site-contact.ts) |
@@ -40,14 +40,14 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Component | Path | Notes |
 |-----------|------|-------|
 | Hero | [`components/Hero.tsx`](../components/Hero.tsx) | Soft wash; optional `highlightWord`, `brandLayout`; CTA group unboxed (primary + outline secondary); `image` → `HeroPhoto` (themed stock under `public/brand/heroes/`); Home uses `HeroBrandVisual` (doctor + Claims/A/R floating cards). Claim workflow placeholder removed. |
-| TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-purple rounded stats bar (Home uses sample metrics pending final review) |
+| TrustBar | [`components/TrustBar.tsx`](../components/TrustBar.tsx) | `default` quiet strip; `variant="brand"` deep-blue rounded stats bar (Home uses sample metrics pending final review) |
 | IconFeatureGrid | [`components/IconFeatureGrid.tsx`](../components/IconFeatureGrid.tsx) | light/deep/open; optional `footerNote`; grid `1→2→3` cols |
 | SplitOfferings | [`components/SplitOfferings.tsx`](../components/SplitOfferings.tsx) | Services vs Solutions framing; filled primary CTA |
 | ServicesOverview | [`components/ServicesOverview.tsx`](../components/ServicesOverview.tsx) | Services (light) + Solutions (deep); grid `1→2→3` cols |
 | AccountTeam | [`components/AccountTeam.tsx`](../components/AccountTeam.tsx) | Named-contact / pending photos |
 | BenefitCards | [`components/BenefitCards.tsx`](../components/BenefitCards.tsx) | Differentiator / mission blocks as bordered cards; stacks on mobile |
 | PlatformSpotlight | [`components/PlatformSpotlight.tsx`](../components/PlatformSpotlight.tsx) | Deep split overview; optional `description`; abstract module visual |
-| ProcessTimeline | [`components/ProcessTimeline.tsx`](../components/ProcessTimeline.tsx) | Centered kicker heading; purple icon nodes + connector line/dots; stacks on mobile |
+| ProcessTimeline | [`components/ProcessTimeline.tsx`](../components/ProcessTimeline.tsx) | Centered kicker heading; blue icon nodes + connector line/dots; stacks on mobile |
 | FAQAccordion | [`components/FAQAccordion.tsx`](../components/FAQAccordion.tsx) | Two-col FAQ + accordion cards; native details/summary |
 | CTABanner | [`components/CTABanner.tsx`](../components/CTABanner.tsx) | Closing deep band; primary CTA with arrow |
 | ComingSoon | [`components/ComingSoon.tsx`](../components/ComingSoon.tsx) | Full-page stub for unfinished routes; swap for real content when ready |
@@ -236,7 +236,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 
 ## Brand mockup notes (Home)
 
-- Accent token ~`#6B4DE6`; deep bands use brand purple (`--band-deep`).
+- Accent token ~`#0A50D0` (Primary Blue); Deep `#0546C1`; Bright `#207DFF`; deep bands use navy-blue (`--band-deep`).
 - Nav + Hero + TrustBar `brand` aim for pixel-close fidelity to the approved mockup; lower sections keep structure with aligned buttons/surfaces.
 - Floating hero cards and trust metrics use sample numbers from the mockup until final figures are confirmed.
 

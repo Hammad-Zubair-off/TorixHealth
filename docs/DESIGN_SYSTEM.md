@@ -1,12 +1,10 @@
-# Torix Design System — Nocturne Light
+# Torix Design System — Torix Blue
 
 Global visual reference for every page (Home, Services, Solutions, About, Careers, Contact, Blog).
 
-**Source:** Finished homepage design in [`referenceUI/Torix Site - Nocturne Light (standalone).html`](../referenceUI/Torix%20Site%20-%20Nocturne%20Light%20(standalone).html), theme **Nocturne Light**, scoped under `.ds-nocl`.
+**Live tokens:** [`app/globals.css`](../app/globals.css). Brand anchors: Deep `#0546C1`, Primary `#0A50D0`, Bright `#207DFF`.
 
-**Scope of this document:** Homepage markup only (content before the second H1, “Claims submitted right the first time,” which begins a Medical Billing service page also present in the same bundle), plus the shared `.ds-nocl` CSS token sheet and component classes.
-
-**Method:** Values below are taken from declared CSS variables and observed homepage styles. Hover states come from CSS `:hover` rules and `style-hover` attributes in that file. This is documentation of what exists — not a redesign.
+**Historical source:** Finished homepage design in [`referenceUI/Torix Site - Nocturne Light (standalone).html`](../referenceUI/Torix%20Site%20-%20Nocturne%20Light%20(standalone).html) — palette below reflects the **current Torix Blue** theme, not the original purple reference.
 
 Future page work should reference this file instead of re-describing visual style.
 
@@ -18,69 +16,67 @@ Future page work should reference this file instead of re-describing visual styl
 
 | Role | Token(s) | Value |
 |------|----------|-------|
-| Page background | `--color-bg` | `#f4f5fc` |
-| Primary text | `--color-text`, `--color-neutral-900` | `#1c1e2b` |
-| Brand / accent | `--color-accent`, `--color-accent-600` | `#796cbf` |
-| Accent alternate (declared) | `--color-accent-2` | `#7972a9` |
-| Divider | `--color-divider` | `color-mix(in srgb, #1c1e2b 12%, transparent)` |
+| Page background | `--color-bg` | `#f3f6fc` |
+| Primary text | `--color-text`, `--color-neutral-900` | `#16182a` |
+| Brand / accent | `--color-accent`, `--color-accent-600` | `#0a50d0` |
+| Accent alternate (bright) | `--color-accent-2`, `--color-accent-500` | `#207dff` |
+| Divider | `--color-divider` | `color-mix(in srgb, #16182a 10%, transparent)` |
 | Paper (white surfaces) | `--band-paper`, `--color-neutral-100` | `#ffffff` |
-| Tint band | `--band-tint` | `#f0eefc` |
-| Deep band start | `--band-deep` | `#23264f` |
-| Deep band end | `--band-deep-2` | `#171a3a` |
-| Deep section base | `--color-section` | `#262a60` |
-| Text on deep bands | `--band-deep-text` | `#f3f5fe` |
-| Muted text on deep bands | `--band-deep-muted` | `rgba(243,245,254,0.72)` |
+| Tint band | `--band-tint` | `#e8f0fc` |
+| Deep band start | `--band-deep` | `#062a6e` |
+| Deep band end | `--band-deep-2` | `#041a45` |
+| Deep section base | `--color-section` | `#062a6e` |
+| Text on deep bands | `--band-deep-text` | `#f4f6fe` |
+| Muted text on deep bands | `--band-deep-muted` | `rgba(244,246,254,0.72)` |
 
 ### Neutral scale
 
 | Token | Value | Observed role on homepage |
 |-------|-------|---------------------------|
 | `--color-neutral-100` | `#ffffff` | White / paper |
-| `--color-neutral-200` | `#f0f1f9` | Soft neutral fills, tag backgrounds |
-| `--color-neutral-300` | `#dfe1ee` | Mid-light neutral (scale member) |
-| `--color-neutral-400` | `#c3c6d8` | Occasional dashed borders |
-| `--color-neutral-500` | `#9ea2b8` | Mid muted (scale member) |
-| `--color-neutral-600` | `#75798c` | Common muted body / supporting copy |
-| `--color-neutral-700` | `#565a6c` | Secondary text, tag text |
-| `--color-neutral-800` | `#343744` | Hero lead text |
-| `--color-neutral-900` | `#1c1e2b` | Primary text (same as `--color-text`) |
+| `--color-neutral-200` | `#eef2f8` | Soft neutral fills, tag backgrounds |
+| `--color-neutral-300` | `#dce3ef` | Mid-light neutral (scale member) |
+| `--color-neutral-400` | `#b8c0d2` | Occasional dashed borders |
+| `--color-neutral-500` | `#8b93ab` | Mid muted (scale member) |
+| `--color-neutral-600` | `#6a7288` | Common muted body / supporting copy |
+| `--color-neutral-700` | `#4d5368` | Secondary text, tag text |
+| `--color-neutral-800` | `#2e3345` | Hero lead text |
+| `--color-neutral-900` | `#16182a` | Primary text (same as `--color-text`) |
 
 ### Accent scale
 
 | Token | Value | Observed role on homepage |
 |-------|-------|---------------------------|
-| `--color-accent-100` | `#f5f4ff` | Soft fills, button hover, card washes |
-| `--color-accent-200` | `#e7e5fe` | Selection highlight; soft hero gradient start |
-| `--color-accent-300` | `#d2cefd` | Accent borders, pill borders |
-| `--color-accent-400` | `#b5abfc` | Scale member |
-| `--color-accent-500` | `#968ae0` | Scale member |
-| `--color-accent-600` | `#796cbf` | Brand accent (same as `--color-accent`) |
-| `--color-accent-700` | `#5d5294` | Primary button text, kickers, icon emphasis |
-| `--color-accent-800` | `#423a6a` | Scale member |
-| `--color-accent-900` | `#2b2741` | Scale member |
+| `--color-accent-100` | `#eef4ff` | Soft fills, button hover, card washes |
+| `--color-accent-200` | `#d6e6ff` | Selection highlight; soft hero gradient start |
+| `--color-accent-300` | `#a8c8ff` | Accent borders, pill borders |
+| `--color-accent-400` | `#4b93ff` | Scale member / mid highlight |
+| `--color-accent-500` | `#207dff` | Bright Blue (glows, gradients) |
+| `--color-accent-600` | `#0a50d0` | Primary Blue (same as `--color-accent`) |
+| `--color-accent-700` | `#0546c1` | Deep Blue — kickers, icon emphasis, strong UI |
+| `--color-accent-800` | `#04389a` | Active / pressed states |
+| `--color-accent-900` | `#032a73` | Darkest accent |
 
 ### Deep-section helpers (declared)
 
 | Token | Value | Homepage use |
 |-------|-------|--------------|
-| `--color-section-glow` | `#353b80` | Declared; **not used** on homepage markup |
-| `--color-section-ghost` | `#4c5397` | Declared; **not used** on homepage markup |
+| `--color-section-glow` | `#0a3d8f` | Declared companion to deep band |
+| `--color-section-ghost` | `#1a5ab8` | Declared companion to deep band |
 
-### Link colors (second style block, outside `.ds-nocl` component rules)
+### Link colors
 
 | State | Value |
 |-------|-------|
-| Default `a` | `#796cbf` |
-| `a:hover` | `#5d5294` |
-
-These compete with `.ds-nocl a { color: inherit }` — see [§6](#6-anything-inconsistent-or-ambiguous).
+| Default accent / links | `#0a50d0` (`--color-accent`) |
+| Hover / emphasis | `#0546c1` (`--color-accent-700`) |
 
 ### Hatch overlay (inline, not a named token)
 
 Diagonal hatch used on some surfaces:
 
-- `rgba(121,108,191,0.07)` — matches accent `#796cbf` at ~7% opacity, 8px stripe / 16px repeat
-- `rgba(121,108,191,0.09)` — same hue at ~9% opacity (one occurrence)
+- `rgba(10,80,208,0.07)` — Primary Blue at ~7% opacity
+- `rgba(10,80,208,0.09)` — same hue at ~9% opacity
 
 ### Status colors
 
@@ -353,7 +349,7 @@ Applied to `a`, `button`, and `[tabindex]` on `:focus-visible` within `.ds-nocl`
 |-------------|--------|
 | Photography | **None** — zero `<img>` tags on the homepage |
 | Illustrations / product shots | **None** as raster assets |
-| Dominant visuals | Layout geometry, soft lavender→paper gradients, deep navy section bands, light diagonal hatch, outline icons |
+| Dominant visuals | Layout geometry, soft blue→paper gradients, deep navy-blue section bands, light diagonal hatch, outline icons |
 | Icon style | Line / stroke, monochrome via `currentColor` |
 | Stock hospital / doctor clichés | **Not present** — consistent with the project’s non-generic medical-template direction |
 
@@ -371,7 +367,7 @@ Flagged separately — **do not bake these into the “official” system** as i
 4. **Section padding max:** Most sections cap at `92px`; hero (and similar) use `96px` — close but not identical.
 5. **Duplicate tag variants:** `.tag-accent` and `.tag-accent-2` share the same CSS declarations.
 6. **Primary button sizing:** Shared `.btn-primary` is outline + `14px` / `10px 18px`; hero CTA bumps to `15px` / `13px 24px` via inline override.
-7. **Link color conflict:** Global `a { color: #796cbf }` / hover `#5d5294` vs `.ds-nocl a { color: inherit }`. Which wins depends on cascade/specificity in a given context.
+7. **Link color conflict:** Global `a { color: #0a50d0 }` / hover `#0546c1` vs inherit rules in chrome. Which wins depends on cascade/specificity in a given context.
 8. **Accent scale members with little direct use:** Mid stops such as accent-400/500/800/900 are in the palette but rarely referenced directly on the homepage (accent-100/300/600/700 dominate).
 9. **Bundle contains a second page:** After the homepage, the same HTML file includes a Medical Billing service page. Patterns there may match, but this document’s section inventory and counts are homepage-scoped.
 10. **`style-hover`:** Hover treatments are stored in a non-standard `style-hover` attribute in the reference (applied by the bundler runtime). When implementing in Next.js, map these to real CSS `:hover` (or equivalent) — the *visual* values are authoritative; the attribute mechanism is not.
@@ -381,11 +377,11 @@ Flagged separately — **do not bake these into the “official” system** as i
 ## Radius, shadow, and font quick reference
 
 ```
-Fonts:     Inter (heading + body); heading weight 500; brand mark 600
-Radii:     4px / 8px / 14px / 999px
-Shadows:   ring + soft drop (sm / md / lg)
+Fonts:     Sora (heading) + Plus Jakarta Sans (body); heading weight 600
+Radii:     4px / 10px / 16px / 999px
+Shadows:   ring + soft drop (sm / md / lg); accent shadows use Primary Blue
 Container: 1280px max, clamp(24px, 4vw, 44px) side padding
-Accent:    #796cbf
-Page bg:   #f4f5fc
-Text:      #1c1e2b
+Accent:    #0a50d0 (Primary); Deep #0546c1; Bright #207dff
+Page bg:   #f3f6fc
+Text:      #16182a
 ```

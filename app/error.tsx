@@ -36,7 +36,7 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
               <button
                 type="button"
                 onClick={reset}
-                className="inline-flex items-center justify-center gap-1.5 rounded-md border border-transparent bg-accent px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(107,77,230,0.28)] transition-[transform,box-shadow,background-color] duration-[160ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-accent-700 hover:shadow-[0_14px_36px_rgba(107,77,230,0.34)] active:translate-y-0 active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-1.5 rounded-md border border-transparent bg-accent px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_8px_24px_rgba(10,80,208,0.28)] transition-[transform,box-shadow,background-color] duration-[160ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:bg-accent-700 hover:shadow-[0_14px_36px_rgba(10,80,208,0.34)] active:translate-y-0 active:scale-[0.98]"
               >
                 Try again
               </button>

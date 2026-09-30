@@ -4,13 +4,13 @@ import { cn } from "@/lib/utils";
 
 const variants = {
   primary:
-    "border border-transparent bg-accent text-white shadow-[0_8px_24px_rgba(107,77,230,0.28)] hover:bg-accent-700 hover:shadow-[0_14px_36px_rgba(107,77,230,0.34)] active:bg-accent-800",
+    "border border-transparent bg-accent text-white shadow-[0_8px_24px_rgba(10,80,208,0.28)] hover:bg-accent-700 hover:shadow-[0_14px_36px_rgba(10,80,208,0.34)] active:bg-accent-800",
   secondary:
     "border border-divider bg-band-paper text-text hover:border-accent-300 hover:bg-accent-100 hover:text-accent-700 active:bg-accent-200",
   ghost:
     "border border-transparent bg-transparent text-accent-700 hover:bg-accent-100 hover:text-accent active:bg-accent-200",
   outline:
-    "border border-accent bg-band-paper text-accent-700 hover:bg-accent hover:text-white hover:shadow-[0_8px_24px_rgba(107,77,230,0.28)]",
+    "border border-accent bg-band-paper text-accent-700 hover:bg-accent hover:text-white hover:shadow-[0_8px_24px_rgba(10,80,208,0.28)]",
 } as const;
 
 type ButtonProps = {

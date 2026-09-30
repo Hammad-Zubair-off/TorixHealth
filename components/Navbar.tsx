@@ -107,21 +107,31 @@ function BrandLogo({ className }: { className?: string }) {
   return (
     <Link
       href="/"
+      aria-label="Torix Health"
       className={cn(
-        "mr-auto inline-flex items-center gap-2.5 no-underline",
+        "group mr-auto inline-flex items-center gap-3 no-underline",
         className,
       )}
     >
       <Image
-        src="/brand/logo-mark.png"
+        src="/brand/torix-logo-mark.png"
         alt=""
-        width={36}
-        height={30}
-        className="h-[30px] w-auto"
+        width={365}
+        height={431}
+        className="h-[44px] w-auto shrink-0 transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] sm:h-[48px]"
         priority
       />
-      <span className="font-[family-name:var(--font-heading)] text-[15px] font-semibold tracking-[0.04em] text-text sm:text-[16px]">
-        TORIX SOLUTIONS
+      <span className="flex min-w-[7.5rem] flex-col items-center justify-center text-center leading-none">
+        <span className="font-[family-name:var(--font-heading)] text-[18px] font-bold tracking-[0.12em] text-accent-700 sm:text-[19px]">
+          TORIX
+        </span>
+        <span className="mt-1.5 flex w-full items-center gap-2">
+          <span aria-hidden="true" className="h-px flex-1 bg-accent-400/70" />
+          <span className="font-[family-name:var(--font-heading)] text-[9px] font-semibold uppercase tracking-[0.28em] text-accent sm:text-[10px]">
+            Health
+          </span>
+          <span aria-hidden="true" className="h-px flex-1 bg-accent-400/70" />
+        </span>
       </span>
     </Link>
   );

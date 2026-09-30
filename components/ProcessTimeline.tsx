@@ -71,7 +71,7 @@ export function ProcessTimeline({
                     aria-hidden
                     className="absolute inset-[6px] rounded-full bg-accent/10"
                   />
-                  <span className="relative flex size-12 items-center justify-center rounded-full bg-accent text-white shadow-[0_10px_28px_rgba(107,77,230,0.32)]">
+                  <span className="relative flex size-12 items-center justify-center rounded-full bg-accent text-white shadow-[0_10px_28px_rgba(10,80,208,0.32)]">
                     <Icon name={icon} size={22} className="text-white" />
                   </span>
                 </div>

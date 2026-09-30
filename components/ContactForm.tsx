@@ -15,7 +15,7 @@ type ContactFormProps = {
 };
 
 const fieldClass =
-  "w-full rounded-md border border-divider bg-band-paper px-3.5 py-2.5 text-[14px] text-text outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-neutral-500 focus:border-accent focus:shadow-[0_0_0_3px_rgba(107,77,230,0.15)]";
+  "w-full rounded-md border border-divider bg-band-paper px-3.5 py-2.5 text-[14px] text-text outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-neutral-500 focus:border-accent focus:shadow-[0_0_0_3px_rgba(10,80,208,0.15)]";
 
 const labelClass = "mb-1.5 block text-[13px] font-medium text-text";
 
@@ -221,8 +221,8 @@ export function ContactForm({
         disabled={pending}
         className={cn(
           "inline-flex items-center justify-center gap-1.5 rounded-md border border-transparent bg-accent px-7 py-3.5 text-[15px] font-semibold text-white",
-          "shadow-[0_8px_24px_rgba(107,77,230,0.28)] transition-[transform,box-shadow,background-color,opacity] duration-[160ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-          "hover:-translate-y-0.5 hover:bg-accent-700 hover:shadow-[0_14px_36px_rgba(107,77,230,0.34)]",
+          "shadow-[0_8px_24px_rgba(10,80,208,0.28)] transition-[transform,box-shadow,background-color,opacity] duration-[160ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+          "hover:-translate-y-0.5 hover:bg-accent-700 hover:shadow-[0_14px_36px_rgba(10,80,208,0.34)]",
           "active:translate-y-0 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-70",
         )}
       >
