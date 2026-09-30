@@ -8,7 +8,7 @@ import { siteContact } from "@/lib/site-contact";
 /** Contact Us page — form posts to `/api/contact` (Resend). */
 export const contactContent = {
   meta: {
-    title: "Contact Us | Torix Solutions",
+    title: "Contact Us",
     description:
       "Contact Torix Solutions for medical billing, healthcare software, revenue cycle management, and compliance questions. Book a consultation or send a message.",
   },

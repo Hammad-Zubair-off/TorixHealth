@@ -5,7 +5,7 @@ import type { IconName } from "@/components/icons";
 /** Revenue Cycle Management — full-cycle oversight from intake to final payment. */
 export const rcmContent = {
   meta: {
-    title: "Revenue Cycle Management | Torix Solutions",
+    title: "Revenue Cycle Management",
     description:
       "Torix Solutions manages your entire revenue cycle from patient scheduling to final payment — so nothing falls through the cracks between coding, claims, credentialing, and collections.",
   },

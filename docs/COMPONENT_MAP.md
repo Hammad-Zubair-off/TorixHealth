@@ -30,7 +30,7 @@ Structure source of truth for the Torix site. Update this file when adding, rena
 | Nav config | [`lib/nav.ts`](../lib/nav.ts) |
 | Site phone / email | [`lib/site-contact.ts`](../lib/site-contact.ts) |
 | Contact form schema | [`lib/contact-schema.ts`](../lib/contact-schema.ts) | Zod payload for `/api/contact` |
-| Contact API | [`app/api/contact/route.ts`](../app/api/contact/route.ts) | Resend email relay; needs `RESEND_API_KEY` |
+| Contact API | [`app/api/contact/route.ts`](../app/api/contact/route.ts) | Resend or Gmail SMTP; see `.env.example` (`RESEND_API_KEY` or `GMAIL_USER` + `GMAIL_APP_PASSWORD`) |
 | `cn` util | [`lib/utils.ts`](../lib/utils.ts) |
 | Card motion | `.card-lift` / `.card-lift-light` / `.card-lift-deep` in globals |
 | Brand assets | [`public/brand/`](../public/brand/) | `logo-mark.png`, `hero-doctor.png`; page heroes in [`public/brand/heroes/`](../public/brand/heroes/); favicons from logo → [`app/favicon.ico`](../app/favicon.ico), [`app/icon.png`](../app/icon.png), [`app/apple-icon.png`](../app/apple-icon.png) |

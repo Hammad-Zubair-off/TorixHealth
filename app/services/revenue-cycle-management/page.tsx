@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
@@ -7,16 +10,18 @@ import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
 import { rcmContent } from "@/content/revenue-cycle-management";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: rcmContent.meta.title,
   description: rcmContent.meta.description,
-};
+  path: "/services/revenue-cycle-management",
+});
 
 export default function RevenueCycleManagementPage() {
   const c = rcmContent;
 
   return (
     <>
+      <JsonLd data={[faqPageSchema(c.faqs.items), breadcrumbSchema(c.hero.breadcrumb, "/services/revenue-cycle-management")]} />
       <Navbar />
       <main>
         <Hero

@@ -7,7 +7,7 @@ import type { IconName } from "@/components/icons";
 /** Medical Coding service page — same component pattern as Medical Billing / RCM. */
 export const medicalCodingContent = {
   meta: {
-    title: "Medical Coding | Torix Solutions",
+    title: "Medical Coding",
     description:
       "Torix Solutions provides ICD-10 and CPT medical coding for independent practices, with specialty-aware assignment, documentation queries when the note doesn't support the code, and handoff ready for claim submission.",
   },

@@ -5,7 +5,7 @@ import type { IconName } from "@/components/icons";
 /** Accounts Receivable Operations — aging AR, denials, appeals, and payment recovery. */
 export const arFollowUpContent = {
   meta: {
-    title: "Accounts Receivable Operations | Torix Solutions",
+    title: "Accounts Receivable Operations",
     description:
       "Torix Solutions handles AR follow-up, denial resolution, appeals and payment recovery — working inside the system you already use, with a named representative you can call.",
   },

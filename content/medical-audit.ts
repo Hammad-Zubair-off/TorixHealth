@@ -7,7 +7,7 @@ import type { IconName } from "@/components/icons";
 /** Medical Billing Audit — KPI, denial, and productivity analysis with corrective actions. */
 export const medicalAuditContent = {
   meta: {
-    title: "Medical Billing Audit | Torix Solutions",
+    title: "Medical Billing Audit",
     description:
       "Torix Solutions analyzes your practice's revenue cycle KPIs, denial patterns, and provider productivity — turning billing data into decisions you can act on.",
   },

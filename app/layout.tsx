@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Sora } from "next/font/google";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  organizationSchema,
+  websiteSchema,
+} from "@/lib/seo-schema";
+import {
+  defaultDescription,
+  ogImagePath,
+  siteName,
+  siteUrl,
+} from "@/lib/site";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -17,9 +28,39 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Torix Solutions | Medical Billing & Healthcare Technology",
-  description:
-    "Underpayments and slow follow-up are quietly draining your collections. Torix Solutions fixes that. Our team of billing experts handles your entire revenue cycle — accurate medical coding, credentialing with the insurances you actually bill, timely claims submission, and relentless follow-up on every unpaid claim. The result: faster reimbursements, fewer denials, and more of what you've earned actually landing in your account.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | Medical Billing & Healthcare Technology`,
+    template: `%s | ${siteName}`,
+  },
+  description: defaultDescription,
+  applicationName: siteName,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName,
+    title: `${siteName} | Medical Billing & Healthcare Technology`,
+    description: defaultDescription,
+    images: [
+      {
+        url: ogImagePath,
+        width: 365,
+        height: 431,
+        alt: `${siteName} logo`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} | Medical Billing & Healthcare Technology`,
+    description: defaultDescription,
+    images: [ogImagePath],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +73,10 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${sora.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        {children}
+      </body>
     </html>
   );
 }

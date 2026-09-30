@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { BenefitCards } from "@/components/BenefitCards";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
@@ -9,16 +12,18 @@ import { Navbar } from "@/components/Navbar";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { medicalBillingSoftwareContent } from "@/content/medical-billing-software";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: medicalBillingSoftwareContent.meta.title,
   description: medicalBillingSoftwareContent.meta.description,
-};
+  path: "/solutions/medical-billing-software",
+});
 
 export default function MedicalBillingSoftwarePage() {
   const c = medicalBillingSoftwareContent;
 
   return (
     <>
+      <JsonLd data={[faqPageSchema(c.faqs.items), breadcrumbSchema(c.hero.breadcrumb, "/solutions/medical-billing-software")]} />
       <Navbar />
       <main>
         <Hero

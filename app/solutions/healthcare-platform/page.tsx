@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
@@ -9,16 +12,18 @@ import { PlatformSpotlight } from "@/components/PlatformSpotlight";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { healthcarePlatformContent } from "@/content/healthcare-platform";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: healthcarePlatformContent.meta.title,
   description: healthcarePlatformContent.meta.description,
-};
+  path: "/solutions/healthcare-platform",
+});
 
 export default function HealthcarePlatformPage() {
   const c = healthcarePlatformContent;
 
   return (
     <>
+      <JsonLd data={[faqPageSchema(c.faqs.items), breadcrumbSchema(c.hero.breadcrumb, "/solutions/healthcare-platform")]} />
       <Navbar />
       <main>
         <Hero

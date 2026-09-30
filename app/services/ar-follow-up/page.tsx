@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
@@ -7,16 +10,18 @@ import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
 import { arFollowUpContent } from "@/content/ar-follow-up";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: arFollowUpContent.meta.title,
   description: arFollowUpContent.meta.description,
-};
+  path: "/services/ar-follow-up",
+});
 
 export default function ArFollowUpPage() {
   const c = arFollowUpContent;
 
   return (
     <>
+      <JsonLd data={[faqPageSchema(c.faqs.items), breadcrumbSchema(c.hero.breadcrumb, "/services/ar-follow-up")]} />
       <Navbar />
       <main>
         <Hero

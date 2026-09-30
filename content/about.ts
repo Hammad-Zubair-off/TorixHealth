@@ -5,7 +5,7 @@ import type { IconName } from "@/components/icons";
 /** About Us page copy from provided company brief. */
 export const aboutContent = {
   meta: {
-    title: "About Us | Torix Solutions",
+    title: "About Us",
     description:
       "Torix Solutions helps healthcare organizations simplify operations through medical billing services, in-house healthcare technology, and compliance-focused solutions that work together.",
   },

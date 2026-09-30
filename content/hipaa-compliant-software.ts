@@ -6,7 +6,7 @@ import type { IconName } from "@/components/icons";
 /** HIPAA-Compliant Software solution page — security & compliance practices. */
 export const hipaaCompliantSoftwareContent = {
   meta: {
-    title: "HIPAA-Compliant Software | Torix Solutions",
+    title: "HIPAA-Compliant Software",
     description:
       "Torix Solutions HIPAA-compliant software practices: role-based access control, audit logging, encryption in transit and at rest, and a signed Business Associate Agreement. Documented in detail rather than asserted in a badge.",
   },

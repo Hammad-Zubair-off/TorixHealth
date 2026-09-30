@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { ComingSoon } from "@/components/ComingSoon";
+import { buildPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Healthcare SEO | Torix Solutions",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Healthcare SEO",
   description:
     "Healthcare SEO is under review and not yet approved for launch.",
-  robots: { index: false, follow: false },
-};
+  path: "/services/healthcare-seo",
+  noIndex: true,
+});
 
 export default function HealthcareSeoPage() {
   return (

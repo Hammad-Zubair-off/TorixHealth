@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/seo-schema";
 import { BenefitCards } from "@/components/BenefitCards";
 import { CTABanner } from "@/components/CTABanner";
 import { Footer } from "@/components/Footer";
@@ -8,16 +11,18 @@ import { Navbar } from "@/components/Navbar";
 import { ProseSection } from "@/components/ProseSection";
 import { aboutContent } from "@/content/about";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: aboutContent.meta.title,
   description: aboutContent.meta.description,
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   const c = aboutContent;
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema(c.hero.breadcrumb, "/about")} />
       <Navbar />
       <main>
         <Hero

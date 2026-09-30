@@ -104,11 +104,15 @@ export function ContactForm({
     <form
       id="contact-form"
       onSubmit={onSubmit}
-      className="flex flex-col gap-4"
+      className="relative flex flex-col gap-4"
       noValidate
     >
-      {/* Honeypot — hidden from users; bots that fill it are ignored. */}
-      <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden">
+      {/* Honeypot — visually hidden; bots that fill it are ignored. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute h-0 w-0 overflow-hidden opacity-0"
+        style={{ left: "-9999px", top: "auto" }}
+      >
         <label htmlFor={`${formId}-website`}>Website</label>
         <input
           id={`${formId}-website`}

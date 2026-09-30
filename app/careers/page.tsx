@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { breadcrumbSchema } from "@/lib/seo-schema";
 import { BenefitCards } from "@/components/BenefitCards";
 import { CTABanner } from "@/components/CTABanner";
 import { Footer } from "@/components/Footer";
@@ -10,16 +13,18 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { ProseSection } from "@/components/ProseSection";
 import { careersContent } from "@/content/careers";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: careersContent.meta.title,
   description: careersContent.meta.description,
-};
+  path: "/careers",
+});
 
 export default function CareersPage() {
   const c = careersContent;
 
   return (
     <>
+      <JsonLd data={breadcrumbSchema(c.hero.breadcrumb, "/careers")} />
       <Navbar />
       <main>
         <Hero

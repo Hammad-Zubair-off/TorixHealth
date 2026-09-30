@@ -7,7 +7,7 @@ import type { IconName } from "@/components/icons";
 /** Careers page copy from provided hiring brief. */
 export const careersContent = {
   meta: {
-    title: "Careers | Torix Solutions",
+    title: "Careers",
     description:
       "Join Torix Solutions and help transform healthcare through technology, medical billing expertise, and operational excellence. Explore open positions and our hiring process.",
   },

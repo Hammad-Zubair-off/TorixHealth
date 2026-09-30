@@ -7,7 +7,7 @@ import type { IconName } from "@/components/icons";
 /** Medical Billing Software solution page — in-house billing automation platform. */
 export const medicalBillingSoftwareContent = {
   meta: {
-    title: "Medical Billing Software | Torix Solutions",
+    title: "Medical Billing Software",
     description:
       "Torix Solutions Medical Billing Software: in-house billing automation with EHR and practice management integration, workflow automation and reporting you can read. Bundled at no cost with the Medical Billing service.",
   },

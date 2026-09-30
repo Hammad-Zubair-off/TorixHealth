@@ -3,15 +3,33 @@ import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero, HeroBrandVisual } from "@/components/Hero";
+import { JsonLd } from "@/components/JsonLd";
 import { Navbar } from "@/components/Navbar";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { SplitOfferings } from "@/components/SplitOfferings";
 import { TrustBar } from "@/components/TrustBar";
 import { homeContent } from "@/content/home";
+import { faqPageSchema } from "@/lib/seo-schema";
+import { buildPageMetadata, siteName } from "@/lib/site";
 
-export const metadata: Metadata = {
+const homeAbsoluteTitle = `${siteName} | ${homeContent.meta.title}`;
+const homeMeta = buildPageMetadata({
   title: homeContent.meta.title,
   description: homeContent.meta.description,
+  path: "/",
+});
+
+export const metadata: Metadata = {
+  ...homeMeta,
+  title: { absolute: homeAbsoluteTitle },
+  openGraph: {
+    ...homeMeta.openGraph,
+    title: homeAbsoluteTitle,
+  },
+  twitter: {
+    ...homeMeta.twitter,
+    title: homeAbsoluteTitle,
+  },
 };
 
 export default function HomePage() {
@@ -19,6 +37,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={faqPageSchema(c.faqs.items)} />
       <Navbar />
       <main>
         <Hero

@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { buildPageMetadata } from "@/lib/site";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
@@ -8,16 +11,18 @@ import { Navbar } from "@/components/Navbar";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { hipaaCompliantSoftwareContent } from "@/content/hipaa-compliant-software";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: hipaaCompliantSoftwareContent.meta.title,
   description: hipaaCompliantSoftwareContent.meta.description,
-};
+  path: "/solutions/hipaa-compliant-software",
+});
 
 export default function HipaaCompliantSoftwarePage() {
   const c = hipaaCompliantSoftwareContent;
 
   return (
     <>
+      <JsonLd data={[faqPageSchema(c.faqs.items), breadcrumbSchema(c.hero.breadcrumb, "/solutions/hipaa-compliant-software")]} />
       <Navbar />
       <main>
         <Hero
