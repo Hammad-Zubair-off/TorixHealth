@@ -271,6 +271,21 @@ export const medicalAuditContent = {
         answer:
           "Front-end fixes — eligibility verification, registration accuracy, authorization capture — typically show up within a billing cycle. Coding and contract changes take longer to flow through.",
       },
+      {
+        question: "What is included in a medical billing audit?",
+        answer:
+          "A billing audit can review claims, coding, documentation, payments, denials, payer reimbursements, and other revenue cycle processes to identify errors, compliance concerns, and missed revenue opportunities.",
+      },
+      {
+        question: "How can a billing audit help my practice?",
+        answer:
+          "An audit can help identify recurring billing errors, underpayments, missed charges, incorrect coding, avoidable denials, and process inefficiencies that may be affecting your revenue.",
+      },
+      {
+        question: "How often should a medical practice conduct a billing audit?",
+        answer:
+          "The ideal frequency depends on the size and complexity of the practice. Regular audits can help identify problems early and ensure billing processes remain accurate, efficient, and compliant.",
+      },
     ] satisfies FAQItem[],
   },
   finalCta: {

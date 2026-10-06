@@ -176,6 +176,26 @@ export const homeContent = {
       },
     ] satisfies FAQItem[],
   },
+  virtualAssistantFaqs: {
+    heading: "Virtual Assistant FAQs",
+    items: [
+      {
+        question: "What tasks can Torix Solutions Virtual Assistants handle?",
+        answer:
+          "Our virtual assistants can support administrative and healthcare-related workflows such as scheduling, patient communication, data entry, insurance verification, documentation support, and other routine administrative tasks.",
+      },
+      {
+        question: "Can I hire a Virtual Assistant specifically for my medical practice?",
+        answer:
+          "Yes. Virtual Assistant support can be tailored to your practice's workflow, specialty, administrative needs, and day-to-day workload.",
+      },
+      {
+        question: "How can a Virtual Assistant help reduce my staff's workload?",
+        answer:
+          "A dedicated Virtual Assistant can handle time-consuming administrative tasks, allowing your in-house team to focus more on patients, providers, and higher-priority responsibilities.",
+      },
+    ] satisfies FAQItem[],
+  },
   finalCta: {
     heading: "Start with a conversation about your current billing.",
     subheading:
