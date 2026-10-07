@@ -67,7 +67,7 @@ export const careersContent = {
     items: [
       {
         icon: "fileText" as IconName,
-        title: "Medical Billing",
+        title: "Medical Billing Consulting",
         href: "/services/medical-billing",
         ctaLabel: "Learn more →",
       },
@@ -78,14 +78,8 @@ export const careersContent = {
         ctaLabel: "Learn more →",
       },
       {
-        icon: "clipboard" as IconName,
-        title: "Medical Coding",
-        href: "/services/medical-coding",
-        ctaLabel: "Learn more →",
-      },
-      {
         icon: "building" as IconName,
-        title: "Credentialing and Contract",
+        title: "Medical Credentialing & Contracting",
         href: "/services/credentialing",
         ctaLabel: "Learn more →",
       },

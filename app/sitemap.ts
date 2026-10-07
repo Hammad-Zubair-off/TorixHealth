@@ -14,6 +14,16 @@ const indexableRoutes: Array<{
   { path: "/services/ar-follow-up", changeFrequency: "monthly", priority: 0.85 },
   { path: "/services/credentialing", changeFrequency: "monthly", priority: 0.85 },
   {
+    path: "/services/virtual-medical-assistants",
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
+    path: "/services/healthcare-digital-marketing",
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
     path: "/solutions/medical-billing-software",
     changeFrequency: "monthly",
     priority: 0.85,

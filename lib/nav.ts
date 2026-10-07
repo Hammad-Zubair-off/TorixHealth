@@ -15,12 +15,13 @@ export const mainNav: Array<NavLink | NavGroup> = [
   {
     label: "Services",
     children: [
-      { label: "Medical Billing", href: "/services/medical-billing" },
+      { label: "Medical Billing Consulting", href: "/services/medical-billing" },
+      { label: "Medical Credentialing & Contracting", href: "/services/credentialing" },
+      { label: "AR & Denial Management", href: "/services/ar-follow-up" },
       { label: "Medical Billing Audit", href: "/services/medical-audit" },
-      { label: "Medical Coding", href: "/services/medical-coding" },
-      { label: "Accounts Receivable Operations", href: "/services/ar-follow-up" },
       { label: "Revenue Cycle Management", href: "/services/revenue-cycle-management" },
-      { label: "Credentialing and Contract", href: "/services/credentialing" },
+      { label: "Virtual Medical Assistants", href: "/services/virtual-medical-assistants" },
+      { label: "Healthcare Digital Marketing", href: "/services/healthcare-digital-marketing" },
     ],
   },
   {
@@ -41,12 +42,13 @@ export const mainNav: Array<NavLink | NavGroup> = [
 
 export const footerNav = {
   services: [
-    { label: "Medical Billing", href: "/services/medical-billing" },
+    { label: "Medical Billing Consulting", href: "/services/medical-billing" },
+    { label: "Medical Credentialing & Contracting", href: "/services/credentialing" },
+    { label: "AR & Denial Management", href: "/services/ar-follow-up" },
     { label: "Medical Billing Audit", href: "/services/medical-audit" },
-    { label: "Medical Coding", href: "/services/medical-coding" },
-    { label: "Accounts Receivable Operations", href: "/services/ar-follow-up" },
     { label: "Revenue Cycle Management", href: "/services/revenue-cycle-management" },
-    { label: "Credentialing and Contract", href: "/services/credentialing" },
+    { label: "Virtual Medical Assistants", href: "/services/virtual-medical-assistants" },
+    { label: "Healthcare Digital Marketing", href: "/services/healthcare-digital-marketing" },
   ],
   solutions: [
     { label: "Medical Billing Software", href: "/solutions/medical-billing-software" },
