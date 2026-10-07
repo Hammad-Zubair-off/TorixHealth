@@ -65,16 +65,9 @@ export const aboutContent = {
     items: [
       {
         icon: "fileText" as IconName,
-        title: "Medical Billing",
+        title: "Medical Billing Consulting",
         description: "Claim operations scoped to submission, posting and denial follow-up.",
         href: "/services/medical-billing",
-        ctaLabel: "Learn more →",
-      },
-      {
-        icon: "clipboard" as IconName,
-        title: "Medical Coding",
-        description: "ICD-10 and CPT assignment with documentation support.",
-        href: "/services/medical-coding",
         ctaLabel: "Learn more →",
       },
       {
@@ -86,7 +79,7 @@ export const aboutContent = {
       },
       {
         icon: "building" as IconName,
-        title: "Credentialing and Contract",
+        title: "Medical Credentialing & Contracting",
         description: "Enrollment, CAQH and recredentialing so providers can bill.",
         href: "/services/credentialing",
         ctaLabel: "Learn more →",

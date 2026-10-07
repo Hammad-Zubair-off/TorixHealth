@@ -73,27 +73,27 @@ export const homeContent = {
     services: [
       {
         icon: "fileText",
-        title: "Medical Billing",
+        title: "Medical Billing Consulting",
         description:
           "Full-cycle billing from scheduling to final insurance and patient payment — eligibility, claims, posting, and patient balances handled end to end.",
         href: "/services/medical-billing",
-        ctaLabel: "Medical Billing",
+        ctaLabel: "Medical Billing Consulting",
+      },
+      {
+        icon: "building",
+        title: "Medical Credentialing & Contracting",
+        description:
+          "Get enrolled with the insurances that matter, keep CAQH current, and renew credentials before you lose network status.",
+        href: "/services/credentialing",
+        ctaLabel: "Medical Credentialing & Contracting",
       },
       {
         icon: "activity",
-        title: "Revenue Cycle Management",
+        title: "AR & Denial Management",
         description:
-          "Everything working together from patient scheduling to final payment — so nothing falls through the cracks between coding, claims, credentialing, and collections.",
-        href: "/services/revenue-cycle-management",
-        ctaLabel: "Revenue Cycle Management",
-      },
-      {
-        icon: "clipboard",
-        title: "Medical Coding",
-        description:
-          "ICD-10 and CPT assignment at the point of entry, with documentation queries raised when the note doesn't support the code.",
-        href: "/services/medical-coding",
-        ctaLabel: "Medical Coding",
+          "AR follow-up, denial resolution, appeals and payment recovery — worked inside your system, with a named representative you can call.",
+        href: "/services/ar-follow-up",
+        ctaLabel: "AR & Denial Management",
       },
       {
         icon: "check",
@@ -105,19 +105,27 @@ export const homeContent = {
       },
       {
         icon: "activity",
-        title: "Accounts Receivable Operations",
+        title: "Revenue Cycle Management",
         description:
-          "AR follow-up, denial resolution, appeals and payment recovery — worked inside your system, with a named representative you can call.",
-        href: "/services/ar-follow-up",
-        ctaLabel: "Accounts Receivable Operations",
+          "Everything working together from patient scheduling to final payment — so nothing falls through the cracks between coding, claims, credentialing, and collections.",
+        href: "/services/revenue-cycle-management",
+        ctaLabel: "Revenue Cycle Management",
       },
       {
-        icon: "building",
-        title: "Credentialing and Contract",
+        icon: "headphones",
+        title: "Virtual Medical Assistants",
         description:
-          "Get enrolled with the insurances that matter, keep CAQH current, and renew credentials before you lose network status.",
-        href: "/services/credentialing",
-        ctaLabel: "Credentialing and Contract",
+          "Trained virtual assistants handle scheduling, patient communication, data entry, and administrative work — so your in-house team can focus on patients.",
+        href: "/services/virtual-medical-assistants",
+        ctaLabel: "Virtual Medical Assistants",
+      },
+      {
+        icon: "monitor",
+        title: "Healthcare Digital Marketing",
+        description:
+          "Websites, SEO, and online visibility built for healthcare practices — so patients searching for care find you first.",
+        href: "/services/healthcare-digital-marketing",
+        ctaLabel: "Healthcare Digital Marketing",
       },
     ] satisfies OverviewCard[],
     solutions: [
