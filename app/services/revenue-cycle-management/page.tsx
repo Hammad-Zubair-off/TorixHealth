@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
+import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { rcmContent } from "@/content/revenue-cycle-management";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -39,6 +40,11 @@ export default function RevenueCycleManagementPage() {
           footerNote={c.howItWorks.footerNote}
           items={c.howItWorks.items}
           band="paper"
+        />
+        <ProcessTimeline
+          heading={c.workflow.heading}
+          subheading={c.workflow.subheading}
+          steps={c.workflow.steps}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner

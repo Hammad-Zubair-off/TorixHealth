@@ -3,6 +3,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/site";
 import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
+import { EnrollmentColumns } from "@/components/EnrollmentColumns";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -38,6 +39,18 @@ export default function CredentialingPage() {
           subheading={c.howItWorks.subheading}
           items={c.howItWorks.items}
           band="paper"
+        />
+        <IconFeatureGrid
+          heading={c.specialties.heading}
+          subheading={c.specialties.subheading}
+          items={c.specialties.items}
+          band="bg"
+        />
+        <EnrollmentColumns
+          heading={c.enrollmentSolutions.heading}
+          subheading={c.enrollmentSolutions.subheading}
+          columns={c.enrollmentSolutions.columns}
+          payerPrompt={c.enrollmentSolutions.payerPrompt}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner

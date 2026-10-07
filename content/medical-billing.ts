@@ -97,6 +97,21 @@ export const medicalBillingContent = {
         answer:
           "Pricing is quoted per practice after the assessment, based on volume, payer mix and specialty. The number and the scope go in writing before anything starts.",
       },
+      {
+        question: "Why are my medical claims being denied?",
+        answer:
+          "Claims may be denied because of eligibility issues, coding errors, missing authorizations, incorrect payer information, documentation requirements, or other billing issues. We identify the cause and manage the appropriate correction or follow-up.",
+      },
+      {
+        question: "Can Torix Solutions manage my entire medical billing process?",
+        answer:
+          "Yes. We can support the complete billing cycle, including eligibility verification, claims submission, payment posting, denial management, AR follow-up, and reporting.",
+      },
+      {
+        question: "How can I reduce my outstanding accounts receivable?",
+        answer:
+          "Our billing team reviews unpaid claims, prioritizes outstanding balances, follows up with payers, and works on eligible claims and denials to help improve collections and reduce aging AR.",
+      },
     ] satisfies FAQItem[],
   },
   finalCta: {
