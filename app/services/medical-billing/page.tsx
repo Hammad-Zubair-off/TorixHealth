@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
+import { ServicePricing } from "@/components/ServicePricing";
 import { medicalBillingContent } from "@/content/medical-billing";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -40,6 +41,7 @@ export default function MedicalBillingPage() {
           items={c.howItWorks.items}
           band="paper"
         />
+        <ServicePricing heading={c.pricing.heading} columns={c.pricing.columns} />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
           heading={c.finalCta.heading}

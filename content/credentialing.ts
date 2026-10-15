@@ -2,6 +2,7 @@ import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { EnrollmentColumn } from "@/components/EnrollmentColumns";
 import type { IconName } from "@/components/icons";
+import type { PricingColumn } from "@/components/ServicePricing";
 
 /** Credentialing and Contract — payer enrollment, CAQH, recredentialing, and related support. */
 export const credentialingContent = {
@@ -222,9 +223,41 @@ export const credentialingContent = {
       ],
     },
   },
+  pricing: {
+    heading: "Provider Credentialing Starting at $99 / Provider / Application",
+    columns: [
+      {
+        items: [
+          "Commercial Payer Enrollment",
+          "Medicare Enrollment",
+          "Medicaid Enrollment",
+          "CAQH Profile Setup",
+          "NPI Registration & Updates",
+          "Individual Provider Enrollment",
+        ],
+        cta: { label: "Start Credentialing", href: "/contact" },
+      },
+      {
+        items: [
+          "Group Practice Enrollment",
+          "Recredentialing & Revalidation",
+          "Demographic Changes",
+          "Payer Application Follow-Up",
+          "Enrollment Status Tracking",
+          "Effective-Date Verification",
+        ],
+        cta: { label: "Book a Consultation", href: "/contact" },
+      },
+    ] satisfies [PricingColumn, PricingColumn],
+  },
   faqs: {
     heading: "Frequently asked questions",
     items: [
+      {
+        question: "How is pricing structured?",
+        answer:
+          "Provider Credentialing starts at $99 per provider per application. Scope and final pricing are confirmed in writing before enrollment work begins.",
+      },
       {
         question: "Why is my provider credentialing taking so long?",
         answer:

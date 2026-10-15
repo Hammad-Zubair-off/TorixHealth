@@ -1,6 +1,7 @@
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { IconName } from "@/components/icons";
+import type { PricingColumn } from "@/components/ServicePricing";
 
 /** Medical Billing — full-cycle billing from scheduling through final payment. */
 export const medicalBillingContent = {
@@ -68,6 +69,34 @@ export const medicalBillingContent = {
       },
     ] satisfies FeatureItem[],
   },
+  pricing: {
+    heading: "Billing Services Starting from 3% of Monthly Collections",
+    columns: [
+      {
+        items: [
+          "Patient Demographic Entry",
+          "Insurance Eligibility & Benefits Verification",
+          "Charge Entry",
+          "Medical Coding & Code Review",
+          "Claim Scrubbing",
+          "Electronic Claim Submission",
+          "Payment Posting (ERA/EOB)",
+        ],
+        cta: { label: "Get a Custom Quote", href: "/contact" },
+      },
+      {
+        items: [
+          "Denial Management",
+          "Corrected Claims & Resubmissions",
+          "A/R Follow-Up",
+          "Patient Statements",
+          "Monthly Financial Reports",
+          "Dedicated Account Manager",
+        ],
+        cta: { label: "Book a Consultation", href: "/contact" },
+      },
+    ] satisfies [PricingColumn, PricingColumn],
+  },
   faqs: {
     heading: "Frequently asked questions",
     items: [
@@ -95,7 +124,7 @@ export const medicalBillingContent = {
       {
         question: "How is pricing structured?",
         answer:
-          "Pricing is quoted per practice after the assessment, based on volume, payer mix and specialty. The number and the scope go in writing before anything starts.",
+          "Medical Billing starts at 3% of monthly collections. Final pricing is confirmed after the assessment based on volume, payer mix, and specialty, and goes in writing before anything starts.",
       },
       {
         question: "Why are my medical claims being denied?",

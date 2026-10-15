@@ -1,6 +1,7 @@
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { IconName } from "@/components/icons";
+import type { PricingColumn } from "@/components/ServicePricing";
 
 /** Accounts Receivable Operations — aging AR, denials, appeals, and payment recovery. */
 export const arFollowUpContent = {
@@ -86,9 +87,43 @@ export const arFollowUpContent = {
       },
     ] satisfies FeatureItem[],
   },
+  pricing: {
+    heading: "A/R & Denial Management Starting at $4 / Claim or Performance-Based",
+    columns: [
+      {
+        items: [
+          "A/R Aging Analysis",
+          "30/60/90/120+ Day Follow-Up",
+          "Unpaid Claim Follow-Up",
+          "Denial Root-Cause Analysis",
+          "Claim Status Investigation",
+          "Corrected Claims",
+          "Claim Resubmissions",
+        ],
+        cta: { label: "Recover Your Revenue", href: "/contact" },
+      },
+      {
+        items: [
+          "Appeals Management",
+          "Timely-Filing Review",
+          "Underpayment Identification",
+          "Payer Follow-Up",
+          "Old A/R Cleanup",
+          "Recovery & Aging Reports",
+          "Denial Trend Analysis",
+        ],
+        cta: { label: "Book a Consultation", href: "/contact" },
+      },
+    ] satisfies [PricingColumn, PricingColumn],
+  },
   faqs: {
     heading: "Frequently asked questions",
     items: [
+      {
+        question: "How is pricing structured?",
+        answer:
+          "A/R & Denial Management starts at $4 per claim, with performance-based pricing available. Final terms are confirmed after the A/R assessment and go in writing before work begins.",
+      },
       {
         question:
           "Is Accounts Receivable Operations a one-time cleanup or an ongoing service?",
