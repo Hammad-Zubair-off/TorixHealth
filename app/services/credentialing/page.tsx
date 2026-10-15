@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
+import { ServicePricing } from "@/components/ServicePricing";
 import { credentialingContent } from "@/content/credentialing";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -51,6 +52,11 @@ export default function CredentialingPage() {
           subheading={c.enrollmentSolutions.subheading}
           columns={c.enrollmentSolutions.columns}
           payerPrompt={c.enrollmentSolutions.payerPrompt}
+        />
+        <ServicePricing
+          heading={c.pricing.heading}
+          columns={c.pricing.columns}
+          band="paper"
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
