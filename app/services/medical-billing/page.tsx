@@ -3,6 +3,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/site";
 import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
+import { EhrSystems } from "@/components/EhrSystems";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -42,6 +43,12 @@ export default function MedicalBillingPage() {
           band="paper"
         />
         <ServicePricing heading={c.pricing.heading} columns={c.pricing.columns} />
+        <EhrSystems
+          heading={c.ehrSystems.heading}
+          subheading={c.ehrSystems.subheading}
+          systems={c.ehrSystems.systems}
+          band="paper"
+        />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
           heading={c.finalCta.heading}
