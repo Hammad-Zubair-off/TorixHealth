@@ -1,7 +1,11 @@
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { OverviewCard } from "@/components/ServicesOverview";
+import type { SpecialtyItem } from "@/components/SpecialtiesShowcase";
 import type { TrustItem } from "@/components/TrustBar";
 import type { IconName } from "@/components/icons";
+import { billingProcessContent } from "@/content/billing-process";
+import { credentialingContent } from "@/content/credentialing";
+import { ehrSystemsContent } from "@/content/ehr-systems";
 
 /** Homepage copy from referenceUI Nocturne Light, with em-dash phrasing cleaned up. */
 export const homeContent = {
@@ -158,6 +162,17 @@ export const homeContent = {
       },
     ] satisfies OverviewCard[],
   },
+  billingProcess: billingProcessContent,
+  specialties: {
+    heading: "Which Medical Specialties Does Torix Health Serve with Expert Billing?",
+    subheading:
+      "We support credentialing and billing across a wide range of specialties — with the same accuracy whether you are a solo practice or a multi-location group.",
+    items: credentialingContent.specialties.items.map((item) => ({
+      icon: item.icon,
+      title: item.title,
+    })) satisfies SpecialtyItem[],
+  },
+  ehrSystems: ehrSystemsContent,
   faqs: {
     heading: "Questions we get asked first",
     items: [

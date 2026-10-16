@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import { CTABanner } from "@/components/CTABanner";
+import { EhrSystems } from "@/components/EhrSystems";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { HeroLeadForm } from "@/components/HeroLeadForm";
 import { JsonLd } from "@/components/JsonLd";
 import { Navbar } from "@/components/Navbar";
+import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { ServicesOverview } from "@/components/ServicesOverview";
+import { SpecialtiesShowcase } from "@/components/SpecialtiesShowcase";
 import { SplitOfferings } from "@/components/SplitOfferings";
 import { TrustBar } from "@/components/TrustBar";
 import { credentialingContent } from "@/content/credentialing";
@@ -72,6 +75,25 @@ export default function HomePage() {
           solutionsHeading={c.overview.solutionsHeading}
           services={c.overview.services}
           solutions={c.overview.solutions}
+        />
+        <ProcessTimeline
+          heading={c.billingProcess.heading}
+          subheading={c.billingProcess.subheading}
+          steps={c.billingProcess.steps}
+          band="tint"
+        />
+        <SpecialtiesShowcase
+          heading={c.specialties.heading}
+          subheading={c.specialties.subheading}
+          items={c.specialties.items}
+          initialCount={6}
+          band="paper"
+        />
+        <EhrSystems
+          heading={c.ehrSystems.heading}
+          subheading={c.ehrSystems.subheading}
+          systems={c.ehrSystems.systems}
+          band="bg"
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <FAQAccordion
