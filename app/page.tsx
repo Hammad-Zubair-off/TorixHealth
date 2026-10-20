@@ -5,6 +5,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { HeroLeadForm } from "@/components/HeroLeadForm";
+import { InsurancePartners } from "@/components/InsurancePartners";
 import { JsonLd } from "@/components/JsonLd";
 import { Navbar } from "@/components/Navbar";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
@@ -94,6 +95,12 @@ export default function HomePage() {
           subheading={c.ehrSystems.subheading}
           systems={c.ehrSystems.systems}
           band="bg"
+        />
+        <InsurancePartners
+          heading={c.insurancePartners.heading}
+          subheading={c.insurancePartners.subheading}
+          partners={c.insurancePartners.partners}
+          band="paper"
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <FAQAccordion

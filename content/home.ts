@@ -6,6 +6,7 @@ import type { IconName } from "@/components/icons";
 import { billingProcessContent } from "@/content/billing-process";
 import { credentialingContent } from "@/content/credentialing";
 import { ehrSystemsContent } from "@/content/ehr-systems";
+import { insurancePartnersContent } from "@/content/insurance-partners";
 
 /** Homepage copy from referenceUI Nocturne Light, with em-dash phrasing cleaned up. */
 export const homeContent = {
@@ -173,6 +174,7 @@ export const homeContent = {
     })) satisfies SpecialtyItem[],
   },
   ehrSystems: ehrSystemsContent,
+  insurancePartners: insurancePartnersContent,
   faqs: {
     heading: "Questions we get asked first",
     items: [

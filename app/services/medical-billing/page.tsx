@@ -8,6 +8,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
+import { InsurancePartners } from "@/components/InsurancePartners";
 import { Navbar } from "@/components/Navbar";
 import { ServicePricing } from "@/components/ServicePricing";
 import { medicalBillingContent } from "@/content/medical-billing";
@@ -48,6 +49,12 @@ export default function MedicalBillingPage() {
           subheading={c.ehrSystems.subheading}
           systems={c.ehrSystems.systems}
           band="paper"
+        />
+        <InsurancePartners
+          heading={c.insurancePartners.heading}
+          subheading={c.insurancePartners.subheading}
+          partners={c.insurancePartners.partners}
+          band="bg"
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
