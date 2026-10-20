@@ -3,10 +3,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { buildPageMetadata } from "@/lib/site";
 import { faqPageSchema, breadcrumbSchema } from "@/lib/seo-schema";
 import { CTABanner } from "@/components/CTABanner";
+import { EhrSystems } from "@/components/EhrSystems";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
+import { InsurancePartners } from "@/components/InsurancePartners";
 import { Navbar } from "@/components/Navbar";
 import { ServicePricing } from "@/components/ServicePricing";
 import { medicalBillingContent } from "@/content/medical-billing";
@@ -42,6 +44,18 @@ export default function MedicalBillingPage() {
           band="paper"
         />
         <ServicePricing heading={c.pricing.heading} columns={c.pricing.columns} />
+        <EhrSystems
+          heading={c.ehrSystems.heading}
+          subheading={c.ehrSystems.subheading}
+          systems={c.ehrSystems.systems}
+          band="paper"
+        />
+        <InsurancePartners
+          heading={c.insurancePartners.heading}
+          subheading={c.insurancePartners.subheading}
+          partners={c.insurancePartners.partners}
+          band="bg"
+        />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
           heading={c.finalCta.heading}

@@ -197,3 +197,22 @@
     transform: translateY(0);
   }
 }
+
+@keyframes logoMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer components {
+  .logo-marquee-track {
+    animation: logoMarquee var(--marquee-duration, 40s) linear infinite;
+  }
+
+  .logo-marquee-track:hover {
+    animation-play-state: paused;
+  }
+}

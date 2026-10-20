@@ -2,6 +2,8 @@ import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
 import type { IconName } from "@/components/icons";
 import type { PricingColumn } from "@/components/ServicePricing";
+import { ehrSystemsContent } from "@/content/ehr-systems";
+import { insurancePartnersContent } from "@/content/insurance-partners";
 
 /** Medical Billing — full-cycle billing from scheduling through final payment. */
 export const medicalBillingContent = {
@@ -97,6 +99,8 @@ export const medicalBillingContent = {
       },
     ] satisfies [PricingColumn, PricingColumn],
   },
+  ehrSystems: ehrSystemsContent,
+  insurancePartners: insurancePartnersContent,
   faqs: {
     heading: "Frequently asked questions",
     items: [

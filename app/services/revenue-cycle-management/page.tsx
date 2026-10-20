@@ -9,6 +9,7 @@ import { Hero } from "@/components/Hero";
 import { IconFeatureGrid } from "@/components/IconFeatureGrid";
 import { Navbar } from "@/components/Navbar";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
+import { RcmComparison } from "@/components/RcmComparison";
 import { rcmContent } from "@/content/revenue-cycle-management";
 
 export const metadata: Metadata = buildPageMetadata({
@@ -47,6 +48,10 @@ export default function RevenueCycleManagementPage() {
           steps={c.workflow.steps}
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
+        <RcmComparison
+          heading={c.comparison.heading}
+          columns={c.comparison.columns}
+        />
         <CTABanner
           heading={c.finalCta.heading}
           subheading={c.finalCta.subheading}
