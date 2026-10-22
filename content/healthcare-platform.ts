@@ -8,7 +8,7 @@ export const healthcarePlatformContent = {
   meta: {
     title: "Healthcare Software Platform",
     description:
-      "Torix Solutions Healthcare Platform: EHR, EMR, practice management, patient portal, telehealth, mobile access and specialty workflows connected under one login. Built and maintained in house.",
+      "Healthcare software platform combining EHR, practice management, patient portal, telehealth, and specialty workflows in one system.",
   },
   hero: {
     breadcrumb: [

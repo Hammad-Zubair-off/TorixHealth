@@ -7,7 +7,7 @@ export const healthcareDigitalMarketingContent = {
   meta: {
     title: "Healthcare Digital Marketing",
     description:
-      "Torix Solutions builds websites and online visibility for healthcare practices — SEO, local search, and content built so patients searching for care find you first.",
+      "Healthcare digital marketing for practices: websites, local SEO, and content that help patients find your services online.",
   },
   hero: {
     breadcrumb: [

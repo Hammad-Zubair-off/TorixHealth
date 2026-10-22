@@ -5,9 +5,9 @@ import { homeContent } from "@/content/home";
 /** Virtual Medical Assistants — trained administrative support for practice workflows. */
 export const virtualMedicalAssistantsContent = {
   meta: {
-    title: "Virtual Medical Assistants for Medical Practices",
+    title: "Virtual Medical Assistants for Practices",
     description:
-      "Torix Solutions provides trained virtual medical assistants for scheduling, patient communication, insurance verification, and administrative support — so your in-house team can focus on patients.",
+      "Virtual medical assistants for scheduling, patient communication, insurance verification, and administrative support in medical practices.",
   },
   hero: {
     breadcrumb: [

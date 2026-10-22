@@ -9,7 +9,7 @@ export const medicalBillingSoftwareContent = {
   meta: {
     title: "Medical Billing Software",
     description:
-      "Torix Solutions Medical Billing Software: in-house billing automation with EHR and practice management integration, workflow automation and reporting you can read. Bundled at no cost with the Medical Billing service.",
+      "Medical billing software with workflow automation, reporting, and EHR/practice-management integration, available with Torix medical billing services.",
   },
   hero: {
     breadcrumb: [

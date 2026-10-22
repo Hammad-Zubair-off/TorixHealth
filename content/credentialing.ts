@@ -9,7 +9,7 @@ export const credentialingContent = {
   meta: {
     title: "Medical Credentialing Services",
     description:
-      "Torix Solutions credentialing gets you enrolled with the insurances that matter and keeps you compliant — so enrollment lag and expired credentials don't quietly cut off your ability to bill.",
+      "Medical credentialing services for payer enrollment, provider recredentialing, and contract support tailored to your practice.",
   },
   hero: {
     breadcrumb: [

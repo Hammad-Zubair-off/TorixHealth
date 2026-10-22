@@ -8,7 +8,7 @@ export const hipaaCompliantSoftwareContent = {
   meta: {
     title: "HIPAA-Compliant Software",
     description:
-      "Torix Solutions HIPAA-compliant software practices: role-based access control, audit logging, encryption in transit and at rest, and a signed Business Associate Agreement. Documented in detail rather than asserted in a badge.",
+      "HIPAA-focused healthcare software with documented access controls, audit logging, encryption, and Business Associate Agreement support.",
   },
   hero: {
     breadcrumb: [

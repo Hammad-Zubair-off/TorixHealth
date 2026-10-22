@@ -8,7 +8,7 @@ export const homeContent = {
   meta: {
     title: "Medical Billing & Healthcare Technology",
     description:
-      "Underpayments and slow follow-up are quietly draining your collections. Torix Solutions fixes that. Our team of billing experts handles your entire revenue cycle — accurate medical coding, credentialing with the insurances you actually bill, timely claims submission, and relentless follow-up on every unpaid claim. The result: faster reimbursements, fewer denials, and more of what you've earned actually landing in your account.",
+      "Medical billing services, revenue cycle management, credentialing, and healthcare technology for practices seeking clearer operations and stronger collections.",
   },
   hero: {
     eyebrow: "US-based billing operations & healthcare technology",

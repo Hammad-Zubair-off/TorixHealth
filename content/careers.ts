@@ -9,7 +9,7 @@ export const careersContent = {
   meta: {
     title: "Careers",
     description:
-      "Join Torix Solutions and help transform healthcare through technology, medical billing expertise, and operational excellence. Explore open positions and our hiring process.",
+      "Explore careers at Torix Solutions, where healthcare technology, medical billing expertise, and operations come together to support practices.",
   },
   hero: {
     breadcrumb: [

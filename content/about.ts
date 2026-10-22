@@ -7,7 +7,7 @@ export const aboutContent = {
   meta: {
     title: "About Us",
     description:
-      "Torix Solutions helps healthcare organizations simplify operations through medical billing services, in-house healthcare technology, and compliance-focused solutions that work together.",
+      "Torix Solutions helps healthcare organizations improve operations with medical billing services, healthcare technology, and compliance-focused solutions.",
   },
   hero: {
     breadcrumb: [

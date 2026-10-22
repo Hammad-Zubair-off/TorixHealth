@@ -9,7 +9,7 @@ export const medicalCodingContent = {
   meta: {
     title: "Medical Coding",
     description:
-      "Torix Solutions provides ICD-10 and CPT medical coding for independent practices, with specialty-aware assignment, documentation queries when the note doesn't support the code, and handoff ready for claim submission.",
+      "Medical coding services for independent practices, including ICD-10 and CPT assignment, documentation queries, and claim-ready handoff.",
   },
   hero: {
     breadcrumb: [

@@ -8,7 +8,7 @@ export const rcmContent = {
   meta: {
     title: "Revenue Cycle Management Services",
     description:
-      "Torix Solutions manages your entire revenue cycle from patient scheduling to final payment — so nothing falls through the cracks between coding, claims, credentialing, and collections.",
+      "Revenue cycle management services connecting registration, coding, claims, payment posting, and collections for clearer practice operations.",
   },
   hero: {
     breadcrumb: [

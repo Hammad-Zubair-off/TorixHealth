@@ -8,7 +8,7 @@ export const medicalBillingContent = {
   meta: {
     title: "Medical Billing Services",
     description:
-      "From patient scheduling to the last insurance or patient dollar, Torix Solutions medical billing handles the full cycle — accurate claims, faster turnaround, and no missed steps between departments.",
+      "Medical billing services for practices, covering eligibility, claims, payment posting, follow-up, and patient balances from scheduling through collection.",
   },
   hero: {
     breadcrumb: [

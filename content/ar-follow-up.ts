@@ -8,7 +8,7 @@ export const arFollowUpContent = {
   meta: {
     title: "Medical Claim Denial Management",
     description:
-      "Torix Solutions handles AR follow-up, denial resolution, appeals and payment recovery — working inside the system you already use, with a named representative you can call.",
+      "Medical claim denial management for A/R follow-up, denial resolution, appeals, underpayments, and payment recovery.",
   },
   hero: {
     breadcrumb: [
