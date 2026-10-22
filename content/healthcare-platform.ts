@@ -6,7 +6,7 @@ import type { IconName } from "@/components/icons";
 /** Healthcare Platform solution page — unified in-house ecosystem. */
 export const healthcarePlatformContent = {
   meta: {
-    title: "Healthcare Platform",
+    title: "Healthcare Software Platform",
     description:
       "Torix Solutions Healthcare Platform: EHR, EMR, practice management, patient portal, telehealth, mobile access and specialty workflows connected under one login. Built and maintained in house.",
   },

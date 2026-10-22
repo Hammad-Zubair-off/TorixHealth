@@ -27,22 +27,22 @@ export const homeContent = {
   trust: [
     {
       icon: "users" as IconName,
-      label: "100+ Satisfied Providers",
-      description: "Across the USA",
+      label: "Practice-focused support",
+      description: "Built around your workflow",
     },
     {
       icon: "shield" as IconName,
-      label: "99% Clean Claims Rate",
-      description: "Higher first-pass success",
+      label: "Claim-focused operations",
+      description: "From submission through follow-up",
     },
     {
       icon: "clock" as IconName,
-      label: "25+ Specialties Supported",
-      description: "Broad experience",
+      label: "Specialty-aware workflows",
+      description: "Tailored to practice needs",
     },
     {
       icon: "headphones" as IconName,
-      label: "US-Based Support Team",
+      label: "Dedicated support team",
       description: "Real people. Real support.",
     },
   ] satisfies TrustItem[],

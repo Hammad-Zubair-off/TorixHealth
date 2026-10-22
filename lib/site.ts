@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 
 /** Live production origin — override with NEXT_PUBLIC_SITE_URL for local/staging. */
-export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://www.torixhealth.com"
-).replace(/\/$/, "");
+/** The single public, indexable origin used for canonicals and sitemap URLs. */
+export const siteUrl = "https://www.torixhealth.com";
 
 export const siteName = "Torix Solutions";
 
@@ -65,7 +63,7 @@ export function buildPageMetadata({
       images: [ogImagePath],
     },
     robots: noIndex
-      ? { index: false, follow: false }
+      ? { index: false, follow: true }
       : { index: true, follow: true },
   };
 }

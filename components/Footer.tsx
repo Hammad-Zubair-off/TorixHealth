@@ -75,14 +75,6 @@ export function Footer() {
 
       <Container className="flex flex-col gap-3 border-t border-white/10 py-6 text-[12px] text-band-deep-muted sm:flex-row sm:items-center sm:justify-between">
         <p>© {new Date().getFullYear()} Torix Solutions. All rights reserved.</p>
-        <div className="flex gap-4">
-          <Link href="/about" className="no-underline transition-colors hover:text-white">
-            Privacy Policy
-          </Link>
-          <Link href="/about" className="no-underline transition-colors hover:text-white">
-            Terms of Use
-          </Link>
-        </div>
       </Container>
     </footer>
   );

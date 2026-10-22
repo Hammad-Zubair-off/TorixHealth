@@ -142,10 +142,6 @@ export function Navbar() {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    if (!mobileOpen) setOpenGroup(null);
-  }, [mobileOpen]);
-
   return (
     <header className="sticky top-0 z-40 border-b border-divider bg-[color-mix(in_srgb,var(--band-paper)_90%,transparent)] backdrop-blur-[12px]">
       <div className="border-b border-divider bg-band-paper/80">
@@ -213,7 +209,10 @@ export function Navbar() {
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          onClick={() => setMobileOpen((v) => !v)}
+          onClick={() => {
+            if (mobileOpen) setOpenGroup(null);
+            setMobileOpen((v) => !v);
+          }}
         >
           <HamburgerIcon open={mobileOpen} />
         </button>
@@ -268,7 +267,10 @@ export function Navbar() {
                             href={child.href}
                             className="rounded-md py-2 pl-1 text-[14px] text-neutral-700 no-underline transition-colors duration-150 hover:bg-accent-100 hover:text-accent-700"
                             tabIndex={openGroup === item.label ? 0 : -1}
-                            onClick={() => setMobileOpen(false)}
+                            onClick={() => {
+                              setOpenGroup(null);
+                              setMobileOpen(false);
+                            }}
                           >
                             {child.label}
                           </Link>
@@ -286,7 +288,10 @@ export function Navbar() {
                     pathname === item.href ? "text-accent-700" : "text-text",
                   )}
                   tabIndex={mobileOpen ? 0 : -1}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setOpenGroup(null);
+                    setMobileOpen(false);
+                  }}
                 >
                   {item.label}
                 </Link>

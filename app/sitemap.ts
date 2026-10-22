@@ -44,11 +44,8 @@ const indexableRoutes: Array<{
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return indexableRoutes.map(({ path, changeFrequency, priority }) => ({
     url: path === "/" ? siteUrl : `${siteUrl}${path}`,
-    lastModified,
     changeFrequency,
     priority,
   }));

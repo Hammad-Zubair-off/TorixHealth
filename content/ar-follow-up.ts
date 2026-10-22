@@ -6,7 +6,7 @@ import type { PricingColumn } from "@/components/ServicePricing";
 /** Accounts Receivable Operations — aging AR, denials, appeals, and payment recovery. */
 export const arFollowUpContent = {
   meta: {
-    title: "Accounts Receivable Operations",
+    title: "Medical Claim Denial Management",
     description:
       "Torix Solutions handles AR follow-up, denial resolution, appeals and payment recovery — working inside the system you already use, with a named representative you can call.",
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 
 type GlobalErrorProps = {
   error: Error & { digest?: string };
@@ -105,7 +106,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
               >
                 Try again
               </button>
-              <a
+              <Link
                 href="/"
                 style={{
                   display: "inline-flex",
@@ -122,8 +123,8 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
                 }}
               >
                 Back to Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
                 style={{
                   display: "inline-flex",
@@ -140,7 +141,7 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
                 }}
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         </main>

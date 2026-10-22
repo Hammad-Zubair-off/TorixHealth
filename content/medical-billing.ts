@@ -6,7 +6,7 @@ import type { PricingColumn } from "@/components/ServicePricing";
 /** Medical Billing — full-cycle billing from scheduling through final payment. */
 export const medicalBillingContent = {
   meta: {
-    title: "Medical Billing",
+    title: "Medical Billing Services",
     description:
       "From patient scheduling to the last insurance or patient dollar, Torix Solutions medical billing handles the full cycle — accurate claims, faster turnaround, and no missed steps between departments.",
   },

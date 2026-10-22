@@ -7,7 +7,7 @@ import type { PricingColumn } from "@/components/ServicePricing";
 /** Credentialing and Contract — payer enrollment, CAQH, recredentialing, and related support. */
 export const credentialingContent = {
   meta: {
-    title: "Credentialing and Contract",
+    title: "Medical Credentialing Services",
     description:
       "Torix Solutions credentialing gets you enrolled with the insurances that matter and keeps you compliant — so enrollment lag and expired credentials don't quietly cut off your ability to bill.",
   },
