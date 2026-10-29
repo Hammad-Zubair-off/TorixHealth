@@ -1,7 +1,8 @@
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { FeatureItem } from "@/components/IconFeatureGrid";
-import type { ProcessStep } from "@/components/ProcessTimeline";
+import type { ComparisonColumn } from "@/components/RcmComparison";
 import type { IconName } from "@/components/icons";
+import { billingProcessContent } from "@/content/billing-process";
 
 /** Revenue Cycle Management — full-cycle oversight from intake to final payment. */
 export const rcmContent = {
@@ -75,66 +76,64 @@ export const rcmContent = {
       },
     ] satisfies FeatureItem[],
   },
-  workflow: {
-    heading: "The revenue cycle workflow we run",
-    subheading:
-      "From the first eligibility check to the final report — each stage is owned, not just touched.",
-    steps: [
+  workflow: billingProcessContent,
+  comparison: {
+    heading: "In-House vs. Outsourced Revenue Cycle Management",
+    columns: [
       {
-        icon: "check" as IconName,
-        title: "Eligibility Verification",
-        description:
-          "Insurance surprises? Not on our watch. We verify patient coverage before they even step into your clinic, as your time is too valuable to waste on verification pitfalls.",
+        title: "In-House RCM",
+        subtitle: "Managing billing internally",
+        items: [
+          {
+            icon: "dollar" as IconName,
+            text: "Salaries, benefits, training, and software add to operating costs.",
+          },
+          {
+            icon: "alert" as IconName,
+            text: "Limited staff capacity can delay claims and increase billing errors.",
+          },
+          {
+            icon: "clock" as IconName,
+            text: "Unpaid claims and patient balances require ongoing follow-up.",
+          },
+          {
+            icon: "clipboard" as IconName,
+            text: "Credentialing and payer enrollment create additional administrative work.",
+          },
+          {
+            icon: "activity" as IconName,
+            text: "Expanding the team as the practice grows can be costly and time-consuming.",
+          },
+        ],
       },
       {
-        icon: "clipboard" as IconName,
-        title: "Prior Authorization",
-        description:
-          "We deal with the red tape, so no more hindered claims. From charge capturing to chasing approvals, we get your treatments paid fast — think of us as your front desk officer handling the \"please hold\" music.",
+        title: "Outsourced RCM with Torix Health",
+        subtitle: "A dedicated billing partner",
+        emphasized: true,
+        items: [
+          {
+            icon: "wallet" as IconName,
+            text: "Reduce the need for additional in-house billing staff and related overhead.",
+          },
+          {
+            icon: "check" as IconName,
+            text: "Structured claim review, coding support, and accurate charge entry.",
+          },
+          {
+            icon: "refresh" as IconName,
+            text: "Proactive follow-up on unpaid claims, denials, and outstanding balances.",
+          },
+          {
+            icon: "users" as IconName,
+            text: "Credentialing and payer enrollment support to help providers join insurance networks.",
+          },
+          {
+            icon: "barChart" as IconName,
+            text: "Flexible operational support as your practice adds providers or locations.",
+          },
+        ],
       },
-      {
-        icon: "fileText" as IconName,
-        title: "Charge Capture",
-        description:
-          "Every service is counted, coded, and claimed beforehand. We make sure every visit, procedure, and modifier is captured correctly. We really don't like redoing stuff that can be corrected the first time.",
-      },
-      {
-        icon: "layers" as IconName,
-        title: "Claim Submission",
-        description:
-          "Clean claims aren't optional. They're our baseline. We scrub, file, and submit your claims with surgical precision, reducing rejections and speeding up your cash flow. Every code is checked by an experienced coder.",
-      },
-      {
-        icon: "monitor" as IconName,
-        title: "Payment Processing",
-        description:
-          "We make sure claim approval means you are getting paid. From EOBs to ERA tracking, we keep everything organized and flowing, so your income isn't stuck in a never-ending cycle.",
-      },
-      {
-        icon: "clock" as IconName,
-        title: "AR Follow-ups",
-        description:
-          "Old claims don't scare us — we know how to pull them back. We follow up with payers, sort out delays, and keep your revenue cycle moving even when payers stall.",
-      },
-      {
-        icon: "alert" as IconName,
-        title: "Denial Management",
-        description:
-          "Denials happen. But we don't just let it be. Our team investigates every denial, corrects the issue, and gets it resubmitted fast. We chase down every single penny for you tirelessly.",
-      },
-      {
-        icon: "headphones" as IconName,
-        title: "Patient Collection",
-        description:
-          "We make it easy for patients to pay, and painless for you to ask. From soft reminders to secure online portals, we keep collections friendly, transparent, and on spot.",
-      },
-      {
-        icon: "activity" as IconName,
-        title: "Reporting and Analysis",
-        description:
-          "What's working? What's leaking? Torix Solutions shows you a holistic picture. With real-time dashboards and actionable insights, you can make smarter decisions and hit revenue goals without delays.",
-      },
-    ] satisfies ProcessStep[],
+    ] satisfies [ComparisonColumn, ComparisonColumn],
   },
   faqs: {
     heading: "Frequently asked questions",
