@@ -3,7 +3,6 @@ import { Container, Section } from "@/components/Container";
 export type Testimonial = {
   quote: string;
   name: string;
-  role: string;
   practice?: string;
 };
 
@@ -37,7 +36,7 @@ export function Testimonials({
 
         <ul className="m-0 grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
-            <li key={`${item.name}-${item.role}`}>
+            <li key={item.name}>
               <figure className="card-lift card-lift-light flex h-full flex-col rounded-md border border-divider bg-band-paper p-6">
                 <blockquote className="m-0 flex-1 text-[15px] leading-[1.65] text-neutral-700">
                   “{item.quote}”
@@ -46,10 +45,11 @@ export function Testimonials({
                   <p className="m-0 text-[15px] font-semibold text-text">
                     {item.name}
                   </p>
-                  <p className="m-0 mt-1 text-[13px] text-neutral-600">
-                    {item.role}
-                    {item.practice ? ` · ${item.practice}` : null}
-                  </p>
+                  {item.practice ? (
+                    <p className="m-0 mt-1 text-[13px] text-neutral-600">
+                      {item.practice}
+                    </p>
+                  ) : null}
                 </figcaption>
               </figure>
             </li>

@@ -185,21 +185,18 @@ export const homeContent = {
         quote:
           "Our clean claims rate jumped within the first month. Denials that used to sit for weeks are now worked the same week — and we finally have someone we can call by name.",
         name: "Dr. Amanda Reyes",
-        role: "Practice Owner",
         practice: "Family Medicine, Utah",
       },
       {
         quote:
           "Credentialing used to stall for months. Torix tracked every payer application and kept us enrolled so we could bill without gaps when we added a new provider.",
-        name: "Marcus Chen",
-        role: "Office Manager",
+        name: "Dr. Marcus Chen",
         practice: "Multi-specialty Clinic",
       },
       {
         quote:
           "We kept our existing EHR and still got faster payments. The parallel transition meant cash flow never stopped while they took over our A/R.",
-        name: "Sarah Patel",
-        role: "Billing Director",
+        name: "Dr. Sarah Patel",
         practice: "Orthopedic Practice",
       },
     ] satisfies Testimonial[],
