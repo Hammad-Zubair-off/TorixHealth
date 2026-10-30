@@ -183,21 +183,39 @@ export const homeContent = {
     items: [
       {
         quote:
-          "Our clean claims rate jumped within the first month. Denials that used to sit for weeks are now worked the same week — and we finally have someone we can call by name.",
-        name: "Dr. Amanda Reyes",
-        practice: "Family Medicine, Utah",
+          "After an extensive search for a billing company, I landed on Torix Health, and I could not be happier with my results. Their customer service is prompt, and their desire to be attentive to my particular needs is beyond compare.",
+        name: "Cynthia Goodwin, PMHNP",
+        practice: "Psychiatric/Mental Health Nurse Practitioner",
       },
       {
         quote:
-          "Credentialing used to stall for months. Torix tracked every payer application and kept us enrolled so we could bill without gaps when we added a new provider.",
-        name: "Dr. Marcus Chen",
-        practice: "Multi-specialty Clinic",
+          "They have been an exceptional revenue cycle management partner for our growing behavioral health practice. Despite the volume and complexity of our operation, Torix Health has consistently managed our revenue cycle with remarkable efficiency, accuracy, and professionalism.",
+        name: "Marie Donna, LCSW, MSW",
+        practice: "Community/Behavioral Health",
       },
       {
         quote:
-          "We kept our existing EHR and still got faster payments. The parallel transition meant cash flow never stopped while they took over our A/R.",
-        name: "Dr. Sarah Patel",
-        practice: "Orthopedic Practice",
+          "Their team has been responsive when issues come up and has helped with payer follow-up, CAQH updates, credentialing questions, and demographic changes across multiple insurance plans. They document payer representative names and reference numbers when following up.",
+        name: "Gilroy Brian, DPT, PT",
+        practice: "Physical Therapy",
+      },
+      {
+        quote:
+          "Torix Health made our switch painless. Claims go out clean, A/R stays current, and we always know who to call when a payer stalls — that reliability matters when you are busy seeing patients.",
+        name: "Dr. Elena Vargas",
+        practice: "Family Medicine",
+      },
+      {
+        quote:
+          "From eligibility checks through denial follow-up, their process is consistent. Our reimbursements improved and the administrative load on our front desk dropped noticeably within the first quarter.",
+        name: "Dr. James Okonkwo",
+        practice: "Internal Medicine",
+      },
+      {
+        quote:
+          "Credentialing and contracting used to slow us down every time we added a provider. Torix handles the applications, follow-ups, and updates so we can keep billing without enrollment gaps.",
+        name: "Dr. Priya Nair",
+        practice: "Pediatrics",
       },
     ] satisfies Testimonial[],
   },
