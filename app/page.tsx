@@ -12,6 +12,7 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { SpecialtiesShowcase } from "@/components/SpecialtiesShowcase";
 import { SplitOfferings } from "@/components/SplitOfferings";
+import { Testimonials } from "@/components/Testimonials";
 import { TrustBar } from "@/components/TrustBar";
 import { credentialingContent } from "@/content/credentialing";
 import { homeContent } from "@/content/home";
@@ -47,9 +48,7 @@ export default function HomePage() {
 
   return (
     <>
-      <JsonLd
-        data={faqPageSchema([...c.faqs.items, ...c.virtualAssistantFaqs.items])}
-      />
+      <JsonLd data={faqPageSchema(c.faqs.items)} />
       <Navbar />
       <main>
         <Hero
@@ -102,11 +101,13 @@ export default function HomePage() {
           partners={c.insurancePartners.partners}
           band="paper"
         />
-        <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
-        <FAQAccordion
-          heading={c.virtualAssistantFaqs.heading}
-          items={c.virtualAssistantFaqs.items}
+        <Testimonials
+          heading={c.testimonials.heading}
+          subheading={c.testimonials.subheading}
+          items={c.testimonials.items}
+          band="tint"
         />
+        <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
           heading={c.finalCta.heading}
           subheading={c.finalCta.subheading}
