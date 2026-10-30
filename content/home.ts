@@ -1,6 +1,7 @@
 import type { FAQItem } from "@/components/FAQAccordion";
 import type { OverviewCard } from "@/components/ServicesOverview";
 import type { SpecialtyItem } from "@/components/SpecialtiesShowcase";
+import type { Testimonial } from "@/components/Testimonials";
 import type { TrustItem } from "@/components/TrustBar";
 import type { IconName } from "@/components/icons";
 import { billingProcessContent } from "@/content/billing-process";
@@ -175,6 +176,34 @@ export const homeContent = {
   },
   ehrSystems: ehrSystemsContent,
   insurancePartners: insurancePartnersContent,
+  testimonials: {
+    heading: "What our clients say",
+    subheading:
+      "Practices that switched to Torix for billing, credentialing, and A/R follow-up share how the partnership changed their collections.",
+    items: [
+      {
+        quote:
+          "Our clean claims rate jumped within the first month. Denials that used to sit for weeks are now worked the same week — and we finally have someone we can call by name.",
+        name: "Dr. Amanda Reyes",
+        role: "Practice Owner",
+        practice: "Family Medicine, Utah",
+      },
+      {
+        quote:
+          "Credentialing used to stall for months. Torix tracked every payer application and kept us enrolled so we could bill without gaps when we added a new provider.",
+        name: "Marcus Chen",
+        role: "Office Manager",
+        practice: "Multi-specialty Clinic",
+      },
+      {
+        quote:
+          "We kept our existing EHR and still got faster payments. The parallel transition meant cash flow never stopped while they took over our A/R.",
+        name: "Sarah Patel",
+        role: "Billing Director",
+        practice: "Orthopedic Practice",
+      },
+    ] satisfies Testimonial[],
+  },
   faqs: {
     heading: "Questions we get asked first",
     items: [

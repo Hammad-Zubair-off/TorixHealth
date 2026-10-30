@@ -12,6 +12,7 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { ServicesOverview } from "@/components/ServicesOverview";
 import { SpecialtiesShowcase } from "@/components/SpecialtiesShowcase";
 import { SplitOfferings } from "@/components/SplitOfferings";
+import { Testimonials } from "@/components/Testimonials";
 import { TrustBar } from "@/components/TrustBar";
 import { credentialingContent } from "@/content/credentialing";
 import { homeContent } from "@/content/home";
@@ -99,6 +100,12 @@ export default function HomePage() {
           subheading={c.insurancePartners.subheading}
           partners={c.insurancePartners.partners}
           band="paper"
+        />
+        <Testimonials
+          heading={c.testimonials.heading}
+          subheading={c.testimonials.subheading}
+          items={c.testimonials.items}
+          band="tint"
         />
         <FAQAccordion heading={c.faqs.heading} items={c.faqs.items} />
         <CTABanner
